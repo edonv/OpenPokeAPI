@@ -410,9 +410,7 @@
       },
       "Endpoint": {
         "type": "string",
-        "enum": [
-          "berry", "berry-firmness"
-        ]
+        "enum": ["berry", "berry-firmness"]
       }
     }
   }
