@@ -62,7 +62,7 @@
       }
     },
     "/berry/{nameOrId}": {
-      "description": "//change parameter to just name or ID, then duplicate to separate path, then move details to component schemas for easy reuse ///// Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
+      "description": "Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
       "parameters": [
         {
           "$ref": "#/components/parameters/nameOrId"
