@@ -199,7 +199,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContestName"
+                  "$ref": "#/components/schemas/ContestType"
                 }
               }
             }
