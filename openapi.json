@@ -191,7 +191,7 @@
         "properties": {
           "count": {
             "description": "The total number of resources available from this API.",
-            "type": "string"
+            "type": "integer"
           },
           "next": {
             "description": "The URL for the next page in the list.",
