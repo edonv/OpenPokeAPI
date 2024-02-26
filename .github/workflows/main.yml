@@ -2,9 +2,6 @@ name: Bundle API
 run-name: ${{ github.actor }} is bundling the API
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 jobs:
   bundle_job:
     name: Bundle Job
