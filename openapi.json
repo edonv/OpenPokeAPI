@@ -271,6 +271,19 @@
       "Berry": {
         "$ref": "./schemas/berries.json#Berry"
       },
+      "BerryFlavorMap": {
+        "type": "object",
+        "properties": {
+          "potency": {
+            "description": "How powerful the referenced flavor is for this berry.",
+            "type": "integer"
+          },
+          "flavor": {
+            "description": "The referenced berry flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
       "BerryFirmness": {
         "type": "object",
         "properties": {
@@ -326,19 +339,6 @@
           },
           "berry": {
             "description": "The berry with the referenced flavor.",
-            "$ref": "#/components/schemas/NamedAPIResource"
-          }
-        }
-      },
-      "BerryFlavorMap": {
-        "type": "object",
-        "properties": {
-          "potency": {
-            "description": "How powerful the referenced flavor is for this berry.",
-            "type": "integer"
-          },
-          "flavor": {
-            "description": "The referenced berry flavor.",
             "$ref": "#/components/schemas/NamedAPIResource"
           }
         }
