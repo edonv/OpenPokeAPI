@@ -1,0 +1,337 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "2",
+    "title": "PokéAPI",
+    "description": "A Pokémon API."
+  },
+  "externalDocs": {
+    "url": "https://pokeapi.co/docs/v2"
+  },
+  "servers": [
+    {
+      "url": "https://pokeapi.co/api/v2",
+      "description": "Base URL for the API."
+    }
+  ],
+  "paths": {
+    "/{endpoint}": {
+      "description": "Calling any API endpoint without a resource ID or name will return a paginated list of available resources for that API. By default, a list \"page\" will contain up to 20 resources. If you would like to change this just add the `limit` query parameter to the request. You can use `offset` to move to the next page or skip resources.",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "endpoint",
+          "schema": {
+            "$ref": "#/components/schemas/Endpoint"
+          },
+          "required": true
+        },
+        {
+          "in": "query",
+          "name": "limit",
+          "schema": {
+            "type": "integer"
+          },
+          "required": false,
+          "description": "The maximum number of resources to return per request \"page\". The default is `20`."
+        },
+        {
+          "in": "query",
+          "name": "offset",
+          "schema": {
+            "type": "integer"
+          },
+          "required": false,
+          "description": "The number of resources to skip before listing resources. The default is `20`."
+        }
+      ],
+      "get": {
+        "operationId": "getEndpointList",
+        "responses": {
+          "default": {
+            "description": "A list of resource items.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NamedAPIResourceList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/berry/{nameOrId}": {
+      "description": "//change parameter to just name or ID, then duplicate to separate path, then move details to component schemas for easy reuse ///// Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getBerryByNameOrId",
+        "responses": {
+          "default": {
+            "description": "A Berry object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Berry"
+                }
+              }
+            },
+            "links": {
+              "GetBerryFirmnessByName": {
+                "operationId": "getBerryFirmnessByNameOrId",
+                "parameters": {
+                  "itemNameOrId": "$response.body#/firmness.name"
+                },
+                "description": "The `name` field of the `firmness` value returned in the response can be used as the `nameOrId` parameter in `GET /berry-firmness/{nameOrId}`."
+              },
+              "GetBerryItemByName": {
+                "operationId": "getItemByNameOrId",
+                "parameters": {
+                  "itemNameOrId": "$response.body#/item.name"
+                },
+                "description": "The `name` field of the `item` value returned in the response can be used as the `nameOrId` parameter in `GET /item/{nameOrId}`."
+              },
+              "GetTypeByName": {
+                "operationId": "getTypeByNameOrId",
+                "parameters": {
+                  "typeNameOrId": "$response.body#/natural_gift_type.name"
+                },
+                "description": "The `name` field of the `natural_gift_type` value returned in the response can be used as the `nameOrId` parameter in `GET /type/{nameOrId}`."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item/{nameOrId}": {
+      "get": {
+        "operationId": "getItemByNameOrId"
+      }
+    },
+    "/spacecrafts/{spacecraftId}": {
+      "parameters": [
+        {
+          "name": "spacecraftId",
+          "description": "The unique identifier of the spacecraft",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/SpacecraftId"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Read a spacecraft",
+        "responses": {
+          "200": {
+            "description": "The spacecraft corresponding to the provided `spacecraftId`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Spacecraft"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No spacecraft found for the provided `spacecraftId`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "nameOrId": {
+        "name": "nameOrId",
+        "in": "path",
+        "required": true,
+        "description": "The name or unique ID to get.",
+        "schema": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/ResourceId"
+            },
+            {
+              "$ref": "#/components/schemas/ResourceName"
+            }
+          ]
+        }
+      }
+    },
+    "schemas": {
+      "ResourceId": {
+        "type": "integer",
+        "description": "The identifier for this resource."
+      },
+      "ResourceName": {
+        "type": "string",
+        "description": "The name for this resource."
+      },
+      "NamedAPIResource": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the referenced resource.",
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL of the referenced resource.",
+            "type": "string"
+          }
+        }
+      },
+      "NamedAPIResourceList": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "description": "The total number of resources available from this API.",
+            "type": "string"
+          },
+          "next": {
+            "description": "The URL for the next page in the list.",
+            "type": ["string", "null"]
+          },
+          "previous": {
+            "description": "The URL for the previous page in the list.",
+            "type": ["string", "null"]
+          },
+          "results": {
+            "description": "A list of named API resources.",
+            "type": "array",
+            "types": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          }
+        }
+      },
+      "Berry": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "The identifier for this resource."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name for this resource."
+          },
+          "growth_time": {
+            "type": "integer",
+            "description": "Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked."
+          },
+          "max_harvest": {
+            "type": "integer",
+            "description": "The maximum number of these berries that can grow on one tree in Generation IV."
+          },
+          "natural_gift_power": {
+            "type": "integer",
+            "description": "The power of the move \"Natural Gift\" when used with this Berry."
+          },
+          "size": {
+            "type": "integer",
+            "description": "The size of this Berry, in millimeters."
+          },
+        
+          "smoothness": {
+            "type": "integer",
+            "description": "The smoothness of this Berry, used in making Pokéblocks or Poffins."
+          },
+          "soil_dryness": {
+            "type": "integer",
+            "description": "The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly."
+          },
+          "firmness": {
+            "$ref": "#/components/schemas/NamedAPIResource",
+            "description": "The firmness of this berry, used in making Pokéblocks or Poffins."
+          },
+          "flavors": {
+            "type": "array",
+            "description": "A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.",
+            "types": {
+              "$ref": "#/components/schemas/BerryFlavor"
+            }
+          },
+          "item": {
+            "$ref": "#/components/schemas/NamedAPIResource",
+            "description": "Berries are actually items. This is a reference to the item specific data for this berry."
+          },
+          "natural_gift_type": {
+            "$ref": "#/components/schemas/NamedAPIResource",
+            "description": "The type inherited by \"Natural Gift\" when used with this Berry."
+          }
+        }
+      },
+      "BerryFirmness": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "berries": {
+            "description": "A list of the berries with this firmness.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          },
+          "names": {
+            "description": "The name of this resource listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Name"
+            }
+          }
+        }
+      },
+      "BerryFlavorMap": {
+        "type": "object",
+        "properties": {
+          "potency": {
+            "description": "How powerful the referenced flavor is for this berry.",
+            "type": "integer"
+          },
+          "flavor": {
+            "description": "The referenced berry flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Endpoint": {
+        "type": "string",
+        "enum": ["berry"]
+      }
+    },
+    "securitySchemes": {
+      "ApiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Api-Key"
+      }
+    }
+  }
+}
