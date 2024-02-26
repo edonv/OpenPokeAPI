@@ -69,7 +69,7 @@
         }
       ],
       "get": {
-        "operationId": "getBerryByNameOrId",
+        "operationId": "getBerry",
         "responses": {
           "default": {
             "description": "A Berry object.",
@@ -82,21 +82,21 @@
             },
             "links": {
               "GetBerryFirmnessByName": {
-                "operationId": "getBerryFirmnessByNameOrId",
+                "operationId": "getBerryFirmness",
                 "parameters": {
                   "itemNameOrId": "$response.body#/firmness.name"
                 },
                 "description": "The `name` field of the `firmness` value returned in the response can be used as the `nameOrId` parameter in `GET /berry-firmness/{nameOrId}`."
               },
               "GetBerryItemByName": {
-                "operationId": "getItemByNameOrId",
+                "operationId": "getItem",
                 "parameters": {
                   "itemNameOrId": "$response.body#/item.name"
                 },
                 "description": "The `name` field of the `item` value returned in the response can be used as the `nameOrId` parameter in `GET /item/{nameOrId}`."
               },
               "GetTypeByName": {
-                "operationId": "getTypeByNameOrId",
+                "operationId": "getType",
                 "parameters": {
                   "typeNameOrId": "$response.body#/natural_gift_type.name"
                 },
