@@ -39,7 +39,7 @@
     "flavors": {
       "type": "array",
       "description": "A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.",
-      "types": {
+      "items": {
         "$ref": "../../../openapi.json#/components/schemas/BerryFlavorMap"
       }
     },
