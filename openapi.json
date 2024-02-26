@@ -78,7 +78,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Berry"
+                  "$ref": "components/schemas/berries/Berry.json"
                 }
               }
             },
@@ -291,9 +291,6 @@
         "items": {
           "$ref": "#/components/schemas/Name"
         }
-      },
-      "Berry": {
-        "$ref": "./schemas/berries.json#Berry"
       },
       "BerryPotency": {
         "description": "How powerful the referenced flavor is for this berry.",
