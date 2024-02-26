@@ -115,7 +115,7 @@
         }
       ],
       "get": {
-        "operationId": "getBerry",
+        "operationId": "getBerryFirmness",
         "responses": {
           "default": {
             "description": "A Berry object.",
