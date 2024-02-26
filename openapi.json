@@ -142,6 +142,46 @@
         }
       }
     },
+    "/berry-flavor/{nameOrId}": {
+      "description": "Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their [nature](https://pokeapi.co/docs/v2#natures). Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getBerryFlavor",
+        "tags": ["Berries"],
+        "responses": {
+          "200": {
+            "description": "A BerryFlavor object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BerryFlavor"
+                }
+              }
+            },
+            "links": {
+              "GetBerryByName": {
+                "operationId": "getBerry",
+                "parameters": {
+                  "itemNameOrId": "$response.body#/berries.berry.name"
+                },
+                "description": "The `name` field of a `berry` value in the `berries` value returned in the response can be used as the `nameOrId` parameter in `GET /berry/{nameOrId}`."
+              },
+              "GetContestByName": {
+                "operationId": "getContest",
+                "parameters": {
+                  "itemNameOrId": "$response.body#/contest_type"
+                },
+                "description": "The `contest_type` value returned in the response can be used as the `nameOrId` parameter in `GET /contest-type/{nameOrId}`."
+              }
+            }
+          }
+        }
+      }
+    },
     "/item/{nameOrId}": {
       "get": {
         "operationId": "getItemByNameOrId"
@@ -254,6 +294,44 @@
           },
           "names": {
             "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "BerryFlavor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "berries": {
+            "description": "A list of the berries with this flavor.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlavorBerryMap"
+            }
+          },
+          "contest_type": {
+            "description": "The contest type that correlates with this berry flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "FlavorBerryMap": {
+        "type": "object",
+        "properties": {
+          "potency": {
+            "description": "How powerful the referenced flavor is for this berry.",
+            "type": "integer"
+          },
+          "berry": {
+            "description": "The berry with the referenced flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
           }
         }
       },
