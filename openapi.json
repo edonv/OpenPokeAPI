@@ -47,6 +47,7 @@
       ],
       "get": {
         "operationId": "getEndpointList",
+        "tags": ["Resource Lists/Pagination"],
         "responses": {
           "default": {
             "description": "A list of resource items.",
@@ -70,6 +71,7 @@
       ],
       "get": {
         "operationId": "getBerry",
+        "tags": ["Berries"],
         "responses": {
           "default": {
             "description": "A Berry object.",
@@ -116,6 +118,7 @@
       ],
       "get": {
         "operationId": "getBerryFirmness",
+        "tags": ["Berries"],
         "responses": {
           "default": {
             "description": "A Berry object.",
