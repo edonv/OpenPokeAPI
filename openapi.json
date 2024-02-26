@@ -226,6 +226,13 @@
           }
         }
       },
+      "NameList": {
+        "description": "The name of this resource listed in different languages.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Name"
+        }
+      },
       "Berry": {
         "$ref": "./schemas/berries.json#Berry"
       },
@@ -246,11 +253,7 @@
             }
           },
           "names": {
-            "description": "The name of this resource listed in different languages.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Name"
-            }
+            "$ref": "#/components/schemas/NameList"
           }
         }
       },
