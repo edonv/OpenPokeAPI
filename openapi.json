@@ -397,7 +397,7 @@
             "type": "string"
           },
           "color": {
-            "desscription": "The color associated with this contest's name.",
+            "description": "The color associated with this contest's name.",
             "type": "string"
           },
           "language": {
