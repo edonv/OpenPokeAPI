@@ -349,13 +349,6 @@
           "berry", "berry-firmness"
         ]
       }
-    },
-    "securitySchemes": {
-      "ApiKey": {
-        "type": "apiKey",
-        "in": "header",
-        "name": "X-Api-Key"
-      }
     }
   }
 }
