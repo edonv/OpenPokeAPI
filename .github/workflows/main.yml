@@ -21,5 +21,5 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: Install Redocly
-        run: npm i -g @redocly/cli@latest
+        run: npm ci @redocly/cli@latest
       - run: redocly bundle openapi/openapi.json --output dist/openapi.json
