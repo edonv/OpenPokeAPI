@@ -1,0 +1,25 @@
+name: Bundle API
+run-name: ${{ github.actor }} is bundling the API
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  bundle_job:
+    name: Bundle Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup NPM Cache
+        uses: actions/checkout@v4
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install Redocly
+        run: npm i -g @redocly/cli@latest
+      - run: redocly bundle openapi/openapi.json --output dist/openapi.json
