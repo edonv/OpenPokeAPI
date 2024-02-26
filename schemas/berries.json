@@ -3,12 +3,10 @@
     "type": "object",
     "properties": {
       "id": {
-        "type": "integer",
-        "description": "The identifier for this resource."
+        "$ref": "#/components/schemas/ResourceId"
       },
       "name": {
-        "type": "string",
-        "description": "The name for this resource."
+        "$ref": "#/components/schemas/ResourceName"
       },
       "growth_time": {
         "type": "integer",
