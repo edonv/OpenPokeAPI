@@ -121,7 +121,7 @@
         "tags": ["Berries"],
         "responses": {
           "default": {
-            "description": "A Berry object.",
+            "description": "A BerryFirmness object.",
             "content": {
               "application/json": {
                 "schema": {
