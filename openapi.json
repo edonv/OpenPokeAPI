@@ -178,6 +178,19 @@
           }
         }
       },
+      "Name": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The localized name for an API resource in a specific language."
+          },
+          "language": {
+            "$ref": "#/components/schemas/NamedAPIResource",
+            "description": "The language this name is in."
+          }
+        }
+      },
       "Berry": {
         "$ref": "./schemas/berries.json#Berry"
       },
