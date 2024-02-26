@@ -1,0 +1,59 @@
+{
+  "Berry": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "description": "The identifier for this resource."
+      },
+      "name": {
+        "type": "string",
+        "description": "The name for this resource."
+      },
+      "growth_time": {
+        "type": "integer",
+        "description": "Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked."
+      },
+      "max_harvest": {
+        "type": "integer",
+        "description": "The maximum number of these berries that can grow on one tree in Generation IV."
+      },
+      "natural_gift_power": {
+        "type": "integer",
+        "description": "The power of the move \"Natural Gift\" when used with this Berry."
+      },
+      "size": {
+        "type": "integer",
+        "description": "The size of this Berry, in millimeters."
+      },
+
+      "smoothness": {
+        "type": "integer",
+        "description": "The smoothness of this Berry, used in making Pokéblocks or Poffins."
+      },
+      "soil_dryness": {
+        "type": "integer",
+        "description": "The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly."
+      },
+      "firmness": {
+        "$ref": "#/components/schemas/NamedAPIResource",
+        "description": "The firmness of this berry, used in making Pokéblocks or Poffins."
+      },
+      "flavors": {
+        "type": "array",
+        "description": "A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.",
+        "types": {
+          "$ref": "#/components/schemas/BerryFlavor"
+        }
+      },
+      "item": {
+        "$ref": "#/components/schemas/NamedAPIResource",
+        "description": "Berries are actually items. This is a reference to the item specific data for this berry."
+      },
+      "natural_gift_type": {
+        "$ref": "#/components/schemas/NamedAPIResource",
+        "description": "The type inherited by \"Natural Gift\" when used with this Berry."
+      }
+    }
+  }
+}
