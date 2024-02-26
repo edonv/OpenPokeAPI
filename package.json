@@ -1,0 +1,14 @@
+{
+    "name": "pokeapi-bundling",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "scripts": {
+        "build": "redocly bundle openapi/openapi.json --output dist/openapi.json"
+    },
+    "dependencies": {
+        "@redocly/cli": "1.9.1"
+    }
+}
