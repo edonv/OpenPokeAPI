@@ -242,7 +242,7 @@
           "results": {
             "description": "A list of named API resources.",
             "type": "array",
-            "types": {
+            "items": {
               "$ref": "#/components/schemas/NamedAPIResource"
             }
           }
