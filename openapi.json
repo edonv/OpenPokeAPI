@@ -181,6 +181,30 @@
           }
         }
       }
+    },
+    "/contest-type/{nameOrId}": {
+      "description": "Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getContest",
+        "tags": ["Contests"],
+        "responses": {
+          "200": {
+            "description": "A ContestType object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContestName"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -341,6 +365,45 @@
           },
           "berry": {
             "description": "The berry with the referenced flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ContestType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "berry_flavor": {
+            "description": "The berry flavor that correlates with this contest type.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "description": "The name of this contest type listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContestName"
+            }
+          }
+        }
+      },
+      "ContestName": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name for this contest.",
+            "type": "string"
+          },
+          "color": {
+            "desscription": "The color associated with this contest's name.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language that this name is in.",
             "$ref": "#/components/schemas/NamedAPIResource"
           }
         }
