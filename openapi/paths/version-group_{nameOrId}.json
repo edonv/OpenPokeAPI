@@ -1,0 +1,25 @@
+{
+  "summary": "Version Groups",
+  "description": "Version groups categorize highly similar versions of the games.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getVersionGroup",
+    "tags": ["Games"],
+    "responses": {
+      "200": {
+        "description": "A VersionGroup object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/VersionGroup.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

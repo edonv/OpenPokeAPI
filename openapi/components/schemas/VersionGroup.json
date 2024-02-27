@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "order": {
+      "description": "Order for sorting. Almost by date of release, except similar versions are grouped together.",
+      "type": "integer"
+    },
+    "generation": {
+      "description": "The generation this version was introduced in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "move_learn_methods": {
+      "description": "A list of methods in which Pokémon can learn moves in this version group.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "pokedexes": {
+      "description": "A list of Pokédexes introduces in this version group.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "regions": {
+      "description": "A list of regions that can be visited in this version group.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "versions": {
+      "description": "The versions this version group owns.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}
