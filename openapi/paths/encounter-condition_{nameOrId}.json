@@ -13,7 +13,7 @@
     ],
     "responses": {
       "200": {
-        "description": "A EncounterCondition object.",
+        "description": "An EncounterCondition object.",
         "content": {
           "application/json": {
             "schema": {

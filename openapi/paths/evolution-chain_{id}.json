@@ -11,7 +11,7 @@
     "tags": ["Evolution"],
     "responses": {
       "200": {
-        "description": "A EvolutionChain object.",
+        "description": "An EvolutionChain object.",
         "content": {
           "application/json": {
             "schema": {
