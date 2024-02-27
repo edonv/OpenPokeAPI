@@ -19,6 +19,44 @@
   "externalDocs": {
     "url": "https://pokeapi.co/docs/v2"
   },
+  "tags": [
+    {
+      "name": "Resource Lists/Pagination"
+    },
+    {
+      "name": "Berries"
+    },
+    {
+      "name": "Contests"
+    },
+    {
+      "name": "Encounters"
+    },
+    {
+      "name": "Evolution"
+    },
+    {
+      "name": "Games"
+    },
+    {
+      "name": "Items"
+    },
+    {
+      "name": "Locations"
+    },
+    {
+      "name": "Machines"
+    },
+    {
+      "name": "Moves"
+    },
+    {
+      "name": "Pokémon"
+    },
+    {
+      "name": "Utility"
+    }
+  ],
   "paths": {
     "/{endpoint}": {
       "$ref": "paths/{endpoint}.json"
