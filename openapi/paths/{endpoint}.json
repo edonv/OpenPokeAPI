@@ -31,9 +31,7 @@
   ],
   "get": {
     "operationId": "getEndpointList",
-    "tags": [
-      "Resource Lists/Pagination"
-    ],
+    "tags": ["Resource Lists/Pagination"],
     "responses": {
       "200": {
         "description": "A list of resource items.",
