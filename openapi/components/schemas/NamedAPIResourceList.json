@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "count": {
+      "description": "The total number of resources available from this API.",
+      "type": "integer"
+    },
+    "next": {
+      "description": "The URL for the next page in the list.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "previous": {
+      "description": "The URL for the previous page in the list.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "results": {
+      "description": "A list of named API resources.",
+      "type": "array",
+      "items": {
+        "$ref": "./NamedAPIResource.json"
+      }
+    }
+  }
+}

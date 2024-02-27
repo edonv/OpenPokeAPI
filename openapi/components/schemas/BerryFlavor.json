@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "berries": {
+      "description": "A list of the berries with this flavor.",
+      "type": "array",
+      "items": {
+        "$ref": "./FlavorBerryMap.json"
+      }
+    },
+    "contest_type": {
+      "description": "The contest type that correlates with this berry flavor.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}

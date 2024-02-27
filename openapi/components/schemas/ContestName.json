@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name for this contest.",
+      "type": "string"
+    },
+    "color": {
+      "description": "The color associated with this contest's name.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language that this name is in.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

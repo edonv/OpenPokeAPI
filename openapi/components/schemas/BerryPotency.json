@@ -1,0 +1,4 @@
+{
+  "description": "How powerful the referenced flavor is for this berry.",
+  "type": "integer"
+}

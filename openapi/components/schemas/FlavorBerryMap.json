@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "potency": {
+      "$ref": "./BerryPotency.json"
+    },
+    "berry": {
+      "description": "The berry with the referenced flavor.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

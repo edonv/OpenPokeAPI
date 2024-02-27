@@ -1,0 +1,16 @@
+{
+  "name": "nameOrId",
+  "in": "path",
+  "required": true,
+  "description": "The name or unique ID to get.",
+  "schema": {
+    "oneOf": [
+      {
+        "$ref": "../schemas/ResourceId.json"
+      },
+      {
+        "$ref": "../schemas/ResourceName.json"
+      }
+    ]
+  }
+}

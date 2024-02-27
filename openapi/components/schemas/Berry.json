@@ -2,10 +2,10 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "../../../openapi.json#/components/schemas/ResourceId"
+      "$ref": "./ResourceId.json"
     },
     "name": {
-      "$ref": "../../../openapi.json#/components/schemas/ResourceName"
+      "$ref": "./ResourceName.json"
     },
     "growth_time": {
       "type": "integer",
@@ -23,7 +23,6 @@
       "type": "integer",
       "description": "The size of this Berry, in millimeters."
     },
-
     "smoothness": {
       "type": "integer",
       "description": "The smoothness of this Berry, used in making Pokéblocks or Poffins."
@@ -33,22 +32,22 @@
       "description": "The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly."
     },
     "firmness": {
-      "$ref": "../../../openapi.json#/components/schemas/NamedAPIResource",
+      "$ref": "./NamedAPIResource.json",
       "description": "The firmness of this berry, used in making Pokéblocks or Poffins."
     },
     "flavors": {
       "type": "array",
       "description": "A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.",
       "items": {
-        "$ref": "../../../openapi.json#/components/schemas/BerryFlavorMap"
+        "$ref": "./BerryFlavorMap.json"
       }
     },
     "item": {
-      "$ref": "../../../openapi.json#/components/schemas/NamedAPIResource",
+      "$ref": "./NamedAPIResource.json",
       "description": "Berries are actually items. This is a reference to the item specific data for this berry."
     },
     "natural_gift_type": {
-      "$ref": "../../../openapi.json#/components/schemas/NamedAPIResource",
+      "$ref": "./NamedAPIResource.json",
       "description": "The type inherited by \"Natural Gift\" when used with this Berry."
     }
   }

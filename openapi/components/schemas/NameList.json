@@ -1,0 +1,7 @@
+{
+  "description": "The name of this resource listed in different languages.",
+  "type": "array",
+  "items": {
+    "$ref": "./Name.json"
+  }
+}

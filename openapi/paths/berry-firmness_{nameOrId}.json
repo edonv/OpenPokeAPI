@@ -1,0 +1,35 @@
+{
+  "description": "Berries can be soft or hard. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getBerryFirmness",
+    "tags": [
+      "Berries"
+    ],
+    "responses": {
+      "200": {
+        "description": "A BerryFirmness object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/BerryFirmness.json"
+            }
+          }
+        },
+        "links": {
+          "GetBerryByName": {
+            "operationId": "getBerry",
+            "parameters": {
+              "itemNameOrId": "$response.body#/berries.name"
+            },
+            "description": "The `name` field of the `berries` value returned in the response can be used as the `nameOrId` parameter in `GET /berry/{nameOrId}`."
+          }
+        }
+      }
+    }
+  }
+}

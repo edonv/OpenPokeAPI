@@ -1,0 +1,26 @@
+{
+  "description": "Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getContest",
+    "tags": [
+      "Contests"
+    ],
+    "responses": {
+      "200": {
+        "description": "A ContestType object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/ContestType.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
