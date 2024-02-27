@@ -1,4 +1,5 @@
 {
+  "summary": "Named",
   "description": "Calling any API endpoint without a resource ID or name will return a paginated list of available resources for that API. By default, a list \"page\" will contain up to 20 resources. If you would like to change this just add the `limit` query parameter to the request. You can use `offset` to move to the next page or skip resources.",
   "parameters": [
     {
