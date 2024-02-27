@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "values": {
+      "description": "The condition this encounter condition value pertains to.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}

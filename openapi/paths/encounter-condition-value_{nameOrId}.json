@@ -1,0 +1,26 @@
+{
+  "description": "Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getEncounterConditionValue",
+    "tags": [
+      "Encounters"
+    ],
+    "responses": {
+      "200": {
+        "description": "A EncounterConditionValue object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/EncounterConditionValue.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

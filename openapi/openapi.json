@@ -84,6 +84,9 @@
     },
     "/encounter-condition/{nameOrId}": {
       "$ref": "paths/encounter-condition_{nameOrId}.json"
+    },
+    "/encounter-condition-value/{nameOrId}": {
+      "$ref": "paths/encounter-condition-value_{nameOrId}.json"
     }
   }
 }
