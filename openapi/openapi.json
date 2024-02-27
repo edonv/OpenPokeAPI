@@ -34,6 +34,9 @@
     },
     "/contest-type/{nameOrId}": {
       "$ref": "paths/contest-type_{nameOrId}.json"
+    },
+    "/contest-effect/{id}": {
+      "$ref": "paths/contest-effect_{id}.json"
     }
   }
 }

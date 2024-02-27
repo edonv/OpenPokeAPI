@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "appeal": {
+      "description": "The base number of hearts the user of this move gets.",
+      "type": "number"
+    },
+    "jam": {
+      "description": "The base number of hearts the user's opponent loses.",
+      "type": "number"
+    },
+    "effect_entries": {
+      "description": "The result of this contest effect listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./Effect.json"
+      }
+    },
+    "flavor_text_entries": {
+      "description": "The flavor text of this contest effect listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./FlavorText.json"
+      }
+    }
+  }
+}

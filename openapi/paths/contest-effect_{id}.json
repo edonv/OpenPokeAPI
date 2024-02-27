@@ -1,0 +1,24 @@
+{
+  "description": "Contest effects refer to the effects of moves when used in contests.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/id.json"
+    }
+  ],
+  "get": {
+    "operationId": "getContestEffect",
+    "tags": ["Contests"],
+    "responses": {
+      "200": {
+        "description": "A ContestEffect object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/ContestEffect.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
