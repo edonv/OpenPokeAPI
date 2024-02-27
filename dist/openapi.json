@@ -3,7 +3,11 @@
   "info": {
     "version": "2",
     "title": "PokéAPI",
-    "description": "A Pokémon API."
+    "description": "A Pokémon API.",
+    "license": {
+      "name": "BSD-3-Clause",
+      "url": "https://github.com/PokeAPI/pokeapi.co?tab=BSD-3-Clause-1-ov-file"
+    }
   },
   "servers": [
     {
@@ -12,11 +16,50 @@
     }
   ],
   "security": [],
+  "tags": [
+    {
+      "name": "Resource Lists/Pagination"
+    },
+    {
+      "name": "Berries"
+    },
+    {
+      "name": "Contests"
+    },
+    {
+      "name": "Encounters"
+    },
+    {
+      "name": "Evolution"
+    },
+    {
+      "name": "Games"
+    },
+    {
+      "name": "Items"
+    },
+    {
+      "name": "Locations"
+    },
+    {
+      "name": "Machines"
+    },
+    {
+      "name": "Moves"
+    },
+    {
+      "name": "Pokémon"
+    },
+    {
+      "name": "Utility"
+    }
+  ],
   "externalDocs": {
     "url": "https://pokeapi.co/docs/v2"
   },
   "paths": {
     "/{endpoint}": {
+      "summary": "Named",
       "description": "Calling any API endpoint without a resource ID or name will return a paginated list of available resources for that API. By default, a list \"page\" will contain up to 20 resources. If you would like to change this just add the `limit` query parameter to the request. You can use `offset` to move to the next page or skip resources.",
       "parameters": [
         {
@@ -66,6 +109,7 @@
       }
     },
     "/berry/{nameOrId}": {
+      "summary": "Berries",
       "description": "Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
       "parameters": [
         {
@@ -115,6 +159,7 @@
       }
     },
     "/berry-firmness/{nameOrId}": {
+      "summary": "Berry Firmnesses",
       "description": "Berries can be soft or hard. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
       "parameters": [
         {
@@ -150,6 +195,7 @@
       }
     },
     "/berry-flavor/{nameOrId}": {
+      "summary": "Berry Flavors",
       "description": "Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their [nature](https://pokeapi.co/docs/v2#natures). Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.",
       "parameters": [
         {
@@ -192,6 +238,7 @@
       }
     },
     "/contest-type/{nameOrId}": {
+      "summary": "Contest Types",
       "description": "Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.",
       "parameters": [
         {
@@ -216,48 +263,368 @@
           }
         }
       }
-    }
-  },
-  "components": {
-    "parameters": {
-      "nameOrId": {
-        "name": "nameOrId",
-        "in": "path",
-        "required": true,
-        "description": "The name or unique ID to get.",
-        "schema": {
-          "anyOf": [
-            {
-              "$ref": "#/components/schemas/ResourceId"
-            },
-            {
-              "$ref": "#/components/schemas/ResourceName"
+    },
+    "/contest-effect/{id}": {
+      "summary": "Contest Effects",
+      "description": "Contest effects refer to the effects of moves when used in contests.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/id"
+        }
+      ],
+      "get": {
+        "operationId": "getContestEffect",
+        "tags": [
+          "Contests"
+        ],
+        "responses": {
+          "200": {
+            "description": "A ContestEffect object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContestEffect"
+                }
+              }
             }
-          ]
+          }
         }
       }
     },
+    "/super-contest-effect/{id}": {
+      "summary": "Super Contest Effects",
+      "description": "Super contest effects refer to the effects of moves when used in super contests.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/id"
+        }
+      ],
+      "get": {
+        "operationId": "getSuperContestEffect",
+        "tags": [
+          "Contests"
+        ],
+        "responses": {
+          "200": {
+            "description": "A SuperContestEffect object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuperContestEffect"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/encounter-method/{nameOrId}": {
+      "summary": "Encounter Methods",
+      "description": "Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Wild_Pok%C3%A9mon) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getEncounterMethod",
+        "tags": [
+          "Encounters"
+        ],
+        "responses": {
+          "200": {
+            "description": "An EncounterMethod object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EncounterMethod"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/encounter-condition/{nameOrId}": {
+      "summary": "Encounter Conditions",
+      "description": "Conditions which affect what pokemon might appear in the wild, e.g., day or night.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getEncounterCondition",
+        "tags": [
+          "Encounters"
+        ],
+        "responses": {
+          "200": {
+            "description": "An EncounterCondition object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EncounterCondition"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/encounter-condition-value/{nameOrId}": {
+      "summary": "Encounter Condition Values",
+      "description": "Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getEncounterConditionValue",
+        "tags": [
+          "Encounters"
+        ],
+        "responses": {
+          "200": {
+            "description": "An EncounterConditionValue object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EncounterConditionValue"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/evolution-chain/{id}": {
+      "summary": "Evolution Chains",
+      "description": "Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/id"
+        }
+      ],
+      "get": {
+        "operationId": "getEvolutionChain",
+        "tags": [
+          "Evolution"
+        ],
+        "responses": {
+          "200": {
+            "description": "An EvolutionChain object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvolutionChain"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/evolution-trigger/{nameOrId}": {
+      "summary": "Evolution Triggers",
+      "description": "Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getEvolutionTrigger",
+        "tags": [
+          "Evolution"
+        ],
+        "responses": {
+          "200": {
+            "description": "An EvolutionTrigger object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvolutionTrigger"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/generation/{nameOrId}": {
+      "summary": "Generations",
+      "description": "A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getGeneration",
+        "tags": [
+          "Games"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Generation object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Generation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokedex/{nameOrId}": {
+      "summary": "Pokedexes",
+      "description": "A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokedex",
+        "tags": [
+          "Games"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Pokedex object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pokedex"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/version/{nameOrId}": {
+      "summary": "Version",
+      "description": "Versions of the games, e.g., Red, Blue or Yellow.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getVersion",
+        "tags": [
+          "Games"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Version object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Version"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/version-group/{nameOrId}": {
+      "summary": "Version Groups",
+      "description": "Version groups categorize highly similar versions of the games.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getVersionGroup",
+        "tags": [
+          "Games"
+        ],
+        "responses": {
+          "200": {
+            "description": "A VersionGroup object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionGroup"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item/{nameOrId}": {
+      "summary": "Item",
+      "description": "An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getItem",
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Item object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
     "schemas": {
-      "ResourceId": {
-        "type": "integer",
-        "description": "The identifier for this resource."
-      },
-      "ResourceName": {
+      "Endpoint": {
         "type": "string",
-        "description": "The name for this resource."
+        "enum": [
+          "berry",
+          "berry-firmness",
+          "berry-flavor",
+          "contest-type",
+          "contest-effect"
+        ]
       },
-      "NamedAPIResource": {
+      "APIResource": {
         "type": "object",
         "properties": {
-          "name": {
-            "description": "The name of the referenced resource.",
-            "type": "string"
-          },
           "url": {
             "description": "The URL of the referenced resource.",
             "type": "string"
           }
         }
+      },
+      "NamedAPIResource": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "The name of the referenced resource.",
+                "type": "string"
+              }
+            }
+          },
+          {
+            "$ref": "#/components/schemas/APIResource"
+          }
+        ]
       },
       "NamedAPIResourceList": {
         "type": "object",
@@ -289,25 +656,13 @@
           }
         }
       },
-      "Name": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The localized name for an API resource in a specific language."
-          },
-          "language": {
-            "$ref": "#/components/schemas/NamedAPIResource",
-            "description": "The language this name is in."
-          }
-        }
+      "ResourceId": {
+        "type": "integer",
+        "description": "The identifier for this resource."
       },
-      "NameList": {
-        "description": "The name of this resource listed in different languages.",
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Name"
-        }
+      "ResourceName": {
+        "type": "string",
+        "description": "The name for this resource."
       },
       "BerryPotency": {
         "description": "How powerful the referenced flavor is for this berry.",
@@ -324,110 +679,6 @@
             "$ref": "#/components/schemas/NamedAPIResource"
           }
         }
-      },
-      "BerryFirmness": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "name": {
-            "$ref": "#/components/schemas/ResourceName"
-          },
-          "berries": {
-            "description": "A list of the berries with this firmness.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NamedAPIResource"
-            }
-          },
-          "names": {
-            "$ref": "#/components/schemas/NameList"
-          }
-        }
-      },
-      "BerryFlavor": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "name": {
-            "$ref": "#/components/schemas/ResourceName"
-          },
-          "berries": {
-            "description": "A list of the berries with this flavor.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FlavorBerryMap"
-            }
-          },
-          "contest_type": {
-            "description": "The contest type that correlates with this berry flavor.",
-            "$ref": "#/components/schemas/NamedAPIResource"
-          },
-          "names": {
-            "$ref": "#/components/schemas/NameList"
-          }
-        }
-      },
-      "FlavorBerryMap": {
-        "type": "object",
-        "properties": {
-          "potency": {
-            "$ref": "#/components/schemas/BerryPotency"
-          },
-          "berry": {
-            "description": "The berry with the referenced flavor.",
-            "$ref": "#/components/schemas/NamedAPIResource"
-          }
-        }
-      },
-      "ContestType": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "name": {
-            "$ref": "#/components/schemas/ResourceName"
-          },
-          "berry_flavor": {
-            "description": "The berry flavor that correlates with this contest type.",
-            "$ref": "#/components/schemas/NamedAPIResource"
-          },
-          "names": {
-            "description": "The name of this contest type listed in different languages.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ContestName"
-            }
-          }
-        }
-      },
-      "ContestName": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name for this contest.",
-            "type": "string"
-          },
-          "color": {
-            "description": "The color associated with this contest's name.",
-            "type": "string"
-          },
-          "language": {
-            "description": "The language that this name is in.",
-            "$ref": "#/components/schemas/NamedAPIResource"
-          }
-        }
-      },
-      "Endpoint": {
-        "type": "string",
-        "enum": [
-          "berry",
-          "berry-firmness"
-        ]
       },
       "Berry": {
         "type": "object",
@@ -481,6 +732,887 @@
             "$ref": "#/components/schemas/NamedAPIResource",
             "description": "The type inherited by \"Natural Gift\" when used with this Berry."
           }
+        }
+      },
+      "Name": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The localized name for an API resource in a specific language."
+          },
+          "language": {
+            "$ref": "#/components/schemas/NamedAPIResource",
+            "description": "The language this name is in."
+          }
+        }
+      },
+      "NameList": {
+        "description": "The name of this resource listed in different languages.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Name"
+        }
+      },
+      "BerryFirmness": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "berries": {
+            "description": "A list of the berries with this firmness.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "FlavorBerryMap": {
+        "type": "object",
+        "properties": {
+          "potency": {
+            "$ref": "#/components/schemas/BerryPotency"
+          },
+          "berry": {
+            "description": "The berry with the referenced flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "BerryFlavor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "berries": {
+            "description": "A list of the berries with this flavor.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlavorBerryMap"
+            }
+          },
+          "contest_type": {
+            "description": "The contest type that correlates with this berry flavor.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "ContestName": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name for this contest.",
+            "type": "string"
+          },
+          "color": {
+            "description": "The color associated with this contest's name.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language that this name is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ContestType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "berry_flavor": {
+            "description": "The berry flavor that correlates with this contest type.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "description": "The name of this contest type listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContestName"
+            }
+          }
+        }
+      },
+      "Effect": {
+        "type": "object",
+        "properties": {
+          "effect": {
+            "description": "The localized effect text for an API resource in a specific language.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this effect is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "FlavorText": {
+        "type": "object",
+        "properties": {
+          "flavor_text": {
+            "description": "The localized flavor text for an API resource in a specific language. Note that this text is left unprocessed as it is found in game files. This means that it contains special characters that one might want to replace with their visible decodable version. Please check out this [issue](https://github.com/veekun/pokedex/issues/218#issuecomment-339841781) to find out more.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this name is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version": {
+            "description": "The game version this flavor text is extracted from.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ContestEffect": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "appeal": {
+            "description": "The base number of hearts the user of this move gets.",
+            "type": "integer"
+          },
+          "jam": {
+            "description": "The base number of hearts the user's opponent loses.",
+            "type": "integer"
+          },
+          "effect_entries": {
+            "description": "The result of this contest effect listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Effect"
+            }
+          },
+          "flavor_text_entries": {
+            "description": "The flavor text of this contest effect listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlavorText"
+            }
+          }
+        }
+      },
+      "SuperContestEffect": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "appeal": {
+            "description": "The level of appeal this super contest effect has.",
+            "type": "integer"
+          },
+          "flavor_text_entries": {
+            "description": "The flavor text of this super contest effect listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlavorText"
+            }
+          },
+          "moves": {
+            "description": "A list of moves that have the effect when used in super contests.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          }
+        }
+      },
+      "EncounterMethod": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "order": {
+            "description": "A good value for sorting.",
+            "type": "integer"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "EncounterCondition": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "values": {
+            "description": "A list of possible values for this encounter condition.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "EncounterConditionValue": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "values": {
+            "description": "The condition this encounter condition value pertains to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "EvolutionDetail": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "description": "The item required to cause evolution this into Pokémon species.",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "trigger": {
+            "description": "The type of event that triggers evolution into this Pokémon species.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "gender": {
+            "description": "The id of the gender of the evolving Pokémon species must be in order to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer",
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          "held_item": {
+            "description": "The item the evolving Pokémon species must be holding during the evolution trigger event to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "known_move": {
+            "description": "The move that must be known by the evolving Pokémon species during the evolution trigger event in order to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "known_move_type": {
+            "description": "The evolving Pokémon species must know a move with this type during the evolution trigger event in order to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "location": {
+            "description": "The location the evolution must be triggered at.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "min_level": {
+            "description": "The minimum required level of the evolving Pokémon species to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "min_happiness": {
+            "description": "The minimum required level of happiness the evolving Pokémon species to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "min_beauty": {
+            "description": "The minimum required level of beauty the evolving Pokémon species to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "min_affection": {
+            "description": "The minimum required level of affection the evolving Pokémon species to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "needs_overworld_rain": {
+            "description": "Whether or not it must be raining in the overworld to cause evolution this Pokémon species.",
+            "type": "boolean"
+          },
+          "party_species": {
+            "description": "The Pokémon species that must be in the players party in order for the evolving Pokémon species to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "party_type": {
+            "description": "The player must have a Pokémon of this type in their party during the evolution trigger event in order for the evolving Pokémon species to evolve into this Pokémon species.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "relative_physical_stats": {
+            "description": "The required relation between the Pokémon's Attack and Defense stats. `1` means Attack > Defense. `0` means Attack = Defense. `-1` means Attack < Defense.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer",
+                "enum": [
+                  -1,
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          "time_of_day": {
+            "description": "The required time of day. Day or night.",
+            "type": "string",
+            "enum": [
+              "day",
+              "night",
+              ""
+            ]
+          },
+          "trade_species": {
+            "description": "Pokémon species for which this one must be traded.",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
+          },
+          "turn_upside_down": {
+            "description": "Whether or not the 3DS needs to be turned upside-down as this Pokémon levels up.",
+            "type": "boolean"
+          }
+        }
+      },
+      "ChainLink": {
+        "type": "object",
+        "properties": {
+          "is_baby": {
+            "description": "Whether or not this link is for a baby Pokémon. This would only ever be true on the base link.",
+            "type": "boolean"
+          },
+          "species": {
+            "description": "The Pokémon species at this point in the evolution chain.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "evolution_details": {
+            "description": "All details regarding the specific details of the referenced Pokémon species evolution.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvolutionDetail"
+            }
+          },
+          "evolves_to": {
+            "description": "A List of chain objects.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChainLink"
+            }
+          }
+        }
+      },
+      "EvolutionChain": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "baby_trigger_item": {
+            "description": "The item that a Pokémon would be holding when mating that would trigger the egg hatching a baby Pokémon rather than a basic Pokémon.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "chain": {
+            "description": "The base chain link object. Each link contains evolution details for a Pokémon in the chain. Each link references the next Pokémon in the natural evolution order.",
+            "$ref": "#/components/schemas/ChainLink"
+          }
+        }
+      },
+      "EvolutionTrigger": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_species": {
+            "description": "A list of pokemon species that result from this evolution trigger.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "Generation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "abilities": {
+            "description": "A list of abilities that were introduced in this generation.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "main_region": {
+            "description": "The main region travelled in this generation.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "moves": {
+            "description": "A list of moves that were introduced in this generation.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "pokemon_species": {
+            "description": "A list of pokemon species that result from this evolution trigger.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "types": {
+            "description": "A list of types that were introduced in this generation.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "version_groups": {
+            "description": "A list of version groups that were introduced in this generation.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "Description": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "description": "The localized description for an API resource in a specific language.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this description is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "DescriptionList": {
+        "description": "The description of this resource listed in different languages.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Description"
+        }
+      },
+      "PokemonEntry": {
+        "type": "object",
+        "properties": {
+          "entry_number": {
+            "description": "The index of this Pokémon species entry within the Pokédex.",
+            "type": "integer"
+          },
+          "pokemon_species": {
+            "description": "The Pokémon species being encountered.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Pokedex": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "is_main_series": {
+            "description": "Whether or not this Pokédex originated in the main series of the video games.",
+            "type": "boolean"
+          },
+          "descriptions": {
+            "$ref": "#/components/schemas/DescriptionList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_entries": {
+            "description": "A list of Pokémon catalogued in this Pokédex and their indexes.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonEntry"
+            }
+          },
+          "region": {
+            "description": "The region this Pokédex catalogues Pokémon for.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_groups": {
+            "description": "A list of version groups this Pokédex is relevant to.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "Version": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "version_group": {
+            "description": "The version group this version belongs to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "VersionGroup": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "order": {
+            "description": "Order for sorting. Almost by date of release, except similar versions are grouped together.",
+            "type": "integer"
+          },
+          "generation": {
+            "description": "The generation this version was introduced in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "move_learn_methods": {
+            "description": "A list of methods in which Pokémon can learn moves in this version group.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "pokedexes": {
+            "description": "A list of Pokédexes introduces in this version group.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "regions": {
+            "description": "A list of regions that can be visited in this version group.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "versions": {
+            "description": "The versions this version group owns.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "VerboseEffect": {
+        "type": "object",
+        "properties": {
+          "effect": {
+            "description": "The localized effect text for an API resource in a specific language.",
+            "type": "string"
+          },
+          "short_effect": {
+            "description": "The localized effect text in brief.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this effect is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "VerboseEffectList": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/VerboseEffect"
+        }
+      },
+      "VersionGroupFlavorText": {
+        "type": "object",
+        "properties": {
+          "flavor_text": {
+            "description": "The localized flavor text for an API resource in a specific language. Note that this text is left unprocessed as it is found in game files. This means that it contains special characters that one might want to replace with their visible decodable version. Please check out this [issue](https://github.com/veekun/pokedex/issues/218#issuecomment-339841781) to find out more.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this name is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group": {
+            "description": "The version group which uses this flavor text.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "GenerationGameIndex": {
+        "type": "object",
+        "properties": {
+          "game_index": {
+            "description": "The internal id of an API resource within game data.",
+            "type": "integer"
+          },
+          "generation": {
+            "description": "The generation relevent to this game index.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ItemSprites": {
+        "type": "object",
+        "properties": {
+          "default": {
+            "description": "The default depiction of this item.",
+            "type": "string"
+          }
+        }
+      },
+      "ItemHolderPokemonVersionDetail": {
+        "type": "object",
+        "properties": {
+          "rarity": {
+            "description": "How often this Pokémon holds this item in this version.",
+            "type": "integer"
+          },
+          "version": {
+            "description": "The version that this item is held in by the Pokémon.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ItemHolderPokemon": {
+        "type": "object",
+        "properties": {
+          "pokemon": {
+            "description": "The Pokémon that holds this item.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_details": {
+            "description": "The details for the version that this item is held in by the Pokémon.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemHolderPokemonVersionDetail"
+            }
+          }
+        }
+      },
+      "MachineVersionDetail": {
+        "type": "object",
+        "properties": {
+          "machine": {
+            "description": "The machine that teaches a move from an item.",
+            "$ref": "#/components/schemas/APIResource"
+          },
+          "version_group": {
+            "description": "The version group of this specific machine.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Item": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "cost": {
+            "description": "The price of this item in stores.",
+            "type": "integer"
+          },
+          "fling_power": {
+            "description": "The power of the move Fling when used with this item.",
+            "type": "integer"
+          },
+          "fling_effect": {
+            "description": "The effect of the move Fling when used with this item.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "attributes": {
+            "description": "A list of attributes this item has.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "category": {
+            "description": "The category of items this item falls into.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "effect_entries": {
+            "description": "The effect of this ability listed in different languages.",
+            "$ref": "#/components/schemas/VerboseEffectList"
+          },
+          "flavor_text_entries": {
+            "description": "The flavor text of this ability listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VersionGroupFlavorText"
+            }
+          },
+          "game_indices": {
+            "description": "A list of game indices relevent to this item by generation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenerationGameIndex"
+            }
+          },
+          "names": {
+            "description": "The name of this item listed in different languages.",
+            "$ref": "#/components/schemas/NameList"
+          },
+          "sprites": {
+            "description": "A set of sprites used to depict this item in the game.",
+            "$ref": "#/components/schemas/ItemSprites"
+          },
+          "held_by_pokemon": {
+            "description": "A list of Pokémon that might be found in the wild holding this item.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemHolderPokemon"
+            }
+          },
+          "baby_trigger_for": {
+            "description": "An evolution chain this item requires to produce a bay during mating.",
+            "$ref": "#/components/schemas/APIResource"
+          },
+          "machines": {
+            "description": "A list of the machines related to this item.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MachineVersionDetail"
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "nameOrId": {
+        "name": "nameOrId",
+        "in": "path",
+        "required": true,
+        "description": "The name or unique ID to get.",
+        "schema": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/ResourceId"
+            },
+            {
+              "$ref": "#/components/schemas/ResourceName"
+            }
+          ]
+        }
+      },
+      "id": {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "description": "The name or unique ID to get.",
+        "schema": {
+          "$ref": "#/components/schemas/ResourceId"
         }
       }
     }
