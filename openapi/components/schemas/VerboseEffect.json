@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "effect": {
+      "description": "The localized effect text for an API resource in a specific language.",
+      "type": "string"
+    },
+    "short_effect": {
+      "description": "The localized effect text in brief.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language this effect is in.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

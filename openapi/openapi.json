@@ -105,6 +105,9 @@
     },
     "/version-group/{nameOrId}": {
       "$ref": "paths/version-group_{nameOrId}.json"
+    },
+    "/item/{nameOrId}": {
+      "$ref": "paths/item_{nameOrId}.json"
     }
   }
 }

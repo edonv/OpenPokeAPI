@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "cost": {
+      "description": "The price of this item in stores.",
+      "type": "integer"
+    },
+    "fling_power": {
+      "description": "The power of the move Fling when used with this item.",
+      "type": "integer"
+    },
+    "fling_effect": {
+      "description": "The effect of the move Fling when used with this item.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "attributes": {
+      "description": "A list of attributes this item has.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "category": {
+      "description": "The category of items this item falls into.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "effect_entries": {
+      "description": "The effect of this ability listed in different languages.",
+      "$ref": "./VerboseEffectList.json"
+    },
+    "flavor_text_entries": {
+      "description": "The flavor text of this ability listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./VersionGroupFlavorText.json"
+      }
+    },
+    "game_indices": {
+      "description": "A list of game indices relevent to this item by generation.",
+      "type": "array",
+      "items": {
+        "$ref": "./GenerationGameIndex.json"
+      }
+    },
+    "names": {
+      "description": "The name of this item listed in different languages.",
+      "$ref": "./NameList.json"
+    },
+    "sprites": {
+      "description": "A set of sprites used to depict this item in the game.",
+      "$ref": "./ItemSprites.json"
+    },
+    "held_by_pokemon": {
+      "description": "A list of Pokémon that might be found in the wild holding this item.",
+      "type": "array",
+      "items": {
+        "$ref": "./ItemHolderPokemon.json"
+      }
+    },
+    "baby_trigger_for": {
+      "description": "An evolution chain this item requires to produce a bay during mating.",
+      "$ref": "./APIResource.json"
+    },
+    "machines": {
+      "description": "A list of the machines related to this item.",
+      "type": "array",
+      "items": {
+        "$ref": "./MachineVersionDetail.json"
+      }
+    }
+  }
+}

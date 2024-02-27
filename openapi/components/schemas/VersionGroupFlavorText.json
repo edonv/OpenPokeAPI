@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "flavor_text": {
+      "description": "The localized flavor text for an API resource in a specific language. Note that this text is left unprocessed as it is found in game files. This means that it contains special characters that one might want to replace with their visible decodable version. Please check out this [issue](https://github.com/veekun/pokedex/issues/218#issuecomment-339841781) to find out more.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language this name is in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_group": {
+      "description": "The version group which uses this flavor text.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "game_index": {
+      "description": "The internal id of an API resource within game data.",
+      "type": "integer"
+    },
+    "generation": {
+      "description": "The generation relevent to this game index.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "default": {
+      "description": "The default depiction of this item.",
+      "type": "string"
+    }
+  }
+}

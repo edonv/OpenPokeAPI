@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "rarity": {
+      "description": "How often this Pokémon holds this item in this version.",
+      "type": "integer"
+    },
+    "version": {
+      "description": "The version that this item is held in by the Pokémon.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "Item",
+  "description": "An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getItem",
+    "tags": ["Item"],
+    "responses": {
+      "200": {
+        "description": "A Item object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Item.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "pokemon": {
+      "description": "The Pokémon that holds this item.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_details": {
+      "description": "The details for the version that this item is held in by the Pokémon.",
+      "type": "array",
+      "items": {
+        "$ref": "./ItemHolderPokemonVersionDetail.json"
+      }
+    }
+  }
+}
