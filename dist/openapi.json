@@ -572,7 +572,7 @@
       "get": {
         "operationId": "getItem",
         "tags": [
-          "Item"
+          "Items"
         ],
         "responses": {
           "200": {
@@ -599,7 +599,7 @@
       "get": {
         "operationId": "getItemAttribute",
         "tags": [
-          "Item"
+          "Items"
         ],
         "responses": {
           "200": {
@@ -626,7 +626,7 @@
       "get": {
         "operationId": "getItemCategory",
         "tags": [
-          "Item"
+          "Items"
         ],
         "responses": {
           "200": {
@@ -653,7 +653,7 @@
       "get": {
         "operationId": "getItemFlingEffect",
         "tags": [
-          "Item"
+          "Items"
         ],
         "responses": {
           "200": {
@@ -662,6 +662,60 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ItemFlingEffect"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-pocket/{nameOrId}": {
+      "summary": "Item Pockets",
+      "description": "Pockets within the players bag used for storing items by category.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getItemPocket",
+        "tags": [
+          "Items"
+        ],
+        "responses": {
+          "200": {
+            "description": "An ItemPocket object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemPocket"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/location/{nameOrId}": {
+      "summary": "Locations",
+      "description": "Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getLocation",
+        "tags": [
+          "Items"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Location object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Location"
                 }
               }
             }
@@ -1733,6 +1787,53 @@
           },
           "items": {
             "description": "A list of items that have this fling effect.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "ItemPocket": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "categories": {
+            "description": "A list of item categories that are relevant to this item pocket.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "Location": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "region": {
+            "description": "The region this location can be found in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "game_indices": {
+            "description": "A list of game indices relevent to this location by generation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenerationGameIndex"
+            }
+          },
+          "areas": {
+            "description": "Areas that can be found within this location.",
             "$ref": "#/components/schemas/NamedAPIResourceList"
           }
         }
