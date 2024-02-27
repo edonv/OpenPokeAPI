@@ -15,4 +15,4 @@ rules:
   no-enum-type-mismatch: error
   no-identical-paths: error
   no-ambiguous-paths: error
-    
+telemetry: off
