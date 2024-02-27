@@ -1,0 +1,25 @@
+{
+  "summary": "Item Categories",
+  "description": "Item categories determine where items will be placed in the players bag.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getItemCategory",
+    "tags": ["Item"],
+    "responses": {
+      "200": {
+        "description": "An ItemCategory object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/ItemCategory.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

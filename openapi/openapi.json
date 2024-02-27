@@ -111,6 +111,9 @@
     },
     "/item-attribute/{nameOrId}": {
       "$ref": "paths/item-attribute_{nameOrId}.json"
+    },
+    "/item-category/{nameOrId}": {
+      "$ref": "paths/item-category_{nameOrId}.json"
     }
   }
 }
