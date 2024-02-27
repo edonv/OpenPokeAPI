@@ -1,0 +1,26 @@
+{
+  "description": "Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Wild_Pok%C3%A9mon) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getEncounterMethod",
+    "tags": [
+      "Encounters"
+    ],
+    "responses": {
+      "200": {
+        "description": "A EncounterMethod object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/EncounterMethod.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

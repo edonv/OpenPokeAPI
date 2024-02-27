@@ -78,6 +78,9 @@
     },
     "/super-contest-effect/{id}": {
       "$ref": "paths/super-contest-effect_{id}.json"
+    },
+    "/encounter-method/{nameOrId}": {
+      "$ref": "paths/encounter-method_{nameOrId}.json"
     }
   }
 }

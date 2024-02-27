@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "order": {
+      "description": "A good value for sorting.",
+      "type": "integer"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}
