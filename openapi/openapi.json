@@ -96,6 +96,9 @@
     },
     "/generation/{nameOrId}": {
       "$ref": "paths/generation_{nameOrId}.json"
+    },
+    "/pokedex/{nameOrId}": {
+      "$ref": "paths/pokedex_{nameOrId}.json"
     }
   }
 }

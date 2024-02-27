@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "description": {
+      "description": "The localized description for an API resource in a specific language.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language this description is in.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

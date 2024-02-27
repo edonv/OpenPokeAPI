@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "is_main_series": {
+      "description": "Whether or not this Pokédex originated in the main series of the video games.",
+      "type": "boolean"
+    },
+    "descriptions": {
+      "$ref": "./DescriptionList.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "pokemon_entries": {
+      "description": "A list of Pokémon catalogued in this Pokédex and their indexes.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonEntry.json"
+      }
+    },
+    "region": {
+      "description": "The region this Pokédex catalogues Pokémon for.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_groups": {
+      "description": "A list of version groups this Pokédex is relevant to.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}
