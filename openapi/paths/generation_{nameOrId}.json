@@ -1,0 +1,25 @@
+{
+  "summary": "Generations",
+  "description": "A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getGeneration",
+    "tags": ["Games"],
+    "responses": {
+      "200": {
+        "description": "A Generation object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Generation.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

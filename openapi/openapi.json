@@ -93,6 +93,9 @@
     },
     "/evolution-trigger/{nameOrId}": {
       "$ref": "paths/evolution-trigger_{nameOrId}.json"
+    },
+    "/generation/{nameOrId}": {
+      "$ref": "paths/generation_{nameOrId}.json"
     }
   }
 }
