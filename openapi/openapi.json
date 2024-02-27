@@ -75,6 +75,9 @@
     },
     "/contest-effect/{id}": {
       "$ref": "paths/contest-effect_{id}.json"
+    },
+    "/super-contest-effect/{id}": {
+      "$ref": "paths/super-contest-effect_{id}.json"
     }
   }
 }

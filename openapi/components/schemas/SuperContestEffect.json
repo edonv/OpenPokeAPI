@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "appeal": {
+      "description": "The level of appeal this super contest effect has.",
+      "type": "integer"
+    },
+    "flavor_text_entries": {
+      "description": "The flavor text of this super contest effect listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./FlavorText.json"
+      }
+    },
+    "moves": {
+      "description": "A list of moves that have the effect when used in super contests.",
+      "type": "array",
+      "items": {
+        "$ref": "./NamedAPIResource.json"
+      }
+    }
+  }
+}
