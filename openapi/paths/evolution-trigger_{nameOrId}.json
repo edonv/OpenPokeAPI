@@ -1,0 +1,25 @@
+{
+  "summary": "Evolution Triggers",
+  "description": "Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getEvolutionTrigger",
+    "tags": ["Evolution"],
+    "responses": {
+      "200": {
+        "description": "An EvolutionTrigger object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/EvolutionTrigger.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
