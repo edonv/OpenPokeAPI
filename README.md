@@ -14,3 +14,4 @@ In the `openapi` folder, is the spec broken down into separate files for easier 
 
 - [ ] Finish fixing the GitHub Action that runs the Redocly CLI `bundle` command.
 - [ ] Figure out how to standardize custom OpenAPI fields for specifying the endpoint each `NamedAPIResource`/`NamedAPIResourceList` would point to.
+    - This would normally would use `links` field on `path` objects.
