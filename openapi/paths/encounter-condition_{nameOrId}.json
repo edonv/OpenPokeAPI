@@ -1,0 +1,26 @@
+{
+  "description": "Conditions which affect what pokemon might appear in the wild, e.g., day or night.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getEncounterCondition",
+    "tags": [
+      "Encounters"
+    ],
+    "responses": {
+      "200": {
+        "description": "A EncounterCondition object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/EncounterCondition.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
