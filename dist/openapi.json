@@ -576,11 +576,92 @@
         ],
         "responses": {
           "200": {
-            "description": "A Item object.",
+            "description": "An Item object.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Item"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-attribute/{nameOrId}": {
+      "summary": "Item Attributes",
+      "description": "Item attributes define particular aspects of items, e.g. \"usable in battle\" or \"consumable\".",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getItemAttribute",
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "An ItemAttribute object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemAttribute"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-category/{nameOrId}": {
+      "summary": "Item Categories",
+      "description": "Item categories determine where items will be placed in the players bag.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getItemCategory",
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "An ItemCategory object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemCategory"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-fling-effect/{nameOrId}": {
+      "summary": "Item Fling Effects",
+      "description": "The various effects of the move \"Fling\" when used with different items.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getItemFlingEffect",
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "An ItemFlingEffect object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFlingEffect"
                 }
               }
             }
@@ -1585,6 +1666,74 @@
             "items": {
               "$ref": "#/components/schemas/MachineVersionDetail"
             }
+          }
+        }
+      },
+      "ItemAttribute": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "items": {
+            "description": "A list of items that have this attribute.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "description": "The name of this item attribute listed in different languages.",
+            "$ref": "#/components/schemas/NameList"
+          },
+          "descriptions": {
+            "description": "The description of this item attribute listed in different languages.",
+            "$ref": "#/components/schemas/DescriptionList"
+          }
+        }
+      },
+      "ItemCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "items": {
+            "description": "A list of items that are a part of this category.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "description": "The name of this item category listed in different languages.",
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pocket": {
+            "description": "The pocket items in this category would be put in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ItemFlingEffect": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "effect_entries": {
+            "description": "The result of this fling effect listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Effect"
+            }
+          },
+          "items": {
+            "description": "A list of items that have this fling effect.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
           }
         }
       }
