@@ -1,0 +1,24 @@
+{
+  "description": "Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/id.json"
+    }
+  ],
+  "get": {
+    "operationId": "getEvolutionChain",
+    "tags": ["Evolution"],
+    "responses": {
+      "200": {
+        "description": "A EvolutionChain object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/EvolutionChain.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

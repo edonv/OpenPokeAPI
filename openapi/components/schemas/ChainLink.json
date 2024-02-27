@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "is_baby": {
+      "description": "Whether or not this link is for a baby Pokémon. This would only ever be true on the base link.",
+      "type": "boolean"
+    },
+    "species": {
+      "description": "The Pokémon species at this point in the evolution chain.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "evolution_details": {
+      "description": "All details regarding the specific details of the referenced Pokémon species evolution.",
+      "type": "array",
+      "items": {
+        "$ref": "./EvolutionDetail.json"
+      }
+    },
+    "evolves_to": {
+      "description": "A List of chain objects.",
+      "type": "array",
+      "items": {
+        "$ref": "./ChainLink.json"
+      }
+    }
+  }
+}

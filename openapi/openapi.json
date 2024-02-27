@@ -87,6 +87,9 @@
     },
     "/encounter-condition-value/{nameOrId}": {
       "$ref": "paths/encounter-condition-value_{nameOrId}.json"
+    },
+    "/evolution-chain/{id}": {
+      "$ref": "paths/evolution-chain_{id}.json"
     }
   }
 }
