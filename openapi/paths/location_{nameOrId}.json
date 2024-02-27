@@ -1,0 +1,25 @@
+{
+  "summary": "Locations",
+  "description": "Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getLocation",
+    "tags": ["Items"],
+    "responses": {
+      "200": {
+        "description": "A Location object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Location.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

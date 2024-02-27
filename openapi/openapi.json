@@ -96,6 +96,9 @@
     },
     "/item-pocket/{nameOrId}": {
       "$ref": "paths/item-pocket_{nameOrId}.json"
+    },
+    "/location/{nameOrId}": {
+      "$ref": "paths/location_{nameOrId}.json"
     }
   }
 }

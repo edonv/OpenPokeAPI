@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "region": {
+      "description": "The region this location can be found in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "game_indices": {
+      "description": "A list of game indices relevent to this location by generation.",
+      "type": "array",
+      "items": {
+        "$ref": "./GenerationGameIndex.json"
+      }
+    },
+    "areas": {
+      "description": "Areas that can be found within this location.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}
