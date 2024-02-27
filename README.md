@@ -1,5 +1,9 @@
 # OpenPokéAPI
 
+![Static Badge](https://img.shields.io/badge/OpenAPI-v3.1-%236BA539?logo=openapiinitiative)
+![Static Badge](https://img.shields.io/badge/Pok%C3%A9API-v2-%23ef5350?logo=pokemon&link=https%3A%2F%2Fpokeapi.co%2Fdocs%2Fv2)
+![GitHub License](https://img.shields.io/github/license/PokeAPI/pokeapi)
+
 `OpenPokéAPI` is an OpenAPI 3.1 spec for [PokéAPI](https://pokeapi.co/) ([GitHub](https://github.com/PokeAPI)).
 
 ## Repo Contents
