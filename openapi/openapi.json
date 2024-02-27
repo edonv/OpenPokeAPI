@@ -3,7 +3,11 @@
   "info": {
     "version": "2",
     "title": "PokéAPI",
-    "description": "A Pokémon API."
+    "description": "A Pokémon API.",
+    "license": {
+      "name": "BSD-3-Clause",
+      "url": "https://github.com/PokeAPI/pokeapi.co?tab=BSD-3-Clause-1-ov-file"
+    }
   },
   "servers": [
     {
