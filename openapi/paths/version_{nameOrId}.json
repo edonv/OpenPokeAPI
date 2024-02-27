@@ -1,0 +1,25 @@
+{
+  "summary": "Version",
+  "description": "Versions of the games, e.g., Red, Blue or Yellow.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getVersion",
+    "tags": ["Games"],
+    "responses": {
+      "200": {
+        "description": "A Version object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Version.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

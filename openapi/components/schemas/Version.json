@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "version_group": {
+      "description": "The version group this version belongs to.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

@@ -99,6 +99,9 @@
     },
     "/pokedex/{nameOrId}": {
       "$ref": "paths/pokedex_{nameOrId}.json"
+    },
+    "/version/{nameOrId}": {
+      "$ref": "paths/version_{nameOrId}.json"
     }
   }
 }
