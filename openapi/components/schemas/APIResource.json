@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "url": {
+      "description": "The URL of the referenced resource.",
+      "type": "string"
+    }
+  }
+}

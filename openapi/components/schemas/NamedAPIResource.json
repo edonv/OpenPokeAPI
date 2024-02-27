@@ -1,13 +1,16 @@
 {
-  "type": "object",
-  "properties": {
-    "name": {
-      "description": "The name of the referenced resource.",
-      "type": "string"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "The name of the referenced resource.",
+          "type": "string"
+        }
+      }
     },
-    "url": {
-      "description": "The URL of the referenced resource.",
-      "type": "string"
+    {
+      "$ref": "./APIResource.json"
     }
-  }
+  ]
 }
