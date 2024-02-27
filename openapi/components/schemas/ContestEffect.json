@@ -6,11 +6,11 @@
     },
     "appeal": {
       "description": "The base number of hearts the user of this move gets.",
-      "type": "number"
+      "type": "integer"
     },
     "jam": {
       "description": "The base number of hearts the user's opponent loses.",
-      "type": "number"
+      "type": "integer"
     },
     "effect_entries": {
       "description": "The result of this contest effect listed in different languages.",
