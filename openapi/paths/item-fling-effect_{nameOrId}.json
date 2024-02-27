@@ -8,7 +8,7 @@
   ],
   "get": {
     "operationId": "getItemFlingEffect",
-    "tags": ["Item"],
+    "tags": ["Items"],
     "responses": {
       "200": {
         "description": "An ItemFlingEffect object.",

@@ -8,7 +8,7 @@
   ],
   "get": {
     "operationId": "getItem",
-    "tags": ["Item"],
+    "tags": ["Items"],
     "responses": {
       "200": {
         "description": "An Item object.",

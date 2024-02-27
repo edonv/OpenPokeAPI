@@ -8,7 +8,7 @@
   ],
   "get": {
     "operationId": "getItemAttribute",
-    "tags": ["Item"],
+    "tags": ["Items"],
     "responses": {
       "200": {
         "description": "An ItemAttribute object.",
