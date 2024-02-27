@@ -1,0 +1,25 @@
+{
+  "summary": "Item Pockets",
+  "description": "Pockets within the players bag used for storing items by category.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getItemPocket",
+    "tags": ["Items"],
+    "responses": {
+      "200": {
+        "description": "An ItemPocket object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/ItemPocket.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

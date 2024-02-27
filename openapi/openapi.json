@@ -93,6 +93,9 @@
     },
     "/item-fling-effect/{nameOrId}": {
       "$ref": "paths/item-fling-effect_{nameOrId}.json"
+    },
+    "/item-pocket/{nameOrId}": {
+      "$ref": "paths/item-pocket_{nameOrId}.json"
     }
   }
 }

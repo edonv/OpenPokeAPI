@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "categories": {
+      "description": "A list of item categories that are relevant to this item pocket.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}
