@@ -2,6 +2,9 @@
   "type": "string",
   "enum": [
     "berry",
-    "berry-firmness"
+    "berry-firmness",
+    "berry-flavor",
+    "contest-type",
+    "contest-effect"
   ]
 }
