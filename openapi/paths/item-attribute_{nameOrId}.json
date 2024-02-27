@@ -1,0 +1,25 @@
+{
+  "summary": "Item Attributes",
+  "description": "Item attributes define particular aspects of items, e.g. \"usable in battle\" or \"consumable\".",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getItemAttribute",
+    "tags": ["Item"],
+    "responses": {
+      "200": {
+        "description": "An ItemAttribute object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/ItemAttribute.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "items": {
+      "description": "A list of items that have this attribute.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "names": {
+      "description": "The name of this item attribute listed in different languages.",
+      "$ref": "./NameList.json"
+    },
+    "descriptions": {
+      "description": "The description of this item attribute listed in different languages.",
+      "$ref": "./DescriptionList.json"
+    }
+  }
+}

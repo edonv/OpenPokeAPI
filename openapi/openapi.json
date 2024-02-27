@@ -108,6 +108,9 @@
     },
     "/item/{nameOrId}": {
       "$ref": "paths/item_{nameOrId}.json"
+    },
+    "/item-attribute/{nameOrId}": {
+      "$ref": "paths/item-attribute_{nameOrId}.json"
     }
   }
 }
