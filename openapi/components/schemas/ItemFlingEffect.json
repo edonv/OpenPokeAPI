@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "effect_entries": {
+      "description": "The result of this fling effect listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./Effect.json"
+      }
+    },
+    "items": {
+      "description": "A list of items that have this fling effect.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}

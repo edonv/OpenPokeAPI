@@ -1,0 +1,25 @@
+{
+  "summary": "Item Fling Effects",
+  "description": "The various effects of the move \"Fling\" when used with different items.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getItemFlingEffect",
+    "tags": ["Item"],
+    "responses": {
+      "200": {
+        "description": "An ItemFlingEffect object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/ItemFlingEffect.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

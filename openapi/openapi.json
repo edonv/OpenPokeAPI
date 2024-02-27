@@ -114,6 +114,9 @@
     },
     "/item-category/{nameOrId}": {
       "$ref": "paths/item-category_{nameOrId}.json"
+    },
+    "/item-fling-effect/{nameOrId}": {
+      "$ref": "paths/item-fling-effect_{nameOrId}.json"
     }
   }
 }
