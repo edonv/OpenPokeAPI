@@ -8,7 +8,7 @@
   ],
   "get": {
     "operationId": "getLocation",
-    "tags": ["Items"],
+    "tags": ["Locations"],
     "responses": {
       "200": {
         "description": "A Location object.",
