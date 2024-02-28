@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "change": {
+      "description": "The amount of change.",
+      "type": "integer"
+    },
+    "stat": {
+      "description": "The stat being affected.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

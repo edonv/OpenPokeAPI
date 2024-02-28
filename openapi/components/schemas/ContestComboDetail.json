@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "use_before": {
+      "type": "array",
+      "items": {
+        "$ref": "./NamedAPIResource.json"
+      }
+    },
+    "use_after": {
+      "type": "array",
+      "items": {
+        "$ref": "./NamedAPIResource.json"
+      }
+    }
+  }
+}

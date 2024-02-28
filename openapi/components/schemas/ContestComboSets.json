@@ -1,0 +1,11 @@
+{
+  "type": ["object", "null"],
+  "properties": {
+    "normal": {
+      "$ref": "./ContestComboDetail.json"
+    },
+    "super": {
+      "$ref": "./ContestComboDetail.json"
+    }
+  }
+}

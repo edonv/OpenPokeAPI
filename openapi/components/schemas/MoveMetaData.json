@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "ailment": {
+      "description": "The status ailment this move inflicts on its target.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "category": {
+      "description": "The category of move this move falls under, e.g. damage or ailment.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "min_hits": {
+      "description": "The minimum number of times this move hits. Null if it always only hits once.",
+      "type": ["integer", "null"]
+    },
+    "max_hits": {
+      "description": "The maximum number of times this move hits. Null if it always only hits once.",
+      "type": ["integer", "null"]
+    },
+    "min_turns": {
+      "description": "The minimum number of turns this move continues to take effect. Null if it always only lasts one turn.",
+      "type": ["integer", "null"]
+    },
+    "max_turns": {
+      "description": "The maximum number of turns this move continues to take effect. Null if it always only lasts one turn.",
+      "type": ["integer", "null"]
+    },
+    "drain": {
+      "description": "HP drain (if positive) or Recoil damage (if negative), in percent of damage done.",
+      "type": "integer"
+    },
+    "healing": {
+      "description": "The amount of hp gained by the attacking Pokemon, in percent of it's maximum HP.",
+      "type": "integer"
+    },
+    "crit_rate": {
+      "description": "Critical hit rate bonus.",
+      "type": "integer"
+    },
+    "ailment_chance": {
+      "description": "The likelihood this attack will cause an ailment.",
+      "type": "integer"
+    },
+    "flinch_chance": {
+      "description": "The likelihood this attack will cause the target Pokémon to flinch.",
+      "type": "integer"
+    },
+    "stat_chance": {
+      "description": "The likelihood this attack will cause a stat change in the target Pokémon.",
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "accuracy": {
+      "description": "The percent value of how likely this move is to be successful.",
+      "type": "integer"
+    },
+    "effect_chance": {
+      "description": "The percent value of how likely it is this moves effect will take effect.",
+      "type": "integer"
+    },
+    "power": {
+      "description": "The base power of this move with a value of 0 if it does not have a base power.",
+      "type": "integer"
+    },
+    "pp": {
+      "description": "Power points. The number of times this move can be used.",
+      "type": "integer"
+    },
+    "effect_entries": {
+      "description": "The effect of this move listed in different languages.",
+      "$ref": "./VerboseEffectList.json"
+    },
+    "type": {
+      "description": "The elemental type of this move.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_group": {
+      "description": "The version group in which these move stat values were in effect.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

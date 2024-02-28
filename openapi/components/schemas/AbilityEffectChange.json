@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "effect_entries": {
+      "description": "The previous effect of this ability listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./Effect.json"
+      }
+    },
+    "version_group": {
+        "description": "The version group in which the previous effect of this ability originated.",
+        "$ref": "./NamedAPIResource.json"
+    }
+  }
+}
