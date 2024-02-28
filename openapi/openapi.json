@@ -99,6 +99,9 @@
     },
     "/location/{nameOrId}": {
       "$ref": "paths/location_{nameOrId}.json"
+    },
+    "/location-area/{nameOrId}": {
+      "$ref": "paths/location-area_{nameOrId}.json"
     }
   }
 }

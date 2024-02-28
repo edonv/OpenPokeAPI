@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "pokemon": {
+      "description": "The Pokémon being encountered.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_details": {
+      "description": "A list of versions and encounters with Pokémon that might happen in the referenced location area.",
+      "type": "array",
+      "items": {
+        "$ref": "./VersionEncounterDetail.json"
+      }
+    }
+  }
+}

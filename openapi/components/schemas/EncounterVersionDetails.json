@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "rate": {
+      "description": "The chance of an encounter to occur.",
+      "type": "integer"
+    },
+    "version": {
+      "description": "The version of the game in which the encounter can occur with the given chance.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

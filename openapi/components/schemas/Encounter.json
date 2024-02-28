@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "min_level": {
+      "description": "The lowest level the Pokémon could be encountered at.",
+      "type": "integer"
+    },
+    "max_level": {
+      "description": "The highest level the Pokémon could be encountered at.",
+      "type": "integer"
+    },
+    "condition_values": {
+      "description": "A list of condition values that must be in effect for this encounter to occur.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "chance": {
+      "description": "Percent chance that this encounter will occur.",
+      "type": "integer"
+    },
+    "method": {
+      "description": "The method by which this encounter happens.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

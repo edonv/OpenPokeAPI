@@ -1,0 +1,25 @@
+{
+  "summary": "Location Areas",
+  "description": "Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getLocationArea",
+    "tags": ["Locations"],
+    "responses": {
+      "200": {
+        "description": "A LocationArea object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/LocationArea.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

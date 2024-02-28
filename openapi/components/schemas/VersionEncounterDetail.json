@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "The game version this encounter happens in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "max_chance": {
+      "description": "The total percentage of all encounter potential.",
+      "type": "integer"
+    },
+    "encounter_details": {
+      "description": "A list of encounters and their specifics.",
+      "type": "array",
+      "items": {
+        "$ref": "./Encounter.json"
+      }
+    }
+  }
+}

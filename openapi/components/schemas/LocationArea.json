@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "game_index": {
+      "description": "The internal id of an API resource within game data.",
+      "type": "integer"
+    },
+    "encounter_method_rates": {
+      "description": "A list of methods in which Pokémon may be encountered in this area and how likely the method will occur depending on the version of the game.",
+      "type": "array",
+      "items": {
+        "$ref": "./EncounterMethodRate.json"
+      }
+    },
+    "location": {
+      "description": "The region this location area can be found in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "pokemon_encounters": {
+      "description": "A list of Pokémon that can be encountered in this area along with version specific details about the encounter.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonEncounter.json"
+      }
+    }
+  }
+}
