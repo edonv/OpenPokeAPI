@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "pokemon_encounters": {
+      "description": "A list of Pokémon encountered in this pal park area along with details.",
+      "type": "array",
+      "items": {
+        "$ref": "./PalParkEncounterSpecies.json"
+      }
+    }
+  }
+}

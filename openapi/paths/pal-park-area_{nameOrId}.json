@@ -1,0 +1,25 @@
+{
+  "summary": "Pal Park Areas",
+  "description": "Areas used for grouping Pokémon encounters in Pal Park. They're like habitats that are specific to [Pal Park](https://bulbapedia.bulbagarden.net/wiki/Pal_Park).",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPalParkArea",
+    "tags": ["Locations"],
+    "responses": {
+      "200": {
+        "description": "A PalParkArea object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PalParkArea.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

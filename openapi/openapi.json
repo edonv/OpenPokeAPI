@@ -102,6 +102,9 @@
     },
     "/location-area/{nameOrId}": {
       "$ref": "paths/location-area_{nameOrId}.json"
+    },
+    "/pal-park-area/{nameOrId}": {
+      "$ref": "paths/pal-park-area_{nameOrId}.json"
     }
   }
 }
