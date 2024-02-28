@@ -7,17 +7,11 @@
     },
     "next": {
       "description": "The URL for the next page in the list.",
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"]
     },
     "previous": {
       "description": "The URL for the previous page in the list.",
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"]
     },
     "results": {
       "description": "A list of named API resources.",
