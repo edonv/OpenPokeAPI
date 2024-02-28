@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "item": {
+      "description": "The TM or HM item that corresponds to this machine.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "move": {
+      "description": "The move that is taught by this machine.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_group": {
+      "description": "The version group that this machine applies to.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

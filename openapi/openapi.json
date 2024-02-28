@@ -108,6 +108,9 @@
     },
     "/region/{nameOrId}": {
       "$ref": "paths/region_{nameOrId}.json"
+    },
+    "/machine/{id}": {
+      "$ref": "paths/machine_{id}.json"
     }
   }
 }
