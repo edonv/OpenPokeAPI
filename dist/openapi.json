@@ -707,7 +707,7 @@
       "get": {
         "operationId": "getLocation",
         "tags": [
-          "Items"
+          "Locations"
         ],
         "responses": {
           "200": {
@@ -716,6 +716,114 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Location"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/location-area/{nameOrId}": {
+      "summary": "Location Areas",
+      "description": "Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getLocationArea",
+        "tags": [
+          "Locations"
+        ],
+        "responses": {
+          "200": {
+            "description": "A LocationArea object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocationArea"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pal-park-area/{nameOrId}": {
+      "summary": "Pal Park Areas",
+      "description": "Areas used for grouping Pokémon encounters in Pal Park. They're like habitats that are specific to [Pal Park](https://bulbapedia.bulbagarden.net/wiki/Pal_Park).",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPalParkArea",
+        "tags": [
+          "Locations"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PalParkArea object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PalParkArea"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/region/{nameOrId}": {
+      "summary": "Regions",
+      "description": "A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getRegion",
+        "tags": [
+          "Locations"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Region object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Region"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/machine/{id}": {
+      "summary": "Machines",
+      "description": "Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/id"
+        }
+      ],
+      "get": {
+        "operationId": "getMachine",
+        "tags": [
+          "Machines"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Machine object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Machine"
                 }
               }
             }
@@ -1835,6 +1943,220 @@
           "areas": {
             "description": "Areas that can be found within this location.",
             "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "EncounterVersionDetails": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "description": "The chance of an encounter to occur.",
+            "type": "integer"
+          },
+          "version": {
+            "description": "The version of the game in which the encounter can occur with the given chance.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "EncounterMethodRate": {
+        "type": "object",
+        "properties": {
+          "encounter_method": {
+            "description": "The method in which Pokémon may be encountered in an area.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_details": {
+            "description": "The chance of the encounter to occur on a version of the game.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EncounterVersionDetails"
+            }
+          }
+        }
+      },
+      "Encounter": {
+        "type": "object",
+        "properties": {
+          "min_level": {
+            "description": "The lowest level the Pokémon could be encountered at.",
+            "type": "integer"
+          },
+          "max_level": {
+            "description": "The highest level the Pokémon could be encountered at.",
+            "type": "integer"
+          },
+          "condition_values": {
+            "description": "A list of condition values that must be in effect for this encounter to occur.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "chance": {
+            "description": "Percent chance that this encounter will occur.",
+            "type": "integer"
+          },
+          "method": {
+            "description": "The method by which this encounter happens.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "VersionEncounterDetail": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "description": "The game version this encounter happens in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "max_chance": {
+            "description": "The total percentage of all encounter potential.",
+            "type": "integer"
+          },
+          "encounter_details": {
+            "description": "A list of encounters and their specifics.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Encounter"
+            }
+          }
+        }
+      },
+      "PokemonEncounter": {
+        "type": "object",
+        "properties": {
+          "pokemon": {
+            "description": "The Pokémon being encountered.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_details": {
+            "description": "A list of versions and encounters with Pokémon that might happen in the referenced location area.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VersionEncounterDetail"
+            }
+          }
+        }
+      },
+      "LocationArea": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "game_index": {
+            "description": "The internal id of an API resource within game data.",
+            "type": "integer"
+          },
+          "encounter_method_rates": {
+            "description": "A list of methods in which Pokémon may be encountered in this area and how likely the method will occur depending on the version of the game.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EncounterMethodRate"
+            }
+          },
+          "location": {
+            "description": "The region this location area can be found in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_encounters": {
+            "description": "A list of Pokémon that can be encountered in this area along with version specific details about the encounter.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonEncounter"
+            }
+          }
+        }
+      },
+      "PalParkEncounterSpecies": {
+        "type": "object",
+        "properties": {
+          "base_score": {
+            "description": "The base score given to the player when this Pokémon is caught during a pal park run.",
+            "type": "integer"
+          },
+          "rate": {
+            "description": "The base rate for encountering this Pokémon in this pal park area.",
+            "type": "integer"
+          },
+          "pokemon_species": {
+            "description": "The Pokémon species being encountered.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PalParkArea": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_encounters": {
+            "description": "A list of Pokémon encountered in this pal park area along with details.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PalParkEncounterSpecies"
+            }
+          }
+        }
+      },
+      "Region": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "locations": {
+            "description": "A list of locations that can be found in this region.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "main_generation": {
+            "description": "The generation this region was introduced in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "pokedexes": {
+            "description": "A list of pokédexes that catalogue Pokémon in this region.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "version_groups": {
+            "description": "A list of version groups where this region can be visited.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "Machine": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "item": {
+            "description": "The TM or HM item that corresponds to this machine.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "move": {
+            "description": "The move that is taught by this machine.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group": {
+            "description": "The version group that this machine applies to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
           }
         }
       }
