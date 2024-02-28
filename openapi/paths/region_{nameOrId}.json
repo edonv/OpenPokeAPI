@@ -1,0 +1,25 @@
+{
+  "summary": "Regions",
+  "description": "A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getRegion",
+    "tags": ["Locations"],
+    "responses": {
+      "200": {
+        "description": "A Region object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Region.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

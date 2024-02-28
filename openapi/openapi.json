@@ -105,6 +105,9 @@
     },
     "/pal-park-area/{nameOrId}": {
       "$ref": "paths/pal-park-area_{nameOrId}.json"
+    },
+    "/region/{nameOrId}": {
+      "$ref": "paths/region_{nameOrId}.json"
     }
   }
 }

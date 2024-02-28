@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "locations": {
+      "description": "A list of locations that can be found in this region.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "main_generation": {
+      "description": "The generation this region was introduced in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "pokedexes": {
+      "description": "A list of pokédexes that catalogue Pokémon in this region.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "version_groups": {
+      "description": "A list of version groups where this region can be visited.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}
