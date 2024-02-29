@@ -887,7 +887,7 @@
     },
     "/move-battle-style/{nameOrId}": {
       "summary": "Move Battle Styles",
-      "description": "Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
+      "description": "Styles of moves when used in the Battle Palace. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
       "parameters": [
         {
           "$ref": "#/components/parameters/nameOrId"
@@ -2528,7 +2528,7 @@
             "type": "integer"
           },
           "priority": {
-            "description": "A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail.",
+            "description": "A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail.",
             "type": "integer",
             "minimum": -8,
             "maximum": 8

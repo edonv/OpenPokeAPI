@@ -1,6 +1,6 @@
 {
   "summary": "Move Battle Styles",
-  "description": "Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
+  "description": "Styles of moves when used in the Battle Palace. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
   "parameters": [
     {
       "$ref": "../components/parameters/nameOrId.json"

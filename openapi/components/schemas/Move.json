@@ -20,7 +20,7 @@
       "type": "integer"
     },
     "priority": {
-      "description": "A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail.",
+      "description": "A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail.",
       "type": "integer",
       "minimum": -8,
       "maximum": 8
