@@ -1,0 +1,25 @@
+{
+  "summary": "Move Categories",
+  "description": "Very general categories that loosely group move effects.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getMoveCategory",
+    "tags": ["Moves"],
+    "responses": {
+      "200": {
+        "description": "A MoveCategory object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/MoveCategory.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

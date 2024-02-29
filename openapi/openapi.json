@@ -120,6 +120,9 @@
     },
     "/move-battle-style/{nameOrId}": {
       "$ref": "paths/move-battle-style_{nameOrId}.json"
+    },
+    "/move-category/{nameOrId}": {
+      "$ref": "paths/move-category_{nameOrId}.json"
     }
   }
 }
