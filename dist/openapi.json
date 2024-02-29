@@ -857,6 +857,168 @@
           }
         }
       }
+    },
+    "/move-ailment/{nameOrId}": {
+      "summary": "Move Ailments",
+      "description": "Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMoveAilment",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A MoveAilment object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveAilment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/move-battle-style/{nameOrId}": {
+      "summary": "Move Battle Styles",
+      "description": "Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMoveBattleStyle",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A MoveBattleStyle object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveBattleStyle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/move-category/{nameOrId}": {
+      "summary": "Move Categories",
+      "description": "Very general categories that loosely group move effects.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMoveCategory",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A MoveCategory object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveCategory"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/move-damage-class/{nameOrId}": {
+      "summary": "Move Damage Classes",
+      "description": "Damage classes moves can have, e.g. physical, special, or non-damaging.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMoveDamageClass",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A MoveDamageClass object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveDamageClass"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/move-learn-method/{nameOrId}": {
+      "summary": "Move Learn Methods",
+      "description": "Methods by which Pokémon can learn moves.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMoveLearnMethod",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A MoveLearnMethod object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveLearnMethod"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/move-target/{nameOrId}": {
+      "summary": "Move Targets",
+      "description": "Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMoveTarget",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A MoveTarget object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveTarget"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2459,6 +2621,119 @@
           "type": {
             "description": "The elemental type of this move.",
             "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "MoveAilment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "moves": {
+            "description": "A list of moves that cause this ailment.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "MoveBattleStyle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "MoveCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "moves": {
+            "description": "A list of moves that fall into this category.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "descriptions": {
+            "$ref": "#/components/schemas/DescriptionList"
+          }
+        }
+      },
+      "MoveDamageClass": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "descriptions": {
+            "$ref": "#/components/schemas/DescriptionList"
+          },
+          "moves": {
+            "description": "A list of moves that fall into this damage class.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "MoveLearnMethod": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "descriptions": {
+            "$ref": "#/components/schemas/DescriptionList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "version_groups": {
+            "description": "A list of version groups where moves can be learned through this method.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          }
+        }
+      },
+      "MoveTarget": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "descriptions": {
+            "$ref": "#/components/schemas/DescriptionList"
+          },
+          "moves": {
+            "description": "A list of moves that that are directed at this target.",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
           }
         }
       }
