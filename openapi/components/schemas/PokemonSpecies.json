@@ -7,7 +7,6 @@
     "name": {
       "$ref": "./ResourceName.json"
     },
-
     "order": {
       "description": "The order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage.",
       "type": "integer"
@@ -87,11 +86,9 @@
       "description": "The generation this Pokémon species was introduced in.",
       "$ref": "./NamedAPIResource.json"
     },
-
     "names": {
       "$ref": "./NameList.json"
     },
-
     "pal_park_encounters": {
       "description": "A list of encounters that can be had with this Pokémon species in pal park.",
       "type": "array",
