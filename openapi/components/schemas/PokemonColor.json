@@ -2,11 +2,9 @@
   "type": "object",
   "properties": {
     "id": {
-      "description": "The identifier for this resource.",
       "$ref": "./ResourceId.json"
     },
     "name": {
-      "description": "The name for this resource.",
       "$ref": "./ResourceName.json"
     },
     "names": {
