@@ -1,6 +1,6 @@
 {
   "summary": "Move Learn Methods",
-  "description": "Damage classes moves can have, e.g. physical, special, or non-damaging.",
+  "description": "Methods by which Pokémon can learn moves.",
   "parameters": [
     {
       "$ref": "../components/parameters/nameOrId.json"
