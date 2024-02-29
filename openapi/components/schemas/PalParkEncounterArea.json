@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "base_score": {
+      "description": "The base score given to the player when this Pokémon is caught during a pal park run.",
+      "type": "integer"
+    },
+    "rate": {
+      "description": "The base rate for encountering this Pokémon in this pal park area.",
+      "type": "integer"
+    },
+    "area": {
+      "description": "The pal park area where this encounter happens.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

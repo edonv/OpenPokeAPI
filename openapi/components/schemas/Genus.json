@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "genus": {
+      "description": "The localized genus for the referenced Pokémon species.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language this genus is in.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

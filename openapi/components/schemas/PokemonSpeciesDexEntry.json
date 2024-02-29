@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "entry_number": {
+      "description": "The index number within the Pokédex.",
+      "type": "integer"
+    },
+    "pokedex": {
+      "description": "The Pokédex the referenced Pokémon species can be found in.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

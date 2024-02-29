@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "is_default": {
+      "description": "Whether this variety is the default variety.",
+      "type": "boolean"
+    },
+    "pokemon": {
+      "description": "The Pokémon variety.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

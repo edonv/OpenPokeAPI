@@ -171,6 +171,9 @@
     },
     "/pokemon-shape/{nameOrId}": {
       "$ref": "paths/pokemon-shape_{nameOrId}.json"
+    },
+    "/pokemon-species/{nameOrId}": {
+      "$ref": "paths/pokemon-species_{nameOrId}.json"
     }
   }
 }
