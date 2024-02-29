@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "awesome_name": {
+      "description": "The localized \"scientific\" name for an API resource in a specific language.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language this \"scientific\" name is in.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

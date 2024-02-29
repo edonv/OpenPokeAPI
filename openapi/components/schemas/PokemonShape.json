@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "awesome_names": {
+      "description": "The \"scientific\" name of this Pokémon shape listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./AwesomeName.json"
+      }
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "pokemon_species": {
+      "description": "A list of the Pokémon species that have this shape.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}

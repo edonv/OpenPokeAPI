@@ -168,6 +168,9 @@
     },
     "/pokemon-habitat/{nameOrId}": {
       "$ref": "paths/pokemon-habitat_{nameOrId}.json"
+    },
+    "/pokemon-shape/{nameOrId}": {
+      "$ref": "paths/pokemon-shape_{nameOrId}.json"
     }
   }
 }

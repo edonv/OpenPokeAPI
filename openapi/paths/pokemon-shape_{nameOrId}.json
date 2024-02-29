@@ -1,0 +1,25 @@
+{
+  "summary": "Pokémon Shapes",
+  "description": "Shapes used for sorting Pokémon in a Pokédex.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPokemonShape",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A PokemonShape object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PokemonShape.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
