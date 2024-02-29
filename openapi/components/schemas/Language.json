@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "official": {
+      "description": "Whether or not the games are published in this language.",
+      "type": "boolean"
+    },
+    "iso639": {
+      "description": "The two-letter code of the country where this language is spoken. Note that it is not unique.",
+      "type": "string"
+    },
+    "iso3166": {
+      "description": "The two-letter code of the language. Note that it is not unique.",
+      "type": "string"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}

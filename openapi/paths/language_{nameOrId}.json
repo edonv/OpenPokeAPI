@@ -1,0 +1,25 @@
+{
+  "summary": "Languages",
+  "description": "Languages for translations of API resource information.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getLanguage",
+    "tags": ["Utility"],
+    "responses": {
+      "200": {
+        "description": "A Language object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Language.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

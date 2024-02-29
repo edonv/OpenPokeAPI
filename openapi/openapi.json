@@ -180,6 +180,9 @@
     },
     "/type/{nameOrId}": {
       "$ref": "paths/type_{nameOrId}.json"
+    },
+    "/language/{nameOrId}": {
+      "$ref": "paths/language_{nameOrId}.json"
     }
   }
 }
