@@ -1,0 +1,25 @@
+{
+  "summary": "Stats",
+  "description": "Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getStat",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A Stat object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Stat.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

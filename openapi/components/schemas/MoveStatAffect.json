@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "change": {
+      "description": "The maximum amount of change to the referenced stat.",
+      "type": "integer"
+    },
+    "move": {
+      "description": "The move causing the change.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

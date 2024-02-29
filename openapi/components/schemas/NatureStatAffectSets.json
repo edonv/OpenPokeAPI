@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "increase": {
+      "description": "A list of natures and how they change the referenced stat.",
+      "$ref": "./NamedAPIResourceArray.json"
+    },
+    "decrease": {
+      "description": "A list of natures and how they change the referenced stat.",
+      "$ref": "./NamedAPIResourceArray.json"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "game_index": {
+      "description": "ID the games use for this stat.",
+      "type": "integer"
+    },
+    "is_battle_only": {
+      "description": "Whether this stat only exists within a battle.",
+      "type": "boolean"
+    },
+    "affecting_moves": {
+      "description": "A detail of moves which affect this stat positively or negatively.",
+      "$ref": "./MoveStatAffectSets.json"
+    },
+    "affecting_natures": {
+      "description": "A detail of natures which affect this stat positively or negatively.",
+      "$ref": "./NatureStatAffectSets.json"
+    },
+    "characteristics": {
+      "description": "A list of characteristics that are set on a Pokémon when its highest base stat is this stat.",
+      "type": "array",
+      "items": {
+        "$ref": "./APIResource.json"
+      }
+    },
+    "move_damage_class": {
+      "description": "The class of damage this stat is directly related to.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}

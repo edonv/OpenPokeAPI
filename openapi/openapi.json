@@ -174,6 +174,9 @@
     },
     "/pokemon-species/{nameOrId}": {
       "$ref": "paths/pokemon-species_{nameOrId}.json"
+    },
+    "/stat/{nameOrId}": {
+      "$ref": "paths/stat_{nameOrId}.json"
     }
   }
 }
