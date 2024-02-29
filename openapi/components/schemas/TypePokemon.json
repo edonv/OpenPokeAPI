@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "slot": {
+      "description": "The order the Pokémon's types are listed in.",
+      "type": "integer"
+    },
+    "pokemon": {
+      "description": "The Pokémon that has the referenced type.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

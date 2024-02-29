@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "damage_relations": {
+      "description": "A detail of how effective this type is toward others and vice versa.",
+      "$ref": "./TypeRelations.json"
+    },
+    "past_damage_relations": {
+      "description": "A list of details of how effective this type was toward others and vice versa in previous generations",
+      "type": "array",
+      "items": {
+        "$ref": "./TypeRelationsPast.json"
+      }
+    },
+    "game_indices": {
+      "description": "A list of game indices relevent to this item by generation.",
+      "type": "array",
+      "items": {
+        "$ref": "./GenerationGameIndex.json"
+      }
+    },
+    "generation": {
+      "description": "The generation this type was introduced in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "move_damage_class": {
+      "description": "The class of damage inflicted by this type.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "pokemon": {
+      "description": "A list of details of Pokémon that have this type.",
+      "type": "array",
+      "items": {
+        "$ref": "./TypePokemon.json"
+      }
+    },
+    "moves": {
+      "description": "A list of moves that have this type.",
+      "type": "array",
+      "items": {
+        "$ref": "./NamedAPIResource.json"
+      }
+    }
+  }
+}

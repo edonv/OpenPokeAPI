@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "generation": {
+      "description": "The last generation in which the referenced type had the listed damage relations.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "damage_relations": {
+      "description": "The damage relations the referenced type had up to and including the listed generation.",
+      "$ref": "./TypeRelations.json"
+    }
+  }
+}

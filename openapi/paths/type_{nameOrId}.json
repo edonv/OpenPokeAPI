@@ -1,0 +1,25 @@
+{
+  "summary": "Types",
+  "description": "Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getType",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A Type object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Type.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

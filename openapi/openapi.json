@@ -177,6 +177,9 @@
     },
     "/stat/{nameOrId}": {
       "$ref": "paths/stat_{nameOrId}.json"
+    },
+    "/type/{nameOrId}": {
+      "$ref": "paths/type_{nameOrId}.json"
     }
   }
 }

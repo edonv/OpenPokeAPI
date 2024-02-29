@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "no_damage_to": {
+      "description": "A list of types this type has no effect on.",
+      "$ref": "./NamedAPIResourceArray.json"
+    },
+    "half_damage_to": {
+      "description": "A list of types this type is not very effect against.",
+      "$ref": "./NamedAPIResourceArray.json"
+    },
+    "double_damage_to": {
+      "description": "A list of types this type is very effect against.",
+      "$ref": "./NamedAPIResourceArray.json"
+    },
+    "no_damage_from": {
+      "description": "A list of types that have no effect on this type.",
+      "$ref": "./NamedAPIResourceArray.json"
+    },
+    "half_damage_from": {
+      "description": "A list of types that are not very effective against this type.",
+      "$ref": "./NamedAPIResourceArray.json"
+    },
+    "double_damage_from": {
+      "description": "A list of types that are very effective against this type.",
+      "$ref": "./NamedAPIResourceArray.json"
+    }
+  }
+}
