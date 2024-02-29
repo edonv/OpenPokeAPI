@@ -1,0 +1,25 @@
+{
+  "summary": "Pokémon Habitats",
+  "description": "Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPokemonHabitat",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A PokemonHabitat object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PokemonHabitat.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

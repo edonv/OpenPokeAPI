@@ -165,6 +165,9 @@
     },
     "/pokemon-form/{nameOrId}": {
       "$ref": "paths/pokemon-form_{nameOrId}.json"
+    },
+    "/pokemon-habitat/{nameOrId}": {
+      "$ref": "paths/pokemon-habitat_{nameOrId}.json"
     }
   }
 }

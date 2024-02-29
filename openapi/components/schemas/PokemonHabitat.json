@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "pokemon_species": {
+      "description": "A list of the Pokémon species that can be found in this habitat.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}
