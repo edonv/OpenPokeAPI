@@ -1,0 +1,25 @@
+{
+  "summary": "Growth Rates",
+  "description": "Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getGrowthRate",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A GrowthRate object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/GrowthRate.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

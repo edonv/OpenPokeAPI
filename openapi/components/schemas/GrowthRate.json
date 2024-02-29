@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "formula": {
+      "description": "The formula (in LaTeX format) used to calculate the rate at which the Pokémon species gains level.",
+      "type": "string"
+    },
+    "descriptions": {
+      "description": "The descriptions of this characteristic listed in different languages.",
+      "$ref": "./DescriptionList.json"
+    },
+    "levels": {
+      "description": "A list of levels and the amount of experienced needed to atain them based on this growth rate.",
+      "type": "array",
+      "items": {
+        "$ref": "./GrowthRateExperienceLevel.json"
+      }
+    },
+    "pokemon_species": {
+      "description": "A list of Pokémon species that gain levels at this growth rate.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}

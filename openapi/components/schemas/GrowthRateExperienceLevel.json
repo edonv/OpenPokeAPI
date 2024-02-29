@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "level": {
+      "description": "The level gained.",
+      "type": "integer"
+    },
+    "experience": {
+      "description": "The amount of experience required to reach the referenced level.",
+      "type": "integer"
+    }
+  }
+}

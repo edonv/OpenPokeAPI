@@ -144,6 +144,9 @@
     },
     "/gender/{nameOrId}": {
       "$ref": "paths/gender_{nameOrId}.json"
+    },
+    "/growth-rate/{nameOrId}": {
+      "$ref": "paths/growth-rate_{nameOrId}.json"
     }
   }
 }
