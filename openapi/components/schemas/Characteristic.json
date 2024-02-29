@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "gene_modulo": {
+      "description": "The remainder of the highest stat/IV divided by 5.",
+      "type": "integer"
+    },
+    "possible_values": {
+      "description": "The possible values of the highest stat that would result in a Pokémon recieving this characteristic when divided by 5.",
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "highest_stat": {
+      "description": "The stat which results in this characteristic.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "descriptions": {
+      "description": "The descriptions of this characteristic listed in different languages.",
+      "$ref": "./DescriptionList.json"
+    }
+  }
+}

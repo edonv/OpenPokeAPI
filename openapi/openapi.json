@@ -135,6 +135,9 @@
     },
     "/ability/{nameOrId}": {
       "$ref": "paths/ability_{nameOrId}.json"
+    },
+    "/characteristic/{id}": {
+      "$ref": "paths/characteristic_{id}.json"
     }
   }
 }
