@@ -123,6 +123,9 @@
     },
     "/move-category/{nameOrId}": {
       "$ref": "paths/move-category_{nameOrId}.json"
+    },
+    "/move-damage-class/{nameOrId}": {
+      "$ref": "paths/move-damage-class_{nameOrId}.json"
     }
   }
 }
