@@ -830,6 +830,33 @@
           }
         }
       }
+    },
+    "/move/{nameOrId}": {
+      "summary": "Moves",
+      "description": "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getMove",
+        "tags": [
+          "Moves"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Move object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Move"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1254,18 +1281,14 @@
           },
           "gender": {
             "description": "The id of the gender of the evolving Pokémon species must be in order to evolve into this Pokémon species.",
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "integer",
-                "enum": [
-                  1,
-                  2,
-                  3
-                ]
-              }
+            "type": [
+              "integer",
+              "null"
+            ],
+            "enum": [
+              1,
+              2,
+              3
             ]
           },
           "held_item": {
@@ -1314,46 +1337,30 @@
           },
           "min_level": {
             "description": "The minimum required level of the evolving Pokémon species to evolve into this Pokémon species.",
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "integer"
-              }
+            "type": [
+              "integer",
+              "null"
             ]
           },
           "min_happiness": {
             "description": "The minimum required level of happiness the evolving Pokémon species to evolve into this Pokémon species.",
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "integer"
-              }
+            "type": [
+              "integer",
+              "null"
             ]
           },
           "min_beauty": {
             "description": "The minimum required level of beauty the evolving Pokémon species to evolve into this Pokémon species.",
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "integer"
-              }
+            "type": [
+              "integer",
+              "null"
             ]
           },
           "min_affection": {
             "description": "The minimum required level of affection the evolving Pokémon species to evolve into this Pokémon species.",
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "integer"
-              }
+            "type": [
+              "integer",
+              "null"
             ]
           },
           "needs_overworld_rain": {
@@ -1384,18 +1391,14 @@
           },
           "relative_physical_stats": {
             "description": "The required relation between the Pokémon's Attack and Defense stats. `1` means Attack > Defense. `0` means Attack = Defense. `-1` means Attack < Defense.",
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "integer",
-                "enum": [
-                  -1,
-                  0,
-                  1
-                ]
-              }
+            "type": [
+              "integer",
+              "null"
+            ],
+            "enum": [
+              -1,
+              0,
+              1
             ]
           },
           "time_of_day": {
@@ -2156,6 +2159,305 @@
           },
           "version_group": {
             "description": "The version group that this machine applies to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "ContestComboDetail": {
+        "type": "object",
+        "properties": {
+          "use_before": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          },
+          "use_after": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          }
+        }
+      },
+      "ContestComboSets": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "normal": {
+            "$ref": "#/components/schemas/ContestComboDetail"
+          },
+          "super": {
+            "$ref": "#/components/schemas/ContestComboDetail"
+          }
+        }
+      },
+      "AbilityEffectChange": {
+        "type": "object",
+        "properties": {
+          "effect_entries": {
+            "description": "The previous effect of this ability listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Effect"
+            }
+          },
+          "version_group": {
+            "description": "The version group in which the previous effect of this ability originated.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "MoveFlavorText": {
+        "type": "object",
+        "properties": {
+          "flavor_text": {
+            "description": "The localized flavor text for an api resource in a specific language.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this name is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group": {
+            "description": "The version group that uses this flavor text.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "MoveMetaData": {
+        "type": "object",
+        "properties": {
+          "ailment": {
+            "description": "The status ailment this move inflicts on its target.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "category": {
+            "description": "The category of move this move falls under, e.g. damage or ailment.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "min_hits": {
+            "description": "The minimum number of times this move hits. Null if it always only hits once.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "max_hits": {
+            "description": "The maximum number of times this move hits. Null if it always only hits once.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "min_turns": {
+            "description": "The minimum number of turns this move continues to take effect. Null if it always only lasts one turn.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "max_turns": {
+            "description": "The maximum number of turns this move continues to take effect. Null if it always only lasts one turn.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "drain": {
+            "description": "HP drain (if positive) or Recoil damage (if negative), in percent of damage done.",
+            "type": "integer"
+          },
+          "healing": {
+            "description": "The amount of hp gained by the attacking Pokemon, in percent of it's maximum HP.",
+            "type": "integer"
+          },
+          "crit_rate": {
+            "description": "Critical hit rate bonus.",
+            "type": "integer"
+          },
+          "ailment_chance": {
+            "description": "The likelihood this attack will cause an ailment.",
+            "type": "integer"
+          },
+          "flinch_chance": {
+            "description": "The likelihood this attack will cause the target Pokémon to flinch.",
+            "type": "integer"
+          },
+          "stat_chance": {
+            "description": "The likelihood this attack will cause a stat change in the target Pokémon.",
+            "type": "integer"
+          }
+        }
+      },
+      "PastMoveStatValues": {
+        "type": "object",
+        "properties": {
+          "accuracy": {
+            "description": "The percent value of how likely this move is to be successful.",
+            "type": "integer"
+          },
+          "effect_chance": {
+            "description": "The percent value of how likely it is this moves effect will take effect.",
+            "type": "integer"
+          },
+          "power": {
+            "description": "The base power of this move with a value of 0 if it does not have a base power.",
+            "type": "integer"
+          },
+          "pp": {
+            "description": "Power points. The number of times this move can be used.",
+            "type": "integer"
+          },
+          "effect_entries": {
+            "description": "The effect of this move listed in different languages.",
+            "$ref": "#/components/schemas/VerboseEffectList"
+          },
+          "type": {
+            "description": "The elemental type of this move.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group": {
+            "description": "The version group in which these move stat values were in effect.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "MoveStatChange": {
+        "type": "object",
+        "properties": {
+          "change": {
+            "description": "The amount of change.",
+            "type": "integer"
+          },
+          "stat": {
+            "description": "The stat being affected.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Move": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "accuracy": {
+            "description": "The percent value of how likely this move is to be successful.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "effect_chance": {
+            "description": "The percent value of how likely it is this moves effect will happen.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "pp": {
+            "description": "Power points. The number of times this move can be used.",
+            "type": "integer"
+          },
+          "priority": {
+            "description": "A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail.",
+            "type": "integer",
+            "minimum": -8,
+            "maximum": 8
+          },
+          "power": {
+            "description": "The base power of this move with a value of 0 if it does not have a base power.",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "contest_combos": {
+            "description": "A detail of normal and super contest combos that require this move.",
+            "$ref": "#/components/schemas/ContestComboSets"
+          },
+          "contest_type": {
+            "description": "The type of appeal this move gives a Pokémon when used in a contest.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "contest_effect": {
+            "description": "The effect the move has when used in a contest.",
+            "$ref": "#/components/schemas/APIResource"
+          },
+          "damage_class": {
+            "description": "The type of damage the move inflicts on the target, e.g. physical.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "effect_entries": {
+            "description": "The effect of this move listed in different languages.",
+            "$ref": "#/components/schemas/VerboseEffectList"
+          },
+          "effect_changes": {
+            "description": "The list of previous effects this move has had across version groups of the games.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbilityEffectChange"
+            }
+          },
+          "learned_by_pokemon": {
+            "description": "List of Pokemon that can learn the move",
+            "$ref": "#/components/schemas/NamedAPIResourceList"
+          },
+          "flavor_text_entries": {
+            "description": "The flavor text of this move listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MoveFlavorText"
+            }
+          },
+          "generation": {
+            "description": "The generation in which this move was introduced.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "machines": {
+            "description": "A list of the machines that teach this move.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MachineVersionDetail"
+            }
+          },
+          "meta": {
+            "description": "Metadata about this move.",
+            "$ref": "#/components/schemas/MoveMetaData"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "past_values": {
+            "description": "A list of move resource value changes across version groups of the game.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PastMoveStatValues"
+            }
+          },
+          "stat_changes": {
+            "description": "A list of stats this moves effects and how much it effects them.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MoveStatChange"
+            }
+          },
+          "super_contest_effect": {
+            "description": "The effect the move has when used in a super contest.",
+            "$ref": "#/components/schemas/APIResource"
+          },
+          "target": {
+            "description": "The type of target that will receive the effects of the attack.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "type": {
+            "description": "The elemental type of this move.",
             "$ref": "#/components/schemas/NamedAPIResource"
           }
         }
