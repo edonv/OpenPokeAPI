@@ -1,0 +1,25 @@
+{
+  "summary": "Pokémon Colors",
+  "description": "Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPokemonColor",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A PokemonColor object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PokemonColor.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
