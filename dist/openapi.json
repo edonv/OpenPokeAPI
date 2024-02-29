@@ -1596,11 +1596,13 @@
       },
       "ResourceId": {
         "type": "integer",
-        "description": "The identifier for this resource."
+        "description": "The identifier for this resource.",
+        "minimum": 1
       },
       "ResourceName": {
         "type": "string",
-        "description": "The name for this resource."
+        "description": "The name for this resource.",
+        "minLength": 1
       },
       "BerryPotency": {
         "description": "How powerful the referenced flavor is for this berry.",
