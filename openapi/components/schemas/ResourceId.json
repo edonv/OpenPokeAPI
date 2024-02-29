@@ -1,4 +1,5 @@
 {
   "type": "integer",
-  "description": "The identifier for this resource."
+  "description": "The identifier for this resource.",
+  "minimum": 1
 }

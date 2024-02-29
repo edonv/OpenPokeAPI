@@ -1,4 +1,5 @@
 {
   "type": "string",
-  "description": "The name for this resource."
+  "description": "The name for this resource.",
+  "minLength": 1
 }
