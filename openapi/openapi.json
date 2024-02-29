@@ -117,6 +117,9 @@
     },
     "/move-ailment/{nameOrId}": {
       "$ref": "paths/move-ailment_{nameOrId}.json"
+    },
+    "/move-battle-style/{nameOrId}": {
+      "$ref": "paths/move-battle-style_{nameOrId}.json"
     }
   }
 }
