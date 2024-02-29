@@ -1019,6 +1019,465 @@
           }
         }
       }
+    },
+    "/ability/{nameOrId}": {
+      "summary": "Abilities",
+      "description": "Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getAbility",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "An Ability object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ability"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/characteristic/{id}": {
+      "summary": "Characteristics",
+      "description": "Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined by the remainder of its highest IV divided by 5 (`gene_modulo`). Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/id"
+        }
+      ],
+      "get": {
+        "operationId": "getCharacteristic",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Characteristic object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Characteristic"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/egg-group/{nameOrId}": {
+      "summary": "Egg Groups",
+      "description": "Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getEggGroup",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "An EggGroup object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EggGroup"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gender/{nameOrId}": {
+      "summary": "Genders",
+      "description": "Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getGender",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Gender object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Gender"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/growth-rate/{nameOrId}": {
+      "summary": "Growth Rates",
+      "description": "Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getGrowthRate",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A GrowthRate object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrowthRate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nature/{nameOrId}": {
+      "summary": "Natures",
+      "description": "Natures influence how a Pokémon's stats grow. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getNature",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Nature object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Nature"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokeathlon-stat/{nameOrId}": {
+      "summary": "Pokeathlon Stats",
+      "description": "Pokeathlon Stats are different attributes of a Pokémon's performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokeathlonStat",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokeathlonStat object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokeathlonStat"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/{nameOrId}": {
+      "summary": "Pokémon",
+      "description": "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemon",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Pokemon object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pokemon"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/{nameOrId}/encounters": {
+      "summary": "Pokémon Location Areas",
+      "description": "Pokémon Location Areas are ares where Pokémon can be found.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemonLocationArea",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokemonLocationArea object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonLocationArea"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon-color/{nameOrId}": {
+      "summary": "Pokémon Colors",
+      "description": "Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemonColor",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokemonColor object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonColor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon-form/{nameOrId}": {
+      "summary": "Pokémon Forms",
+      "description": "Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the 'Pokémon' entity is used to represent such a variety.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemonForm",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokemonForm object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonForm"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon-habitat/{nameOrId}": {
+      "summary": "Pokémon Habitats",
+      "description": "Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemonHabitat",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokemonHabitat object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonHabitat"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon-shape/{nameOrId}": {
+      "summary": "Pokémon Shapes",
+      "description": "Shapes used for sorting Pokémon in a Pokédex.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemonShape",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokemonShape object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonShape"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon-species/{nameOrId}": {
+      "summary": "Pokémon Species",
+      "description": "A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getPokemonSpecies",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A PokemonSpecies object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonSpecies"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stat/{nameOrId}": {
+      "summary": "Stats",
+      "description": "Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getStat",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Stat object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Stat"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/type/{nameOrId}": {
+      "summary": "Types",
+      "description": "Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getType",
+        "tags": [
+          "Pokémon"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Type object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Type"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/language/{nameOrId}": {
+      "summary": "Languages",
+      "description": "Languages for translations of API resource information.",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/nameOrId"
+        }
+      ],
+      "get": {
+        "operationId": "getLanguage",
+        "tags": [
+          "Utility"
+        ],
+        "responses": {
+          "200": {
+            "description": "A Language object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Language"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1030,7 +1489,51 @@
           "berry-firmness",
           "berry-flavor",
           "contest-type",
-          "contest-effect"
+          "contest-effect",
+          "super-contest-effect",
+          "encounter-method",
+          "encounter-condition",
+          "encounter-condition-value",
+          "evolution-chain",
+          "evolution-trigger",
+          "generation",
+          "pokedex",
+          "version",
+          "version-group",
+          "item",
+          "item-attribute",
+          "item-category",
+          "item-fling-effect",
+          "item-pocket",
+          "location",
+          "location-area",
+          "pal-park-area",
+          "region",
+          "machine",
+          "move",
+          "move-ailment",
+          "move-battle-style",
+          "move-category",
+          "move-damage-class",
+          "move-learn-method",
+          "move-target",
+          "ability",
+          "characteristic",
+          "egg-group",
+          "gender",
+          "growth-rate",
+          "nature",
+          "pokeathlon-stat",
+          "pokemon",
+          "pokemon",
+          "pokemon-color",
+          "pokemon-form",
+          "pokemon-habitat",
+          "pokemon-shape",
+          "pokemon-species",
+          "stat",
+          "type",
+          "language"
         ]
       },
       "APIResource": {
@@ -1058,6 +1561,12 @@
           }
         ]
       },
+      "NamedAPIResourceArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/NamedAPIResource"
+        }
+      },
       "NamedAPIResourceList": {
         "type": "object",
         "properties": {
@@ -1081,10 +1590,7 @@
           },
           "results": {
             "description": "A list of named API resources.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NamedAPIResource"
-            }
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -1401,7 +1907,7 @@
           },
           "values": {
             "description": "A list of possible values for this encounter condition.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -1653,7 +2159,7 @@
           },
           "pokemon_species": {
             "description": "A list of pokemon species that result from this evolution trigger.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -1668,7 +2174,7 @@
           },
           "abilities": {
             "description": "A list of abilities that were introduced in this generation.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "names": {
             "$ref": "#/components/schemas/NameList"
@@ -1679,19 +2185,19 @@
           },
           "moves": {
             "description": "A list of moves that were introduced in this generation.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "pokemon_species": {
             "description": "A list of pokemon species that result from this evolution trigger.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "types": {
             "description": "A list of types that were introduced in this generation.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "version_groups": {
             "description": "A list of version groups that were introduced in this generation.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -1760,7 +2266,7 @@
           },
           "version_groups": {
             "description": "A list of version groups this Pokédex is relevant to.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -1801,19 +2307,19 @@
           },
           "move_learn_methods": {
             "description": "A list of methods in which Pokémon can learn moves in this version group.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "pokedexes": {
             "description": "A list of Pokédexes introduces in this version group.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "regions": {
             "description": "A list of regions that can be visited in this version group.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "versions": {
             "description": "The versions this version group owns.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -1944,7 +2450,7 @@
           },
           "attributes": {
             "description": "A list of attributes this item has.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "category": {
             "description": "The category of items this item falls into.",
@@ -2007,7 +2513,7 @@
           },
           "items": {
             "description": "A list of items that have this attribute.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "names": {
             "description": "The name of this item attribute listed in different languages.",
@@ -2030,7 +2536,7 @@
           },
           "items": {
             "description": "A list of items that are a part of this category.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "names": {
             "description": "The name of this item category listed in different languages.",
@@ -2060,7 +2566,7 @@
           },
           "items": {
             "description": "A list of items that have this fling effect.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -2075,7 +2581,7 @@
           },
           "categories": {
             "description": "A list of item categories that are relevant to this item pocket.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "names": {
             "$ref": "#/components/schemas/NameList"
@@ -2107,7 +2613,7 @@
           },
           "areas": {
             "description": "Areas that can be found within this location.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -2153,7 +2659,7 @@
           },
           "condition_values": {
             "description": "A list of condition values that must be in effect for this encounter to occur.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "chance": {
             "description": "Percent chance that this encounter will occur.",
@@ -2283,7 +2789,7 @@
           },
           "locations": {
             "description": "A list of locations that can be found in this region.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "name": {
             "$ref": "#/components/schemas/ResourceName"
@@ -2297,11 +2803,11 @@
           },
           "pokedexes": {
             "description": "A list of pokédexes that catalogue Pokémon in this region.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "version_groups": {
             "description": "A list of version groups where this region can be visited.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -2569,7 +3075,7 @@
           },
           "learned_by_pokemon": {
             "description": "List of Pokemon that can learn the move",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "flavor_text_entries": {
             "description": "The flavor text of this move listed in different languages.",
@@ -2635,7 +3141,7 @@
           },
           "moves": {
             "description": "A list of moves that cause this ailment.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "names": {
             "$ref": "#/components/schemas/NameList"
@@ -2667,7 +3173,7 @@
           },
           "moves": {
             "description": "A list of moves that fall into this category.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "descriptions": {
             "$ref": "#/components/schemas/DescriptionList"
@@ -2688,7 +3194,7 @@
           },
           "moves": {
             "description": "A list of moves that fall into this damage class.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           },
           "names": {
             "$ref": "#/components/schemas/NameList"
@@ -2712,7 +3218,7 @@
           },
           "version_groups": {
             "description": "A list of version groups where moves can be learned through this method.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
           }
         }
       },
@@ -2730,7 +3236,1336 @@
           },
           "moves": {
             "description": "A list of moves that that are directed at this target.",
-            "$ref": "#/components/schemas/NamedAPIResourceList"
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "AbilityFlavorText": {
+        "type": "object",
+        "properties": {
+          "flavor_text": {
+            "description": "The localized name for an API resource in a specific language.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this text resource is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group": {
+            "description": "The version group that uses this flavor text.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "AbilityPokemon": {
+        "type": "object",
+        "properties": {
+          "is_hidden": {
+            "description": "Whether or not this a hidden ability for the referenced Pokémon.",
+            "type": "boolean"
+          },
+          "slot": {
+            "description": "Pokémon have 3 ability 'slots' which hold references to possible abilities they could have. This is the slot of this ability for the referenced Pokémon.",
+            "type": "integer"
+          },
+          "pokemon": {
+            "description": "The Pokémon this ability could belong to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Ability": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "is_main_series": {
+            "description": "Whether or not this ability originated in the main series of the video games.",
+            "type": "boolean"
+          },
+          "generation": {
+            "description": "The generation this ability originated in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "effect_entries": {
+            "description": "The effect of this ability listed in different languages.",
+            "$ref": "#/components/schemas/VerboseEffectList"
+          },
+          "effect_changes": {
+            "description": "The list of previous effects this ability has had across version groups.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbilityEffectChange"
+            }
+          },
+          "flavor_text_entries": {
+            "description": "The flavor text of this ability listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbilityFlavorText"
+            }
+          },
+          "pokemon": {
+            "description": "A list of Pokémon that could potentially have this ability.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbilityPokemon"
+            }
+          }
+        }
+      },
+      "Characteristic": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "gene_modulo": {
+            "description": "The remainder of the highest stat/IV divided by 5.",
+            "type": "integer"
+          },
+          "possible_values": {
+            "description": "The possible values of the highest stat that would result in a Pokémon recieving this characteristic when divided by 5.",
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "highest_stat": {
+            "description": "The stat which results in this characteristic.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "descriptions": {
+            "description": "The descriptions of this characteristic listed in different languages.",
+            "$ref": "#/components/schemas/DescriptionList"
+          }
+        }
+      },
+      "EggGroup": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_species": {
+            "description": "A list of all Pokémon species that are members of this egg group.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "PokemonSpeciesGender": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "description": "The chance of this Pokémon being female, in eighths; or -1 for genderless.",
+            "type": "integer"
+          },
+          "pokemon_species": {
+            "description": "A Pokémon species that can be the referenced gender.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Gender": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "pokemon_species_details": {
+            "description": "A list of Pokémon species that can be this gender and how likely it is that they will be.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonSpeciesGender"
+            }
+          },
+          "required_for_evolution": {
+            "description": "A list of Pokémon species that required this gender in order for a Pokémon to evolve into them.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "GrowthRateExperienceLevel": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "description": "The level gained.",
+            "type": "integer"
+          },
+          "experience": {
+            "description": "The amount of experience required to reach the referenced level.",
+            "type": "integer"
+          }
+        }
+      },
+      "GrowthRate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "formula": {
+            "description": "The formula (in LaTeX format) used to calculate the rate at which the Pokémon species gains level.",
+            "type": "string"
+          },
+          "descriptions": {
+            "description": "The descriptions of this characteristic listed in different languages.",
+            "$ref": "#/components/schemas/DescriptionList"
+          },
+          "levels": {
+            "description": "A list of levels and the amount of experienced needed to atain them based on this growth rate.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GrowthRateExperienceLevel"
+            }
+          },
+          "pokemon_species": {
+            "description": "A list of Pokémon species that gain levels at this growth rate.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "NatureStatChange": {
+        "type": "object",
+        "properties": {
+          "max_change": {
+            "description": "The amount of change.",
+            "type": "integer"
+          },
+          "pokeathlon_stat": {
+            "description": "The stat being affected.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "MoveBattleStylePreference": {
+        "type": "object",
+        "properties": {
+          "low_hp_preference": {
+            "description": "Chance of using the move, in percent, if HP is under one half.",
+            "type": "integer"
+          },
+          "high_hp_preference": {
+            "description": "Chance of using the move, in percent, if HP is over one half.",
+            "type": "integer"
+          },
+          "move_battle_style": {
+            "description": "The move battle style.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Nature": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "decreased_stat": {
+            "description": "The stat decreased by 10% in Pokémon with this nature.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "increased_stat": {
+            "description": "The stat increased by 10% in Pokémon with this nature.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "hates_flavor": {
+            "description": "The flavor hated by Pokémon with this nature.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "likes_flavor": {
+            "description": "The flavor liked by Pokémon with this nature.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "pokeathlon_stat_changes": {
+            "description": "A list of Pokéathlon stats this nature effects and how much it effects them.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NatureStatChange"
+            }
+          },
+          "move_battle_style_preferences": {
+            "description": "A list of battle styles and how likely a Pokémon with this nature is to use them in the Battle Palace or Battle Tent.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MoveBattleStylePreference"
+            }
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "NaturePokeathlonStatAffect": {
+        "type": "object",
+        "properties": {
+          "max_change": {
+            "description": "The maximum amount of change to the referenced Pokéathlon stat.",
+            "type": "integer"
+          },
+          "nature": {
+            "description": "The nature causing the change.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "NaturePokeathlonStatAffectSets": {
+        "type": "object",
+        "properties": {
+          "increase": {
+            "description": "A list of natures and how they change the referenced Pokéathlon stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NaturePokeathlonStatAffect"
+            }
+          },
+          "decrease": {
+            "description": "A list of natures and how they change the referenced Pokéathlon stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NaturePokeathlonStatAffect"
+            }
+          }
+        }
+      },
+      "PokeathlonStat": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "affecting_natures": {
+            "description": "A detail of natures which affect this Pokéathlon stat positively or negatively.",
+            "$ref": "#/components/schemas/NaturePokeathlonStatAffectSets"
+          }
+        }
+      },
+      "PokemonAbility": {
+        "type": "object",
+        "properties": {
+          "is_hidden": {
+            "description": "Whether or not this is a hidden ability.",
+            "type": "boolean"
+          },
+          "slot": {
+            "description": "The slot this ability occupies in this Pokémon species.",
+            "type": "integer"
+          },
+          "ability": {
+            "description": "The ability the Pokémon may have.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "VersionGameIndex": {
+        "type": "object",
+        "properties": {
+          "game_index": {
+            "description": "The internal id of an API resource within game data.",
+            "type": "integer"
+          },
+          "version": {
+            "description": "The version relevent to this game index.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PokemonHeldItemVersion": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "description": "The version in which the item is held.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "rarity": {
+            "description": "How often the item is held.",
+            "type": "integer"
+          }
+        }
+      },
+      "PokemonHeldItem": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "description": "The item the referenced Pokémon holds.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_details": {
+            "description": "The details of the different versions in which the item is held.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonHeldItemVersion"
+            }
+          }
+        }
+      },
+      "PokemonMoveVersion": {
+        "type": "object",
+        "properties": {
+          "move_learn_method": {
+            "description": "The method by which the move is learned.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group": {
+            "description": "The version group in which the move is learned.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "level_learned_at": {
+            "description": "The minimum level to learn the move.",
+            "type": "integer"
+          }
+        }
+      },
+      "PokemonMove": {
+        "type": "object",
+        "properties": {
+          "move": {
+            "description": "The move the Pokémon can learn.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_group_details": {
+            "description": "The details of the version in which the Pokémon can learn the move.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonMoveVersion"
+            }
+          }
+        }
+      },
+      "PokemonType": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "description": "The order the Pokémon's types are listed in.",
+            "type": "integer"
+          },
+          "type": {
+            "description": "The type the referenced Pokémon has.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PokemonTypePast": {
+        "type": "object",
+        "properties": {
+          "generation": {
+            "description": "The last generation in which the referenced pokémon had the listed types.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "types": {
+            "description": "The types the referenced pokémon had up to and including the listed generation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            }
+          }
+        }
+      },
+      "PokemonSprites": {
+        "type": "object",
+        "properties": {
+          "front_default": {
+            "description": "The default depiction of this Pokémon from the front in battle.",
+            "type": "string"
+          },
+          "front_shiny": {
+            "description": "The shiny depiction of this Pokémon from the front in battle.",
+            "type": "string"
+          },
+          "front_female": {
+            "description": "The female depiction of this Pokémon from the front in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "front_shiny_female": {
+            "description": "The shiny female depiction of this Pokémon from the front in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "back_default": {
+            "description": "The default depiction of this Pokémon from the back in battle.",
+            "type": "string"
+          },
+          "back_shiny": {
+            "description": "The shiny depiction of this Pokémon from the back in battle.",
+            "type": "string"
+          },
+          "back_female": {
+            "description": "The female depiction of this Pokémon from the back in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "back_shiny_female": {
+            "description": "The shiny female depiction of this Pokémon from the back in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "other": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "dream_world": {
+                "type": "object",
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "home": {
+                "type": "object",
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "official-artwork": {
+                "type": "object",
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  }
+                }
+              },
+              "showdown": {
+                "type": "object",
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "back_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PokemonCries": {
+        "type": "object",
+        "properties": {
+          "latest": {
+            "description": "The latest depiction of this Pokémon's cry.",
+            "type": "string"
+          },
+          "legacy": {
+            "description": "The legacy depiction of this Pokémon's cry.",
+            "type": "string"
+          }
+        }
+      },
+      "PokemonStat": {
+        "type": "object",
+        "properties": {
+          "stat": {
+            "description": "The stat the Pokémon has.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "effort": {
+            "description": "The effort points (EV) the Pokémon has in the stat.",
+            "type": "integer"
+          },
+          "base_stat": {
+            "description": "The base value of the stat.",
+            "type": "integer"
+          }
+        }
+      },
+      "Pokemon": {
+        "type": "object",
+        "properties": {
+          "increase": {
+            "description": "A list of natures and how they change the referenced Pokéathlon stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NaturePokeathlonStatAffect"
+            }
+          },
+          "decrease": {
+            "description": "A list of natures and how they change the referenced Pokéathlon stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NaturePokeathlonStatAffect"
+            }
+          },
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "base_experience": {
+            "description": "The base experience gained for defeating this Pokémon.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of this Pokémon in decimetres.",
+            "type": "integer"
+          },
+          "is_default": {
+            "description": "Set for exactly one Pokémon used as the default for each species.",
+            "type": "boolean"
+          },
+          "order": {
+            "description": "Order for sorting. Almost national order, except families are grouped together.",
+            "type": "integer"
+          },
+          "weight": {
+            "description": "The weight of this Pokémon in hectograms.",
+            "type": "integer"
+          },
+          "abilities": {
+            "description": "A list of abilities this Pokémon could potentially have.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonAbility"
+            }
+          },
+          "forms": {
+            "description": "A list of forms this Pokémon can take on.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          },
+          "game_indices": {
+            "description": "A list of game indices relevent to Pokémon item by generation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VersionGameIndex"
+            }
+          },
+          "held_items": {
+            "description": "A list of items this Pokémon may be holding when encountered.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonHeldItem"
+            }
+          },
+          "location_area_encounters": {
+            "description": "A link to a list of location areas, as well as encounter details pertaining to specific versions.",
+            "type": "string"
+          },
+          "moves": {
+            "description": "A list of moves along with learn methods and level details pertaining to specific version groups.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "past_types": {
+            "description": "A list of details showing types this pokémon had in previous generations",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonTypePast"
+            }
+          },
+          "sprites": {
+            "description": "A set of sprites used to depict this Pokémon in the game. A visual representation of the various sprites can be found at [PokeAPI/sprites]((https://github.com/PokeAPI/sprites#sprites).",
+            "$ref": "#/components/schemas/PokemonSprites"
+          },
+          "cries": {
+            "description": "A set of cries used to depict this Pokémon in the game. A visual representation of the various cries can be found at [PokeAPI/cries](https://github.com/PokeAPI/cries#cries).",
+            "$ref": "#/components/schemas/PokemonCries"
+          },
+          "species": {
+            "description": "The species this Pokémon belongs to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "stats": {
+            "description": "A list of base stat values for this Pokémon.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonStat"
+            }
+          },
+          "types": {
+            "description": "A list of details showing types this Pokémon has.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            }
+          }
+        }
+      },
+      "PokemonLocationArea": {
+        "type": "object",
+        "properties": {
+          "location_area": {
+            "description": "The location area the referenced Pokémon can be encountered in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "version_details": {
+            "description": "A list of versions and encounters with the referenced Pokémon that might happen.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VersionEncounterDetail"
+            }
+          }
+        }
+      },
+      "PokemonColor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_species": {
+            "description": "A list of the Pokémon species that have this color.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "PokemonFormType": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "description": "The order the Pokémon's types are listed in.",
+            "type": "integer"
+          },
+          "type": {
+            "description": "The type the referenced Form has.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PokemonFormSprites": {
+        "type": "object",
+        "properties": {
+          "front_default": {
+            "description": "The default depiction of this Pokémon from the front in battle.",
+            "type": "string"
+          },
+          "front_shiny": {
+            "description": "The shiny depiction of this Pokémon from the front in battle.",
+            "type": "string"
+          },
+          "back_default": {
+            "description": "The default depiction of this Pokémon from the back in battle.",
+            "type": "string"
+          },
+          "back_shiny": {
+            "description": "The shiny depiction of this Pokémon from the back in battle.",
+            "type": "string"
+          }
+        }
+      },
+      "PokemonForm": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "order": {
+            "description": "The order in which forms should be sorted within all forms. Multiple forms may have equal order, in which case they should fall back on sorting by name.",
+            "type": "integer"
+          },
+          "form_order": {
+            "description": "The order in which forms should be sorted within a species' forms.",
+            "type": "integer"
+          },
+          "is_default": {
+            "description": "True for exactly one form used as the default for each Pokémon.",
+            "type": "boolean"
+          },
+          "is_battle_only": {
+            "description": "Whether or not this form can only happen during battle.",
+            "type": "boolean"
+          },
+          "is_mega": {
+            "description": "Whether or not this form requires mega evolution.",
+            "type": "boolean"
+          },
+          "form_name": {
+            "description": "The name of this form.",
+            "type": "string"
+          },
+          "pokemon": {
+            "description": "The Pokémon that can take on this form.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "types": {
+            "description": "A list of details showing types this Pokémon form has.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonFormType"
+            }
+          },
+          "sprites": {
+            "description": "A set of sprites used to depict this Pokémon form in the game.",
+            "$ref": "#/components/schemas/PokemonFormSprites"
+          },
+          "version_group": {
+            "description": "The version group this Pokémon form was introduced in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "form_names": {
+            "description": "The form specific form name of this Pokémon form, or empty if the form does not have a specific name.",
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "PokemonHabitat": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_species": {
+            "description": "A list of the Pokémon species that can be found in this habitat.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "AwesomeName": {
+        "type": "object",
+        "properties": {
+          "awesome_name": {
+            "description": "The localized \"scientific\" name for an API resource in a specific language.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this \"scientific\" name is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PokemonShape": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "awesome_names": {
+            "description": "The \"scientific\" name of this Pokémon shape listed in different languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AwesomeName"
+            }
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon_species": {
+            "description": "A list of the Pokémon species that have this shape.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "PokemonSpeciesDexEntry": {
+        "type": "object",
+        "properties": {
+          "entry_number": {
+            "description": "The index number within the Pokédex.",
+            "type": "integer"
+          },
+          "pokedex": {
+            "description": "The Pokédex the referenced Pokémon species can be found in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PalParkEncounterArea": {
+        "type": "object",
+        "properties": {
+          "base_score": {
+            "description": "The base score given to the player when this Pokémon is caught during a pal park run.",
+            "type": "integer"
+          },
+          "rate": {
+            "description": "The base rate for encountering this Pokémon in this pal park area.",
+            "type": "integer"
+          },
+          "area": {
+            "description": "The pal park area where this encounter happens.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Genus": {
+        "type": "object",
+        "properties": {
+          "genus": {
+            "description": "The localized genus for the referenced Pokémon species.",
+            "type": "string"
+          },
+          "language": {
+            "description": "The language this genus is in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PokemonSpeciesVariety": {
+        "type": "object",
+        "properties": {
+          "is_default": {
+            "description": "Whether this variety is the default variety.",
+            "type": "boolean"
+          },
+          "pokemon": {
+            "description": "The Pokémon variety.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "PokemonSpecies": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "order": {
+            "description": "The order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage.",
+            "type": "integer"
+          },
+          "gender_rate": {
+            "description": "The chance of this Pokémon being female, in eighths; or -1 for genderless.",
+            "type": "integer"
+          },
+          "capture_rate": {
+            "description": "The base capture rate; up to 255. The higher the number, the easier the catch.",
+            "type": "integer"
+          },
+          "base_happiness": {
+            "description": "The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.",
+            "type": "integer"
+          },
+          "is_baby": {
+            "description": "Whether or not this is a baby Pokémon.",
+            "type": "boolean"
+          },
+          "is_legendary": {
+            "description": "Whether or not this is a legendary Pokémon.",
+            "type": "boolean"
+          },
+          "is_mythical": {
+            "description": "Whether or not this is a mythical Pokémon.",
+            "type": "boolean"
+          },
+          "hatch_counter": {
+            "description": "Initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's.",
+            "type": "integer"
+          },
+          "has_gender_differences": {
+            "description": "Whether or not this Pokémon has visual gender differences.",
+            "type": "boolean"
+          },
+          "forms_switchable": {
+            "description": "Whether or not this Pokémon has multiple forms and can switch between them.",
+            "type": "boolean"
+          },
+          "growth_rate": {
+            "description": "The rate at which this Pokémon species gains levels.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "pokedex_numbers": {
+            "description": "A list of Pokedexes and the indexes reserved within them for this Pokémon species.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonSpeciesDexEntry"
+            }
+          },
+          "egg_groups": {
+            "description": "A list of egg groups this Pokémon species is a member of.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "color": {
+            "description": "The color of this Pokémon for Pokédex search.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "shape": {
+            "description": "The shape of this Pokémon for Pokédex search.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "evolves_from_species": {
+            "description": "The Pokémon species that evolves into this Pokemon_species.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "evolution_chain": {
+            "description": "The evolution chain this Pokémon species is a member of.",
+            "$ref": "#/components/schemas/APIResource"
+          },
+          "habitat": {
+            "description": "The habitat this Pokémon species can be encountered in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "generation": {
+            "description": "The generation this Pokémon species was introduced in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pal_park_encounters": {
+            "description": "A list of encounters that can be had with this Pokémon species in pal park.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PalParkEncounterArea"
+            }
+          },
+          "flavor_text_entries": {
+            "description": "A list of flavor text entries for this Pokémon species.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlavorText"
+            }
+          },
+          "form_descriptions": {
+            "description": "Descriptions of different forms Pokémon take on within the Pokémon species.",
+            "$ref": "#/components/schemas/DescriptionList"
+          },
+          "genera": {
+            "description": "The genus of this Pokémon species listed in multiple languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Genus"
+            }
+          },
+          "varieties": {
+            "description": "A list of the Pokémon that exist within this Pokémon species.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PokemonSpeciesVariety"
+            }
+          }
+        }
+      },
+      "MoveStatAffect": {
+        "type": "object",
+        "properties": {
+          "change": {
+            "description": "The maximum amount of change to the referenced stat.",
+            "type": "integer"
+          },
+          "move": {
+            "description": "The move causing the change.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "MoveStatAffectSets": {
+        "type": "object",
+        "properties": {
+          "increase": {
+            "description": "A list of moves and how they change the referenced stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MoveStatAffect"
+            }
+          },
+          "decrease": {
+            "description": "A list of moves and how they change the referenced stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MoveStatAffect"
+            }
+          }
+        }
+      },
+      "NatureStatAffectSets": {
+        "type": "object",
+        "properties": {
+          "increase": {
+            "description": "A list of natures and how they change the referenced stat.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "decrease": {
+            "description": "A list of natures and how they change the referenced stat.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "Stat": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "game_index": {
+            "description": "ID the games use for this stat.",
+            "type": "integer"
+          },
+          "is_battle_only": {
+            "description": "Whether this stat only exists within a battle.",
+            "type": "boolean"
+          },
+          "affecting_moves": {
+            "description": "A detail of moves which affect this stat positively or negatively.",
+            "$ref": "#/components/schemas/MoveStatAffectSets"
+          },
+          "affecting_natures": {
+            "description": "A detail of natures which affect this stat positively or negatively.",
+            "$ref": "#/components/schemas/NatureStatAffectSets"
+          },
+          "characteristics": {
+            "description": "A list of characteristics that are set on a Pokémon when its highest base stat is this stat.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIResource"
+            }
+          },
+          "move_damage_class": {
+            "description": "The class of damage this stat is directly related to.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          }
+        }
+      },
+      "TypeRelations": {
+        "type": "object",
+        "properties": {
+          "no_damage_to": {
+            "description": "A list of types this type has no effect on.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "half_damage_to": {
+            "description": "A list of types this type is not very effect against.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "double_damage_to": {
+            "description": "A list of types this type is very effect against.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "no_damage_from": {
+            "description": "A list of types that have no effect on this type.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "half_damage_from": {
+            "description": "A list of types that are not very effective against this type.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          },
+          "double_damage_from": {
+            "description": "A list of types that are very effective against this type.",
+            "$ref": "#/components/schemas/NamedAPIResourceArray"
+          }
+        }
+      },
+      "TypeRelationsPast": {
+        "type": "object",
+        "properties": {
+          "generation": {
+            "description": "The last generation in which the referenced type had the listed damage relations.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "damage_relations": {
+            "description": "The damage relations the referenced type had up to and including the listed generation.",
+            "$ref": "#/components/schemas/TypeRelations"
+          }
+        }
+      },
+      "TypePokemon": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "description": "The order the Pokémon's types are listed in.",
+            "type": "integer"
+          },
+          "pokemon": {
+            "description": "The Pokémon that has the referenced type.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          }
+        }
+      },
+      "Type": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "damage_relations": {
+            "description": "A detail of how effective this type is toward others and vice versa.",
+            "$ref": "#/components/schemas/TypeRelations"
+          },
+          "past_damage_relations": {
+            "description": "A list of details of how effective this type was toward others and vice versa in previous generations",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TypeRelationsPast"
+            }
+          },
+          "game_indices": {
+            "description": "A list of game indices relevent to this item by generation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenerationGameIndex"
+            }
+          },
+          "generation": {
+            "description": "The generation this type was introduced in.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "move_damage_class": {
+            "description": "The class of damage inflicted by this type.",
+            "$ref": "#/components/schemas/NamedAPIResource"
+          },
+          "names": {
+            "$ref": "#/components/schemas/NameList"
+          },
+          "pokemon": {
+            "description": "A list of details of Pokémon that have this type.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TypePokemon"
+            }
+          },
+          "moves": {
+            "description": "A list of moves that have this type.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedAPIResource"
+            }
+          }
+        }
+      },
+      "Language": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          "official": {
+            "description": "Whether or not the games are published in this language.",
+            "type": "boolean"
+          },
+          "iso639": {
+            "description": "The two-letter code of the country where this language is spoken. Note that it is not unique.",
+            "type": "string"
+          },
+          "iso3166": {
+            "description": "The two-letter code of the language. Note that it is not unique.",
+            "type": "string"
           },
           "names": {
             "$ref": "#/components/schemas/NameList"
