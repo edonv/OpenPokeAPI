@@ -91,9 +91,7 @@
       ],
       "get": {
         "operationId": "getEndpointList",
-        "tags": [
-          "Resource Lists/Pagination"
-        ],
+        "tags": ["Resource Lists/Pagination"],
         "responses": {
           "200": {
             "description": "A list of resource items.",
@@ -118,9 +116,7 @@
       ],
       "get": {
         "operationId": "getBerry",
-        "tags": [
-          "Berries"
-        ],
+        "tags": ["Berries"],
         "responses": {
           "200": {
             "description": "A Berry object.",
@@ -168,9 +164,7 @@
       ],
       "get": {
         "operationId": "getBerryFirmness",
-        "tags": [
-          "Berries"
-        ],
+        "tags": ["Berries"],
         "responses": {
           "200": {
             "description": "A BerryFirmness object.",
@@ -204,9 +198,7 @@
       ],
       "get": {
         "operationId": "getBerryFlavor",
-        "tags": [
-          "Berries"
-        ],
+        "tags": ["Berries"],
         "responses": {
           "200": {
             "description": "A BerryFlavor object.",
@@ -247,9 +239,7 @@
       ],
       "get": {
         "operationId": "getContest",
-        "tags": [
-          "Contests"
-        ],
+        "tags": ["Contests"],
         "responses": {
           "200": {
             "description": "A ContestType object.",
@@ -274,9 +264,7 @@
       ],
       "get": {
         "operationId": "getContestEffect",
-        "tags": [
-          "Contests"
-        ],
+        "tags": ["Contests"],
         "responses": {
           "200": {
             "description": "A ContestEffect object.",
@@ -301,9 +289,7 @@
       ],
       "get": {
         "operationId": "getSuperContestEffect",
-        "tags": [
-          "Contests"
-        ],
+        "tags": ["Contests"],
         "responses": {
           "200": {
             "description": "A SuperContestEffect object.",
@@ -328,9 +314,7 @@
       ],
       "get": {
         "operationId": "getEncounterMethod",
-        "tags": [
-          "Encounters"
-        ],
+        "tags": ["Encounters"],
         "responses": {
           "200": {
             "description": "An EncounterMethod object.",
@@ -355,9 +339,7 @@
       ],
       "get": {
         "operationId": "getEncounterCondition",
-        "tags": [
-          "Encounters"
-        ],
+        "tags": ["Encounters"],
         "responses": {
           "200": {
             "description": "An EncounterCondition object.",
@@ -382,9 +364,7 @@
       ],
       "get": {
         "operationId": "getEncounterConditionValue",
-        "tags": [
-          "Encounters"
-        ],
+        "tags": ["Encounters"],
         "responses": {
           "200": {
             "description": "An EncounterConditionValue object.",
@@ -409,9 +389,7 @@
       ],
       "get": {
         "operationId": "getEvolutionChain",
-        "tags": [
-          "Evolution"
-        ],
+        "tags": ["Evolution"],
         "responses": {
           "200": {
             "description": "An EvolutionChain object.",
@@ -436,9 +414,7 @@
       ],
       "get": {
         "operationId": "getEvolutionTrigger",
-        "tags": [
-          "Evolution"
-        ],
+        "tags": ["Evolution"],
         "responses": {
           "200": {
             "description": "An EvolutionTrigger object.",
@@ -463,9 +439,7 @@
       ],
       "get": {
         "operationId": "getGeneration",
-        "tags": [
-          "Games"
-        ],
+        "tags": ["Games"],
         "responses": {
           "200": {
             "description": "A Generation object.",
@@ -490,9 +464,7 @@
       ],
       "get": {
         "operationId": "getPokedex",
-        "tags": [
-          "Games"
-        ],
+        "tags": ["Games"],
         "responses": {
           "200": {
             "description": "A Pokedex object.",
@@ -517,9 +489,7 @@
       ],
       "get": {
         "operationId": "getVersion",
-        "tags": [
-          "Games"
-        ],
+        "tags": ["Games"],
         "responses": {
           "200": {
             "description": "A Version object.",
@@ -544,9 +514,7 @@
       ],
       "get": {
         "operationId": "getVersionGroup",
-        "tags": [
-          "Games"
-        ],
+        "tags": ["Games"],
         "responses": {
           "200": {
             "description": "A VersionGroup object.",
@@ -571,9 +539,7 @@
       ],
       "get": {
         "operationId": "getItem",
-        "tags": [
-          "Items"
-        ],
+        "tags": ["Items"],
         "responses": {
           "200": {
             "description": "An Item object.",
@@ -598,9 +564,7 @@
       ],
       "get": {
         "operationId": "getItemAttribute",
-        "tags": [
-          "Items"
-        ],
+        "tags": ["Items"],
         "responses": {
           "200": {
             "description": "An ItemAttribute object.",
@@ -625,9 +589,7 @@
       ],
       "get": {
         "operationId": "getItemCategory",
-        "tags": [
-          "Items"
-        ],
+        "tags": ["Items"],
         "responses": {
           "200": {
             "description": "An ItemCategory object.",
@@ -652,9 +614,7 @@
       ],
       "get": {
         "operationId": "getItemFlingEffect",
-        "tags": [
-          "Items"
-        ],
+        "tags": ["Items"],
         "responses": {
           "200": {
             "description": "An ItemFlingEffect object.",
@@ -679,9 +639,7 @@
       ],
       "get": {
         "operationId": "getItemPocket",
-        "tags": [
-          "Items"
-        ],
+        "tags": ["Items"],
         "responses": {
           "200": {
             "description": "An ItemPocket object.",
@@ -706,9 +664,7 @@
       ],
       "get": {
         "operationId": "getLocation",
-        "tags": [
-          "Locations"
-        ],
+        "tags": ["Locations"],
         "responses": {
           "200": {
             "description": "A Location object.",
@@ -733,9 +689,7 @@
       ],
       "get": {
         "operationId": "getLocationArea",
-        "tags": [
-          "Locations"
-        ],
+        "tags": ["Locations"],
         "responses": {
           "200": {
             "description": "A LocationArea object.",
@@ -760,9 +714,7 @@
       ],
       "get": {
         "operationId": "getPalParkArea",
-        "tags": [
-          "Locations"
-        ],
+        "tags": ["Locations"],
         "responses": {
           "200": {
             "description": "A PalParkArea object.",
@@ -787,9 +739,7 @@
       ],
       "get": {
         "operationId": "getRegion",
-        "tags": [
-          "Locations"
-        ],
+        "tags": ["Locations"],
         "responses": {
           "200": {
             "description": "A Region object.",
@@ -814,9 +764,7 @@
       ],
       "get": {
         "operationId": "getMachine",
-        "tags": [
-          "Machines"
-        ],
+        "tags": ["Machines"],
         "responses": {
           "200": {
             "description": "A Machine object.",
@@ -841,9 +789,7 @@
       ],
       "get": {
         "operationId": "getMove",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A Move object.",
@@ -868,9 +814,7 @@
       ],
       "get": {
         "operationId": "getMoveAilment",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A MoveAilment object.",
@@ -895,9 +839,7 @@
       ],
       "get": {
         "operationId": "getMoveBattleStyle",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A MoveBattleStyle object.",
@@ -922,9 +864,7 @@
       ],
       "get": {
         "operationId": "getMoveCategory",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A MoveCategory object.",
@@ -949,9 +889,7 @@
       ],
       "get": {
         "operationId": "getMoveDamageClass",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A MoveDamageClass object.",
@@ -976,9 +914,7 @@
       ],
       "get": {
         "operationId": "getMoveLearnMethod",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A MoveLearnMethod object.",
@@ -1003,9 +939,7 @@
       ],
       "get": {
         "operationId": "getMoveTarget",
-        "tags": [
-          "Moves"
-        ],
+        "tags": ["Moves"],
         "responses": {
           "200": {
             "description": "A MoveTarget object.",
@@ -1030,9 +964,7 @@
       ],
       "get": {
         "operationId": "getAbility",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "An Ability object.",
@@ -1057,9 +989,7 @@
       ],
       "get": {
         "operationId": "getCharacteristic",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A Characteristic object.",
@@ -1084,9 +1014,7 @@
       ],
       "get": {
         "operationId": "getEggGroup",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "An EggGroup object.",
@@ -1111,9 +1039,7 @@
       ],
       "get": {
         "operationId": "getGender",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A Gender object.",
@@ -1138,9 +1064,7 @@
       ],
       "get": {
         "operationId": "getGrowthRate",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A GrowthRate object.",
@@ -1165,9 +1089,7 @@
       ],
       "get": {
         "operationId": "getNature",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A Nature object.",
@@ -1192,9 +1114,7 @@
       ],
       "get": {
         "operationId": "getPokeathlonStat",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokeathlonStat object.",
@@ -1219,9 +1139,7 @@
       ],
       "get": {
         "operationId": "getPokemon",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A Pokemon object.",
@@ -1246,9 +1164,7 @@
       ],
       "get": {
         "operationId": "getPokemonLocationArea",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokemonLocationArea object.",
@@ -1273,9 +1189,7 @@
       ],
       "get": {
         "operationId": "getPokemonColor",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokemonColor object.",
@@ -1300,9 +1214,7 @@
       ],
       "get": {
         "operationId": "getPokemonForm",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokemonForm object.",
@@ -1327,9 +1239,7 @@
       ],
       "get": {
         "operationId": "getPokemonHabitat",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokemonHabitat object.",
@@ -1354,9 +1264,7 @@
       ],
       "get": {
         "operationId": "getPokemonShape",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokemonShape object.",
@@ -1381,9 +1289,7 @@
       ],
       "get": {
         "operationId": "getPokemonSpecies",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A PokemonSpecies object.",
@@ -1408,9 +1314,7 @@
       ],
       "get": {
         "operationId": "getStat",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A Stat object.",
@@ -1435,9 +1339,7 @@
       ],
       "get": {
         "operationId": "getType",
-        "tags": [
-          "Pokémon"
-        ],
+        "tags": ["Pokémon"],
         "responses": {
           "200": {
             "description": "A Type object.",
@@ -1462,9 +1364,7 @@
       ],
       "get": {
         "operationId": "getLanguage",
-        "tags": [
-          "Utility"
-        ],
+        "tags": ["Utility"],
         "responses": {
           "200": {
             "description": "A Language object.",
@@ -1576,17 +1476,11 @@
           },
           "next": {
             "description": "The URL for the next page in the list.",
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "previous": {
             "description": "The URL for the previous page in the list.",
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "results": {
             "description": "A list of named API resources.",
@@ -1951,15 +1845,8 @@
           },
           "gender": {
             "description": "The id of the gender of the evolving Pokémon species must be in order to evolve into this Pokémon species.",
-            "type": [
-              "integer",
-              "null"
-            ],
-            "enum": [
-              1,
-              2,
-              3
-            ]
+            "type": ["integer", "null"],
+            "enum": [1, 2, 3]
           },
           "held_item": {
             "description": "The item the evolving Pokémon species must be holding during the evolution trigger event to evolve into this Pokémon species.",
@@ -2007,31 +1894,19 @@
           },
           "min_level": {
             "description": "The minimum required level of the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "min_happiness": {
             "description": "The minimum required level of happiness the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "min_beauty": {
             "description": "The minimum required level of beauty the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "min_affection": {
             "description": "The minimum required level of affection the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "needs_overworld_rain": {
             "description": "Whether or not it must be raining in the overworld to cause evolution this Pokémon species.",
@@ -2061,24 +1936,13 @@
           },
           "relative_physical_stats": {
             "description": "The required relation between the Pokémon's Attack and Defense stats. `1` means Attack > Defense. `0` means Attack = Defense. `-1` means Attack < Defense.",
-            "type": [
-              "integer",
-              "null"
-            ],
-            "enum": [
-              -1,
-              0,
-              1
-            ]
+            "type": ["integer", "null"],
+            "enum": [-1, 0, 1]
           },
           "time_of_day": {
             "description": "The required time of day. Day or night.",
             "type": "string",
-            "enum": [
-              "day",
-              "night",
-              ""
-            ]
+            "enum": ["day", "night", ""]
           },
           "trade_species": {
             "description": "Pokémon species for which this one must be traded.",
@@ -2851,10 +2715,7 @@
         }
       },
       "ContestComboSets": {
-        "type": [
-          "object",
-          "null"
-        ],
+        "type": ["object", "null"],
         "properties": {
           "normal": {
             "$ref": "#/components/schemas/ContestComboDetail"
@@ -2910,31 +2771,19 @@
           },
           "min_hits": {
             "description": "The minimum number of times this move hits. Null if it always only hits once.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "max_hits": {
             "description": "The maximum number of times this move hits. Null if it always only hits once.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "min_turns": {
             "description": "The minimum number of turns this move continues to take effect. Null if it always only lasts one turn.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "max_turns": {
             "description": "The maximum number of turns this move continues to take effect. Null if it always only lasts one turn.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "drain": {
             "description": "HP drain (if positive) or Recoil damage (if negative), in percent of damage done.",
@@ -3019,17 +2868,11 @@
           },
           "accuracy": {
             "description": "The percent value of how likely this move is to be successful.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "effect_chance": {
             "description": "The percent value of how likely it is this moves effect will happen.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "pp": {
             "description": "Power points. The number of times this move can be used.",
@@ -3043,10 +2886,7 @@
           },
           "power": {
             "description": "The base power of this move with a value of 0 if it does not have a base power.",
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": ["integer", "null"]
           },
           "contest_combos": {
             "description": "A detail of normal and super contest combos that require this move.",
@@ -3707,17 +3547,11 @@
           },
           "front_female": {
             "description": "The female depiction of this Pokémon from the front in battle.",
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "front_shiny_female": {
             "description": "The shiny female depiction of this Pokémon from the front in battle.",
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "back_default": {
             "description": "The default depiction of this Pokémon from the back in battle.",
@@ -3729,23 +3563,14 @@
           },
           "back_female": {
             "description": "The female depiction of this Pokémon from the back in battle.",
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "back_shiny_female": {
             "description": "The shiny female depiction of this Pokémon from the back in battle.",
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "other": {
-            "type": [
-              "object",
-              "null"
-            ],
+            "type": ["object", "null"],
             "properties": {
               "dream_world": {
                 "type": "object",
@@ -3754,10 +3579,7 @@
                     "type": "string"
                   },
                   "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   }
                 }
               },
@@ -3768,19 +3590,13 @@
                     "type": "string"
                   },
                   "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   },
                   "front_shiny": {
                     "type": "string"
                   },
                   "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   }
                 }
               },
@@ -3802,37 +3618,25 @@
                     "type": "string"
                   },
                   "back_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   },
                   "back_shiny": {
                     "type": "string"
                   },
                   "back_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   },
                   "front_default": {
                     "type": "string"
                   },
                   "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   },
                   "front_shiny": {
                     "type": "string"
                   },
                   "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                    "type": ["string", "null"]
                   }
                 }
               }
