@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "latest": {
+      "description": "The latest depiction of this Pokémon's cry.",
+      "type": "string"
+    },
+    "legacy": {
+      "description": "The legacy depiction of this Pokémon's cry.",
+      "type": "string"
+    }
+  }
+}

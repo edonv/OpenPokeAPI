@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "stat": {
+      "description": "The stat the Pokémon has.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "effort": {
+      "description": "The effort points (EV) the Pokémon has in the stat.",
+      "type": "integer"
+    },
+    "base_stat": {
+      "description": "The base value of the stat.",
+      "type": "integer"
+    }
+  }
+}

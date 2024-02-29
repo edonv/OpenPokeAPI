@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "is_hidden": {
+      "description": "Whether or not this is a hidden ability.",
+      "type": "boolean"
+    },
+    "slot": {
+      "description": "The slot this ability occupies in this Pokémon species.",
+      "type": "integer"
+    },
+    "ability": {
+      "description": "The ability the Pokémon may have.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

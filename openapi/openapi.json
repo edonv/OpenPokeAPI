@@ -153,6 +153,9 @@
     },
     "/pokeathlon-stat/{nameOrId}": {
       "$ref": "paths/pokeathlon-stat_{nameOrId}.json"
+    },
+    "/pokemon/{nameOrId}": {
+      "$ref": "paths/pokemon_{nameOrId}.json"
     }
   }
 }

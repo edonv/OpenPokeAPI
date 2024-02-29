@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "generation": {
+      "description": "The last generation in which the referenced pokémon had the listed types.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "types": {
+      "description": "The types the referenced pokémon had up to and including the listed generation.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonType.json"
+      }
+    }
+  }
+}

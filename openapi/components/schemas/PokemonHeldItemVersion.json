@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "The version in which the item is held.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "rarity": {
+      "description": "How often the item is held.",
+      "type": "integer"
+    }
+  }
+}

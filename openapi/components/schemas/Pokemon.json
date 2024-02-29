@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "properties": {
+    "increase": {
+      "description": "A list of natures and how they change the referenced Pokéathlon stat.",
+      "type": "array",
+      "items": {
+        "$ref": "./NaturePokeathlonStatAffect.json"
+      }
+    },
+    "decrease": {
+      "description": "A list of natures and how they change the referenced Pokéathlon stat.",
+      "type": "array",
+      "items": {
+        "$ref": "./NaturePokeathlonStatAffect.json"
+      }
+    },
+
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "base_experience": {
+      "description": "The base experience gained for defeating this Pokémon.",
+      "type": "integer"
+    },
+    "height": {
+      "description": "The height of this Pokémon in decimetres.",
+      "type": "integer"
+    },
+    "is_default": {
+      "description": "Set for exactly one Pokémon used as the default for each species.",
+      "type": "boolean"
+    },
+    "order": {
+      "description": "Order for sorting. Almost national order, except families are grouped together.",
+      "type": "integer"
+    },
+    "weight": {
+      "description": "The weight of this Pokémon in hectograms.",
+      "type": "integer"
+    },
+    "abilities": {
+      "description": "A list of abilities this Pokémon could potentially have.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonAbility.json"
+      }
+    },
+    "forms": {
+      "description": "A list of forms this Pokémon can take on.",
+      "type": "array",
+      "items": {
+        "$ref": "./NamedAPIResource.json"
+      }
+    },
+    "game_indices": {
+      "description": "A list of game indices relevent to Pokémon item by generation.",
+      "type": "array",
+      "items": {
+        "$ref": "./VersionGameIndex.json"
+      }
+    },
+    "held_items": {
+      "description": "A list of items this Pokémon may be holding when encountered.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonHeldItem.json"
+      }
+    },
+    "location_area_encounters": {
+      "description": "A link to a list of location areas, as well as encounter details pertaining to specific versions.",
+      "type": "string"
+    },
+    "moves": {
+      "description": "A list of moves along with learn methods and level details pertaining to specific version groups.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonMove.json"
+      }
+    },
+    "past_types": {
+      "description": "A list of details showing types this pokémon had in previous generations",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonTypePast.json"
+      }
+    },
+    "sprites": {
+      "description": "A set of sprites used to depict this Pokémon in the game. A visual representation of the various sprites can be found at [PokeAPI/sprites]((https://github.com/PokeAPI/sprites#sprites).",
+      "$ref": "./PokemonSprites.json"
+    },
+    "cries": {
+      "description": "A set of cries used to depict this Pokémon in the game. A visual representation of the various cries can be found at [PokeAPI/cries](https://github.com/PokeAPI/cries#cries).",
+      "$ref": "./PokemonCries.json"
+    },
+    "species": {
+      "description": "The species this Pokémon belongs to.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "stats": {
+      "description": "A list of base stat values for this Pokémon.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonStat.json"
+      }
+    },
+    "types": {
+      "description": "A list of details showing types this Pokémon has.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonType.json"
+      }
+    }
+  }
+}

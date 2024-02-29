@@ -1,0 +1,110 @@
+{
+  "type": "object",
+  "properties": {
+    "front_default": {
+      "description": "The default depiction of this Pokémon from the front in battle.",
+      "type": "string"
+    },
+    "front_shiny": {
+      "description": "The shiny depiction of this Pokémon from the front in battle.",
+      "type": "string"
+    },
+    "front_female": {
+      "description": "The female depiction of this Pokémon from the front in battle.",
+      "type": ["string", "null"]
+    },
+    "front_shiny_female": {
+      "description": "The shiny female depiction of this Pokémon from the front in battle.",
+      "type": ["string", "null"]
+    },
+    "back_default": {
+      "description": "The default depiction of this Pokémon from the back in battle.",
+      "type": "string"
+    },
+    "back_shiny": {
+      "description": "The shiny depiction of this Pokémon from the back in battle.",
+      "type": "string"
+    },
+    "back_female": {
+      "description": "The female depiction of this Pokémon from the back in battle.",
+      "type": ["string", "null"]
+    },
+    "back_shiny_female": {
+      "description": "The shiny female depiction of this Pokémon from the back in battle.",
+      "type": ["string", "null"]
+    },
+    "other": {
+      "type": ["object", "null"],
+      "properties": {
+        "dream_world": {
+          "type": "object",
+          "properties": {
+            "front_default": {
+              "type": "string"
+            },
+            "front_female": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "home": {
+          "type": "object",
+          "properties": {
+            "front_default": {
+              "type": "string"
+            },
+            "front_female": {
+              "type": ["string", "null"]
+            },
+            "front_shiny": {
+              "type": "string"
+            },
+            "front_shiny_female": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "official-artwork": {
+          "type": "object",
+          "properties": {
+            "front_default": {
+              "type": "string"
+            },
+            "front_shiny": {
+              "type": "string"
+            }
+          }
+        },
+        "showdown": {
+          "type": "object",
+          "properties": {
+            "back_default": {
+              "type": "string"
+            },
+            "back_female": {
+              "type": ["string", "null"]
+            },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_shiny_female": {
+              "type": ["string", "null"]
+            },
+            "front_default": {
+              "type": "string"
+            },
+            "front_female": {
+              "type": ["string", "null"]
+            },
+            "front_shiny": {
+              "type": "string"
+            },
+            "front_shiny_female": {
+              "type": ["string", "null"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "move_learn_method": {
+      "description": "The method by which the move is learned.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_group": {
+      "description": "The version group in which the move is learned.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "level_learned_at": {
+      "description": "The minimum level to learn the move.",
+      "type": "integer"
+    }
+  }
+}
