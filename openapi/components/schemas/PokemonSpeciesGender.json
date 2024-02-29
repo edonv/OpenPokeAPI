@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+      "rate": {
+        "description": "The chance of this Pokémon being female, in eighths; or -1 for genderless.",
+        "type": "integer"
+      },
+      "pokemon_species": {
+        "description": "A Pokémon species that can be the referenced gender.",
+        "$ref": "./NamedAPIResource.json"
+      }
+    }
+}

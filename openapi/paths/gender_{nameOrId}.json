@@ -1,0 +1,25 @@
+{
+  "summary": "Genders",
+  "description": "Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getGender",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "An Gender object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Gender.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

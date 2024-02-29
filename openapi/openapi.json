@@ -141,6 +141,9 @@
     },
     "/egg-group/{nameOrId}": {
       "$ref": "paths/egg-group_{nameOrId}.json"
+    },
+    "/gender/{nameOrId}": {
+      "$ref": "paths/gender_{nameOrId}.json"
     }
   }
 }
