@@ -1,0 +1,25 @@
+{
+  "summary": "Move Targets",
+  "description": "Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getMoveTarget",
+    "tags": ["Moves"],
+    "responses": {
+      "200": {
+        "description": "A MoveTarget object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/MoveTarget.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

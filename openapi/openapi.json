@@ -129,6 +129,9 @@
     },
     "/move-learn-method/{nameOrId}": {
       "$ref": "paths/move-learn-method_{nameOrId}.json"
+    },
+    "/move-target/{nameOrId}": {
+      "$ref": "paths/move-target_{nameOrId}.json"
     }
   }
 }
