@@ -38,7 +38,6 @@
       }
     },
     "names": {
-      "description": "The name of this resource listed in different languages.",
       "$ref": "./NameList.json"
     }
   }
