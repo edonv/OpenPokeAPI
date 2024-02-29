@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "is_main_series": {
+      "description": "Whether or not this ability originated in the main series of the video games.",
+      "type": "boolean"
+    },
+    "generation": {
+      "description": "The generation this ability originated in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "effect_entries": {
+      "description": "The effect of this ability listed in different languages.",
+      "$ref": "./VerboseEffectList.json"
+    },
+    "effect_changes": {
+      "description": "The list of previous effects this ability has had across version groups.",
+      "type": "array",
+      "items": {
+        "$ref": "./AbilityEffectChange.json"
+      }
+    },
+    "flavor_text_entries": {
+      "description": "The flavor text of this ability listed in different languages.",
+      "type": "array",
+      "items": {
+        "$ref": "./AbilityFlavorText.json"
+      }
+    },
+    "pokemon": {
+      "description": "A list of Pokémon that could potentially have this ability.",
+      "type": "array",
+      "items": {
+        "$ref": "./AbilityPokemon.json"
+      }
+    }
+  }
+}

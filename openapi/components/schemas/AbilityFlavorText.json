@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "flavor_text": {
+      "description": "The localized name for an API resource in a specific language.",
+      "type": "string"
+    },
+    "language": {
+      "description": "The language this text resource is in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "version_group": {
+      "description": "The version group that uses this flavor text.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

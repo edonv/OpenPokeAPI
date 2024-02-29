@@ -132,6 +132,9 @@
     },
     "/move-target/{nameOrId}": {
       "$ref": "paths/move-target_{nameOrId}.json"
+    },
+    "/ability/{nameOrId}": {
+      "$ref": "paths/ability_{nameOrId}.json"
     }
   }
 }
