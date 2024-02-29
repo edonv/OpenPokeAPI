@@ -1,0 +1,25 @@
+{
+  "summary": "Egg Groups",
+  "description": "Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getEggGroup",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "An EggGroup object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/EggGroup.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -138,6 +138,9 @@
     },
     "/characteristic/{id}": {
       "$ref": "paths/characteristic_{id}.json"
+    },
+    "/egg-group/{nameOrId}": {
+      "$ref": "paths/egg-group_{nameOrId}.json"
     }
   }
 }
