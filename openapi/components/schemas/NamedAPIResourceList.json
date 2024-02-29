@@ -15,10 +15,7 @@
     },
     "results": {
       "description": "A list of named API resources.",
-      "type": "array",
-      "items": {
-        "$ref": "./NamedAPIResource.json"
-      }
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

@@ -9,7 +9,7 @@
     },
     "moves": {
       "description": "A list of moves that fall into this category.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "descriptions": {
       "$ref": "./DescriptionList.json"

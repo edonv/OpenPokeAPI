@@ -12,7 +12,7 @@
     },
     "pokemon_species": {
       "description": "A list of all Pokémon species that are members of this egg group.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

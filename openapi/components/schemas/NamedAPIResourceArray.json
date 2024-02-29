@@ -1,0 +1,6 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "./NamedAPIResource.json"
+  }
+}

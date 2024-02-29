@@ -19,7 +19,7 @@
     },
     "pokemon_species": {
       "description": "A list of the Pokémon species that have this shape.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

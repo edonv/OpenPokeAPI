@@ -16,7 +16,7 @@
     },
     "items": {
       "description": "A list of items that have this fling effect.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

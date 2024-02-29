@@ -12,7 +12,7 @@
     },
     "moves": {
       "description": "A list of moves that fall into this damage class.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "names": {
       "$ref": "./NameList.json"

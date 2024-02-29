@@ -11,7 +11,7 @@
     },
     "condition_values": {
       "description": "A list of condition values that must be in effect for this encounter to occur.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "chance": {
       "description": "Percent chance that this encounter will occur.",

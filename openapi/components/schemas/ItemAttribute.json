@@ -9,7 +9,7 @@
     },
     "items": {
       "description": "A list of items that have this attribute.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "names": {
       "description": "The name of this item attribute listed in different languages.",

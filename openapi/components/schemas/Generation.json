@@ -9,7 +9,7 @@
     },
     "abilities": {
       "description": "A list of abilities that were introduced in this generation.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "names": {
       "$ref": "./NameList.json"
@@ -20,19 +20,19 @@
     },
     "moves": {
       "description": "A list of moves that were introduced in this generation.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "pokemon_species": {
       "description": "A list of pokemon species that result from this evolution trigger.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "types": {
       "description": "A list of types that were introduced in this generation.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "version_groups": {
       "description": "A list of version groups that were introduced in this generation.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

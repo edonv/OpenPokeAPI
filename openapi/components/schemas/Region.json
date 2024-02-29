@@ -6,7 +6,7 @@
     },
     "locations": {
       "description": "A list of locations that can be found in this region.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "name": {
       "$ref": "./ResourceName.json"
@@ -20,11 +20,11 @@
     },
     "pokedexes": {
       "description": "A list of pokédexes that catalogue Pokémon in this region.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "version_groups": {
       "description": "A list of version groups where this region can be visited.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

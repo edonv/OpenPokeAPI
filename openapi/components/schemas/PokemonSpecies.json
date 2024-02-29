@@ -60,7 +60,7 @@
     },
     "egg_groups": {
       "description": "A list of egg groups this Pokémon species is a member of.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "color": {
       "description": "The color of this Pokémon for Pokédex search.",

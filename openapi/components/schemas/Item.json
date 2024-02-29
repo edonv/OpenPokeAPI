@@ -21,7 +21,7 @@
     },
     "attributes": {
       "description": "A list of attributes this item has.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "category": {
       "description": "The category of items this item falls into.",

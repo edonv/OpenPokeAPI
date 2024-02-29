@@ -17,19 +17,19 @@
     },
     "move_learn_methods": {
       "description": "A list of methods in which Pokémon can learn moves in this version group.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "pokedexes": {
       "description": "A list of Pokédexes introduces in this version group.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "regions": {
       "description": "A list of regions that can be visited in this version group.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "versions": {
       "description": "The versions this version group owns.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

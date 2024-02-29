@@ -24,7 +24,7 @@
     },
     "pokemon_species": {
       "description": "A list of Pokémon species that gain levels at this growth rate.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

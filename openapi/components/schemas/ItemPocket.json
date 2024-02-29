@@ -9,7 +9,7 @@
     },
     "categories": {
       "description": "A list of item categories that are relevant to this item pocket.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "names": {
       "$ref": "./NameList.json"

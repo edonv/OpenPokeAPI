@@ -30,7 +30,7 @@
     },
     "version_groups": {
       "description": "A list of version groups this Pokédex is relevant to.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

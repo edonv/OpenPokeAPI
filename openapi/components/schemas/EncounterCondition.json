@@ -12,7 +12,7 @@
     },
     "values": {
       "description": "A list of possible values for this encounter condition.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

@@ -58,7 +58,7 @@
     },
     "learned_by_pokemon": {
       "description": "List of Pokemon that can learn the move",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "flavor_text_entries": {
       "description": "The flavor text of this move listed in different languages.",

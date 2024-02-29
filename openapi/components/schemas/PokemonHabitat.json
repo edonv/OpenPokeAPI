@@ -12,7 +12,7 @@
     },
     "pokemon_species": {
       "description": "A list of the Pokémon species that can be found in this habitat.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

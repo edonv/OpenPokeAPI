@@ -12,7 +12,7 @@
     },
     "pokemon_species": {
       "description": "A list of the Pokémon species that have this color.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

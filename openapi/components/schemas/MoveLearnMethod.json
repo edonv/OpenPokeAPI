@@ -15,7 +15,7 @@
     },
     "version_groups": {
       "description": "A list of version groups where moves can be learned through this method.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }

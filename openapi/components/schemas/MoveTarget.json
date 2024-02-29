@@ -12,7 +12,7 @@
     },
     "moves": {
       "description": "A list of moves that that are directed at this target.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     },
     "names": {
       "$ref": "./NameList.json"

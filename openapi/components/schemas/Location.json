@@ -23,7 +23,7 @@
     },
     "areas": {
       "description": "Areas that can be found within this location.",
-      "$ref": "./NamedAPIResourceList.json"
+      "$ref": "./NamedAPIResourceArray.json"
     }
   }
 }
