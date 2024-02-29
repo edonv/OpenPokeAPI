@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+
+    "decreased_stat": {
+      "description": "The stat decreased by 10% in Pokémon with this nature.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "increased_stat": {
+      "description": "The stat increased by 10% in Pokémon with this nature.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "hates_flavor": {
+      "description": "The flavor hated by Pokémon with this nature.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "likes_flavor": {
+      "description": "The flavor liked by Pokémon with this nature.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "pokeathlon_stat_changes": {
+      "description": "A list of Pokéathlon stats this nature effects and how much it effects them.",
+      "type": "array",
+      "items": {
+        "$ref": "./NatureStatChange.json"
+      }
+    },
+    "move_battle_style_preferences": {
+      "description": "A list of battle styles and how likely a Pokémon with this nature is to use them in the Battle Palace or Battle Tent.",
+      "type": "array",
+      "items": {
+        "$ref": "./MoveBattleStylePreference.json"
+      }
+    },
+    "names": {
+      "description": "The name of this resource listed in different languages.",
+      "$ref": "./NameList.json"
+    }
+  }
+}

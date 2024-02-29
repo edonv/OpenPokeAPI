@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "low_hp_preference": {
+      "description": "Chance of using the move, in percent, if HP is under one half.",
+      "type": "integer"
+    },
+    "high_hp_preference": {
+      "description": "Chance of using the move, in percent, if HP is over one half.",
+      "type": "integer"
+    },
+    "move_battle_style": {
+      "description": "The move battle style.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

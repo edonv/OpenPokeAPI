@@ -147,6 +147,9 @@
     },
     "/growth-rate/{nameOrId}": {
       "$ref": "paths/growth-rate_{nameOrId}.json"
+    },
+    "/nature/{nameOrId}": {
+      "$ref": "paths/nature_{nameOrId}.json"
     }
   }
 }

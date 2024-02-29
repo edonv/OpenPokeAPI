@@ -1,0 +1,25 @@
+{
+  "summary": "Natures",
+  "description": "Natures influence how a Pokémon's stats grow. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getNature",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A Nature object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Nature.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
