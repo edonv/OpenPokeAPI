@@ -1,0 +1,25 @@
+{
+  "summary": "Move Learn Methods",
+  "description": "Damage classes moves can have, e.g. physical, special, or non-damaging.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getMoveLearnMethod",
+    "tags": ["Moves"],
+    "responses": {
+      "200": {
+        "description": "A MoveLearnMethod object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/MoveLearnMethod.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

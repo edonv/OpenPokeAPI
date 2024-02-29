@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "descriptions": {
+      "$ref": "./DescriptionList.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "version_groups": {
+      "description": "A list of version groups where moves can be learned through this method.",
+      "$ref": "./NamedAPIResourceList.json"
+    }
+  }
+}

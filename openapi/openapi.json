@@ -126,6 +126,9 @@
     },
     "/move-damage-class/{nameOrId}": {
       "$ref": "paths/move-damage-class_{nameOrId}.json"
+    },
+    "/move-learn-method/{nameOrId}": {
+      "$ref": "paths/move-learn-method_{nameOrId}.json"
     }
   }
 }
