@@ -11,7 +11,7 @@
     "tags": ["Pokémon"],
     "responses": {
       "200": {
-        "description": "An Gender object.",
+        "description": "A Gender object.",
         "content": {
           "application/json": {
             "schema": {
