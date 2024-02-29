@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "moves": {
+      "description": "A list of moves that cause this ailment.",
+      "$ref": "./NamedAPIResourceList.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "Move Ailments",
+  "description": "Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getMoveAilment",
+    "tags": ["Moves"],
+    "responses": {
+      "200": {
+        "description": "A MoveAilment object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/MoveAilment.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

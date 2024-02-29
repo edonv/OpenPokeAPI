@@ -114,6 +114,9 @@
     },
     "/move/{nameOrId}": {
       "$ref": "paths/move_{nameOrId}.json"
+    },
+    "/move-ailment/{nameOrId}": {
+      "$ref": "paths/move-ailment_{nameOrId}.json"
     }
   }
 }
