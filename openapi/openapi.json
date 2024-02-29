@@ -156,6 +156,9 @@
     },
     "/pokemon/{nameOrId}": {
       "$ref": "paths/pokemon_{nameOrId}.json"
+    },
+    "/pokemon/{nameOrId}/encounters": {
+      "$ref": "paths/pokemon_{nameOrId}_encounters.json"
     }
   }
 }

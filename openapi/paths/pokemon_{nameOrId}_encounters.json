@@ -1,0 +1,25 @@
+{
+  "summary": "Pokémon Location Areas",
+  "description": "Pokémon Location Areas are ares where Pokémon can be found.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPokemonLocationArea",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A PokemonLocationArea object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PokemonLocationArea.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
