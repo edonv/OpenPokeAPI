@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "slot": {
+      "description": "The order the Pokémon's types are listed in.",
+      "type": "integer"
+    },
+    "type": {
+      "description": "The type the referenced Form has.",
+      "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

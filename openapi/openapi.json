@@ -162,6 +162,9 @@
     },
     "/pokemon-color/{nameOrId}": {
       "$ref": "paths/pokemon-color_{nameOrId}.json"
+    },
+    "/pokemon-form/{nameOrId}": {
+      "$ref": "paths/pokemon-form_{nameOrId}.json"
     }
   }
 }

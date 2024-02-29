@@ -1,0 +1,25 @@
+{
+  "summary": "Pokémon Forms",
+  "description": "Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the 'Pokémon' entity is used to represent such a variety.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPokemonForm",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A PokemonForm object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PokemonForm.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "order": {
+      "description": "The order in which forms should be sorted within all forms. Multiple forms may have equal order, in which case they should fall back on sorting by name.",
+      "type": "integer"
+    },
+    "form_order": {
+      "description": "The order in which forms should be sorted within a species' forms.",
+      "type": "integer"
+    },
+    "is_default": {
+      "description": "True for exactly one form used as the default for each Pokémon.",
+      "type": "boolean"
+    },
+    "is_battle_only": {
+      "description": "Whether or not this form can only happen during battle.",
+      "type": "boolean"
+    },
+    "is_mega": {
+      "description": "Whether or not this form requires mega evolution.",
+      "type": "boolean"
+    },
+    "form_name": {
+      "description": "The name of this form.",
+      "type": "string"
+    },
+    "pokemon": {
+      "description": "The Pokémon that can take on this form.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "types": {
+      "description": "A list of details showing types this Pokémon form has.",
+      "type": "array",
+      "items": {
+        "$ref": "./PokemonFormType.json"
+      }
+    },
+    "sprites": {
+      "description": "A set of sprites used to depict this Pokémon form in the game.",
+      "$ref": "./PokemonFormSprites.json"
+    },
+    "version_group": {
+      "description": "The version group this Pokémon form was introduced in.",
+      "$ref": "./NamedAPIResource.json"
+    },
+    "names": {
+      "description": "The name of this resource listed in different languages.",
+      "$ref": "./NameList.json"
+    },
+    "form_names": {
+      "description": "The form specific form name of this Pokémon form, or empty if the form does not have a specific name.",
+      "$ref": "./NameList.json"
+    }
+  }
+}
