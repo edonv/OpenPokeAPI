@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./ResourceId.json"
+    },
+    "name": {
+      "$ref": "./ResourceName.json"
+    },
+    "names": {
+      "$ref": "./NameList.json"
+    },
+    "affecting_natures": {
+      "description": "A detail of natures which affect this Pokéathlon stat positively or negatively.",
+      "$ref": "./NaturePokeathlonStatAffectSets.json"
+    }
+  }
+}

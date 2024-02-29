@@ -1,0 +1,25 @@
+{
+  "summary": "Pokeathlon Stats",
+  "description": "Pokeathlon Stats are different attributes of a Pokémon's performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.",
+  "parameters": [
+    {
+      "$ref": "../components/parameters/nameOrId.json"
+    }
+  ],
+  "get": {
+    "operationId": "getPokeathlonStat",
+    "tags": ["Pokémon"],
+    "responses": {
+      "200": {
+        "description": "A PokeathlonStat object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/PokeathlonStat.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

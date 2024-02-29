@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "max_change": {
+      "description": "The maximum amount of change to the referenced Pokéathlon stat.",
+      "type": "integer"
+    },
+    "nature": {
+      "description": "The nature causing the change.",
+        "$ref": "./NamedAPIResource.json"
+    }
+  }
+}

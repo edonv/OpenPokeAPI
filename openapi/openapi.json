@@ -150,6 +150,9 @@
     },
     "/nature/{nameOrId}": {
       "$ref": "paths/nature_{nameOrId}.json"
+    },
+    "/pokeathlon-stat/{nameOrId}": {
+      "$ref": "paths/pokeathlon-stat_{nameOrId}.json"
     }
   }
 }
