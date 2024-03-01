@@ -24,10 +24,16 @@ for (filePath of files) {
             const propertyKeys = Object.keys(properties);
             // console.log(propertyKeys);
             
+            const remainingData = json;
+            delete remainingData.type;
+            delete remainingData.required;
+            delete remainingData.properties;
+
             const newFileContents = {
                 type: 'object',
                 required: propertyKeys,
-                properties: properties
+                properties: properties,
+                ...remainingData
             };
 
             fs.writeFileSync(filePath, JSON.stringify(newFileContents, null, 2) + '\n', {
