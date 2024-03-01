@@ -1,6 +1,6 @@
 apis:
   pokeapi: 
-    root: openapi/root.json
+    root: openapi/openapi.json
 extends:
   - recommended
 rules:
