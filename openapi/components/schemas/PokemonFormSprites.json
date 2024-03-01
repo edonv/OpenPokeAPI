@@ -2,26 +2,46 @@
   "type": "object",
   "required": [
     "front_default",
+    "front_female",
     "front_shiny",
+    "front_shiny_female",
     "back_default",
-    "back_shiny"
+    "back_female",
+    "back_shiny",
+    "back_shiny_female"
   ],
   "properties": {
     "front_default": {
       "description": "The default depiction of this Pokémon from the front in battle.",
       "type": "string"
     },
+    "front_female": {
+      "description": "The female depiction of this Pokémon from the front in battle.",
+      "type": ["string", "null"]
+    },
     "front_shiny": {
       "description": "The shiny depiction of this Pokémon from the front in battle.",
       "type": "string"
+    },
+    "front_shiny_female": {
+      "description": "The shiny female depiction of this Pokémon from the front in battle.",
+      "type": ["string", "null"]
     },
     "back_default": {
       "description": "The default depiction of this Pokémon from the back in battle.",
       "type": "string"
     },
+    "back_female": {
+      "description": "The female depiction of this Pokémon from the back in battle.",
+      "type": ["string", "null"]
+    },
     "back_shiny": {
       "description": "The shiny depiction of this Pokémon from the back in battle.",
       "type": "string"
+    },
+    "back_shiny_female": {
+      "description": "The shiny female depiction of this Pokémon from the back in battle.",
+      "type": ["string", "null"]
     }
   }
 }
