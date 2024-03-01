@@ -3,6 +3,16 @@
   "in": "path",
   "required": true,
   "description": "The name or unique ID to get.",
+  "examples": {
+    "name": {
+      "summary": "A name value.",
+      "value": "cheri"
+    },
+    "id": {
+      "summary": "An ID value.",
+      "value": "1"
+    }
+  },
   "schema": {
     "oneOf": [
       {

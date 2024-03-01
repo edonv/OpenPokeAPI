@@ -3,6 +3,7 @@
   "in": "path",
   "required": true,
   "description": "The name or unique ID to get.",
+  "example": 1,
   "schema": {
     "$ref": "../schemas/ResourceId.json"
   }
