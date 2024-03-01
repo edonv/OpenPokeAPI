@@ -11,13 +11,13 @@
     "tags": ["Pokémon"],
     "responses": {
       "200": {
-        "description": "A PokemonLocationArea object.",
+        "description": "A LocationAreaEncounter object.",
         "content": {
           "application/json": {
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "../components/schemas/PokemonLocationArea.json"
+                "$ref": "../components/schemas/LocationAreaEncounter.json"
               }
             },
             "example": [
