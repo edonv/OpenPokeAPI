@@ -13,7 +13,8 @@ const files = fs.readdirSync(componentsDir, {
 // console.log(files);
 
 const filesWithOptionalProps = {
-    'FlavorText.json': ['version']
+    'FlavorText.json': ['version'],
+    'Item.json': ['machines']
 };
 
 for (const filePath of files) {

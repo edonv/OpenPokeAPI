@@ -14,8 +14,7 @@
     "names",
     "sprites",
     "held_by_pokemon",
-    "baby_trigger_for",
-    "machines"
+    "baby_trigger_for"
   ],
   "properties": {
     "id": {
