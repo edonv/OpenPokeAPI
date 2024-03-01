@@ -1,0 +1,11 @@
+{
+  "name": "addrequiredfield",
+  "version": "1.0.0",
+  "description": "Iterates through all schema files and adds `required` field for objects. Doesn't currently include nested objects, only schemas that are root-level objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
