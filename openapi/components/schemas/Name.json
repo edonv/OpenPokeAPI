@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "name",
+    "language"
+  ],
   "properties": {
     "name": {
       "type": "string",

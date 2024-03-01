@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "description",
+    "language"
+  ],
   "properties": {
     "description": {
       "description": "The localized description for an API resource in a specific language.",

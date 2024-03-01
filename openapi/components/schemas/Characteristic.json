@@ -1,5 +1,12 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "gene_modulo",
+    "possible_values",
+    "highest_stat",
+    "descriptions"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

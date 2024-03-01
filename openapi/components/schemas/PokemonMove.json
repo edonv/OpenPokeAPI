@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "move",
+    "version_group_details"
+  ],
   "properties": {
     "move": {
       "description": "The move the Pokémon can learn.",

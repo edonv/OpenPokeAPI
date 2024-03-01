@@ -1,5 +1,34 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "order",
+    "gender_rate",
+    "capture_rate",
+    "base_happiness",
+    "is_baby",
+    "is_legendary",
+    "is_mythical",
+    "hatch_counter",
+    "has_gender_differences",
+    "forms_switchable",
+    "growth_rate",
+    "pokedex_numbers",
+    "egg_groups",
+    "color",
+    "shape",
+    "evolves_from_species",
+    "evolution_chain",
+    "habitat",
+    "generation",
+    "names",
+    "pal_park_encounters",
+    "flavor_text_entries",
+    "form_descriptions",
+    "genera",
+    "varieties"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "pokemon_species_details",
+    "required_for_evolution"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

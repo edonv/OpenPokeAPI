@@ -1,5 +1,19 @@
 {
   "type": "object",
+  "required": [
+    "ailment",
+    "category",
+    "min_hits",
+    "max_hits",
+    "min_turns",
+    "max_turns",
+    "drain",
+    "healing",
+    "crit_rate",
+    "ailment_chance",
+    "flinch_chance",
+    "stat_chance"
+  ],
   "properties": {
     "ailment": {
       "description": "The status ailment this move inflicts on its target.",
@@ -11,19 +25,31 @@
     },
     "min_hits": {
       "description": "The minimum number of times this move hits. Null if it always only hits once.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "max_hits": {
       "description": "The maximum number of times this move hits. Null if it always only hits once.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "min_turns": {
       "description": "The minimum number of turns this move continues to take effect. Null if it always only lasts one turn.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "max_turns": {
       "description": "The maximum number of turns this move continues to take effect. Null if it always only lasts one turn.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "drain": {
       "description": "HP drain (if positive) or Recoil damage (if negative), in percent of damage done.",

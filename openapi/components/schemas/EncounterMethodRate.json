@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "encounter_method",
+    "version_details"
+  ],
   "properties": {
     "encounter_method": {
       "description": "The method in which Pokémon may be encountered in an area.",

@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "use_before",
+    "use_after"
+  ],
   "properties": {
     "use_before": {
       "type": "array",

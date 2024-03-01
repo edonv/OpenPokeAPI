@@ -1,5 +1,14 @@
 {
   "type": "object",
+  "required": [
+    "accuracy",
+    "effect_chance",
+    "power",
+    "pp",
+    "effect_entries",
+    "type",
+    "version_group"
+  ],
   "properties": {
     "accuracy": {
       "description": "The percent value of how likely this move is to be successful.",

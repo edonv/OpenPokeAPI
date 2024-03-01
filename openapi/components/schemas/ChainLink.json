@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "required": [
+    "is_baby",
+    "species",
+    "evolution_details",
+    "evolves_to"
+  ],
   "properties": {
     "is_baby": {
       "description": "Whether or not this link is for a baby Pokémon. This would only ever be true on the base link.",

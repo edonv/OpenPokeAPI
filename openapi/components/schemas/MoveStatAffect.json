@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "change",
+    "move"
+  ],
   "properties": {
     "change": {
       "description": "The maximum amount of change to the referenced stat.",

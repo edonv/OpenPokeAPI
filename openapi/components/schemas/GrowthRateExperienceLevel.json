@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "level",
+    "experience"
+  ],
   "properties": {
     "level": {
       "description": "The level gained.",

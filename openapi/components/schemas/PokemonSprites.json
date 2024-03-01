@@ -1,5 +1,16 @@
 {
   "type": "object",
+  "required": [
+    "front_default",
+    "front_shiny",
+    "front_female",
+    "front_shiny_female",
+    "back_default",
+    "back_shiny",
+    "back_female",
+    "back_shiny_female",
+    "other"
+  ],
   "properties": {
     "front_default": {
       "description": "The default depiction of this Pokémon from the front in battle.",
@@ -11,11 +22,17 @@
     },
     "front_female": {
       "description": "The female depiction of this Pokémon from the front in battle.",
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "front_shiny_female": {
       "description": "The shiny female depiction of this Pokémon from the front in battle.",
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "back_default": {
       "description": "The default depiction of this Pokémon from the back in battle.",
@@ -27,45 +44,81 @@
     },
     "back_female": {
       "description": "The female depiction of this Pokémon from the back in battle.",
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "back_shiny_female": {
       "description": "The shiny female depiction of this Pokémon from the back in battle.",
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "other": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "front_default",
+        "front_female"
+      ],
       "properties": {
         "dream_world": {
           "type": "object",
+          "required": [
+            "front_default",
+            "front_female"
+          ],
           "properties": {
             "front_default": {
               "type": "string"
             },
             "front_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         },
         "home": {
           "type": "object",
+          "required": [
+            "front_default",
+            "front_female",
+            "front_shiny",
+            "front_shiny_female"
+          ],
           "properties": {
             "front_default": {
               "type": "string"
             },
             "front_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "front_shiny": {
               "type": "string"
             },
             "front_shiny_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         },
         "official-artwork": {
           "type": "object",
+          "required": [
+            "front_default",
+            "front_shiny"
+          ],
           "properties": {
             "front_default": {
               "type": "string"
@@ -77,30 +130,46 @@
         },
         "showdown": {
           "type": "object",
+          "required": [
+            "back_default",
+            "back_female"
+          ],
           "properties": {
             "back_default": {
               "type": "string"
             },
             "back_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "back_shiny": {
               "type": "string"
             },
             "back_shiny_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "front_default": {
               "type": "string"
             },
             "front_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "front_shiny": {
               "type": "string"
             },
             "front_shiny_female": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         }

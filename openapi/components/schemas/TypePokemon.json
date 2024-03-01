@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "slot",
+    "pokemon"
+  ],
   "properties": {
     "slot": {
       "description": "The order the Pokémon's types are listed in.",

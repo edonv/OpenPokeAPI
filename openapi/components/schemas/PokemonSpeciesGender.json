@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "rate",
+    "pokemon_species"
+  ],
   "properties": {
     "rate": {
       "description": "The chance of this Pokémon being female, in eighths; or -1 for genderless.",

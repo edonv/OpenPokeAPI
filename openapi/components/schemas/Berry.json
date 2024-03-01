@@ -1,5 +1,19 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "growth_time",
+    "max_harvest",
+    "natural_gift_power",
+    "size",
+    "smoothness",
+    "soil_dryness",
+    "firmness",
+    "flavors",
+    "item",
+    "natural_gift_type"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

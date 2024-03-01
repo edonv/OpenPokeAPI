@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "names",
+    "pokemon_species"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

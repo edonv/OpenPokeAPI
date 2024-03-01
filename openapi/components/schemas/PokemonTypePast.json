@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "generation",
+    "types"
+  ],
   "properties": {
     "generation": {
       "description": "The last generation in which the referenced pokémon had the listed types.",

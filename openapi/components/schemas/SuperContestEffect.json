@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "appeal",
+    "flavor_text_entries",
+    "moves"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

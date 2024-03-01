@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "rate",
+    "version"
+  ],
   "properties": {
     "rate": {
       "description": "The chance of an encounter to occur.",

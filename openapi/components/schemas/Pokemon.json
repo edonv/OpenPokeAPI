@@ -1,5 +1,26 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "base_experience",
+    "height",
+    "is_default",
+    "order",
+    "weight",
+    "abilities",
+    "forms",
+    "game_indices",
+    "held_items",
+    "location_area_encounters",
+    "moves",
+    "past_types",
+    "sprites",
+    "cries",
+    "species",
+    "stats",
+    "types"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

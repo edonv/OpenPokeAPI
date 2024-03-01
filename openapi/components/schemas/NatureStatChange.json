@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "max_change",
+    "pokeathlon_stat"
+  ],
   "properties": {
     "max_change": {
       "description": "The amount of change.",

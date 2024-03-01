@@ -1,5 +1,13 @@
 {
   "type": "object",
+  "required": [
+    "no_damage_to",
+    "half_damage_to",
+    "double_damage_to",
+    "no_damage_from",
+    "half_damage_from",
+    "double_damage_from"
+  ],
   "properties": {
     "no_damage_to": {
       "description": "A list of types this type has no effect on.",

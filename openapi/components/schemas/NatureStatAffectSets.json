@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "increase",
+    "decrease"
+  ],
   "properties": {
     "increase": {
       "description": "A list of natures and how they change the referenced stat.",

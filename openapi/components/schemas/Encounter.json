@@ -1,5 +1,12 @@
 {
   "type": "object",
+  "required": [
+    "min_level",
+    "max_level",
+    "condition_values",
+    "chance",
+    "method"
+  ],
   "properties": {
     "min_level": {
       "description": "The lowest level the Pokémon could be encountered at.",

@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "genus",
+    "language"
+  ],
   "properties": {
     "genus": {
       "description": "The localized genus for the referenced Pokémon species.",

@@ -1,5 +1,16 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "decreased_stat",
+    "increased_stat",
+    "hates_flavor",
+    "likes_flavor",
+    "pokeathlon_stat_changes",
+    "move_battle_style_preferences",
+    "names"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

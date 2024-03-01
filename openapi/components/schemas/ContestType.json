@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "berry_flavor",
+    "names"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

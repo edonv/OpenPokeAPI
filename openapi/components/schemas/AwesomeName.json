@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "awesome_name",
+    "language"
+  ],
   "properties": {
     "awesome_name": {
       "description": "The localized \"scientific\" name for an API resource in a specific language.",

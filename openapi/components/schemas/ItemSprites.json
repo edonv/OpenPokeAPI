@@ -1,5 +1,8 @@
 {
   "type": "object",
+  "required": [
+    "default"
+  ],
   "properties": {
     "default": {
       "description": "The default depiction of this item.",

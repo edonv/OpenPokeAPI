@@ -1,5 +1,15 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "order",
+    "generation",
+    "move_learn_methods",
+    "pokedexes",
+    "regions",
+    "versions"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

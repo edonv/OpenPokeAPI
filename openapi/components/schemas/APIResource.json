@@ -1,5 +1,8 @@
 {
   "type": "object",
+  "required": [
+    "url"
+  ],
   "properties": {
     "url": {
       "description": "The URL of the referenced resource.",

@@ -1,5 +1,12 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "appeal",
+    "jam",
+    "effect_entries",
+    "flavor_text_entries"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

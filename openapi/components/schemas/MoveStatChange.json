@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "change",
+    "stat"
+  ],
   "properties": {
     "change": {
       "description": "The amount of change.",

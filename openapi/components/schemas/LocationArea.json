@@ -1,5 +1,14 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "game_index",
+    "encounter_method_rates",
+    "location",
+    "names",
+    "pokemon_encounters"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

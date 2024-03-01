@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "entry_number",
+    "pokemon_species"
+  ],
   "properties": {
     "entry_number": {
       "description": "The index of this Pokémon species entry within the Pokédex.",

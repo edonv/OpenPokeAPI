@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "location_area",
+    "version_details"
+  ],
   "properties": {
     "location_area": {
       "description": "The location area the referenced Pokémon can be encountered in.",

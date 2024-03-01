@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "item",
+    "version_details"
+  ],
   "properties": {
     "item": {
       "description": "The item the referenced Pokémon holds.",

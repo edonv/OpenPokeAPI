@@ -1,5 +1,10 @@
 {
   "type": "object",
+  "required": [
+    "name",
+    "color",
+    "language"
+  ],
   "properties": {
     "name": {
       "description": "The name for this contest.",

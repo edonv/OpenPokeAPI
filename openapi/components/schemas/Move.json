@@ -1,5 +1,31 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "accuracy",
+    "effect_chance",
+    "pp",
+    "priority",
+    "power",
+    "contest_combos",
+    "contest_type",
+    "contest_effect",
+    "damage_class",
+    "effect_entries",
+    "effect_changes",
+    "learned_by_pokemon",
+    "flavor_text_entries",
+    "generation",
+    "machines",
+    "meta",
+    "names",
+    "past_values",
+    "stat_changes",
+    "super_contest_effect",
+    "target",
+    "type"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"
@@ -9,11 +35,17 @@
     },
     "accuracy": {
       "description": "The percent value of how likely this move is to be successful.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "effect_chance": {
       "description": "The percent value of how likely it is this moves effect will happen.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "pp": {
       "description": "Power points. The number of times this move can be used.",
@@ -27,7 +59,10 @@
     },
     "power": {
       "description": "The base power of this move with a value of 0 if it does not have a base power.",
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "contest_combos": {
       "description": "A detail of normal and super contest combos that require this move.",

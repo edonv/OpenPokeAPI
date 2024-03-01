@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "item",
+    "move",
+    "version_group"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

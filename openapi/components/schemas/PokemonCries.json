@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "latest",
+    "legacy"
+  ],
   "properties": {
     "latest": {
       "description": "The latest depiction of this Pokémon's cry.",

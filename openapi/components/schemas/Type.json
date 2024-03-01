@@ -1,5 +1,17 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "damage_relations",
+    "past_damage_relations",
+    "game_indices",
+    "generation",
+    "move_damage_class",
+    "names",
+    "pokemon",
+    "moves"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

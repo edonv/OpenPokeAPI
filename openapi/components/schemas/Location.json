@@ -1,5 +1,13 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "region",
+    "names",
+    "game_indices",
+    "areas"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

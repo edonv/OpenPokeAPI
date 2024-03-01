@@ -1,5 +1,6 @@
 {
   "type": ["object", "null"],
+  "required": ["normal", "super"],
   "properties": {
     "normal": {
       "$ref": "./ContestComboDetail.json"

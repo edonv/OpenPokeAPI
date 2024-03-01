@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "version",
+    "rarity"
+  ],
   "properties": {
     "version": {
       "description": "The version in which the item is held.",

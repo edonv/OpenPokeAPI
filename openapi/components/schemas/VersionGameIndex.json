@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "game_index",
+    "version"
+  ],
   "properties": {
     "game_index": {
       "description": "The internal id of an API resource within game data.",

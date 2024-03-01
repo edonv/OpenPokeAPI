@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "entry_number",
+    "pokedex"
+  ],
   "properties": {
     "entry_number": {
       "description": "The index number within the Pokédex.",

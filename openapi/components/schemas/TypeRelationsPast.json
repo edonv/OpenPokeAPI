@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "generation",
+    "damage_relations"
+  ],
   "properties": {
     "generation": {
       "description": "The last generation in which the referenced type had the listed damage relations.",

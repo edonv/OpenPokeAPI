@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "effect",
+    "language"
+  ],
   "properties": {
     "effect": {
       "description": "The localized effect text for an API resource in a specific language.",

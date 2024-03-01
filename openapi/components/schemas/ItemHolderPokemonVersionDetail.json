@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "rarity",
+    "version"
+  ],
   "properties": {
     "rarity": {
       "description": "How often this Pokémon holds this item in this version.",

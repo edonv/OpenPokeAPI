@@ -1,5 +1,16 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "abilities",
+    "names",
+    "main_region",
+    "moves",
+    "pokemon_species",
+    "types",
+    "version_groups"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

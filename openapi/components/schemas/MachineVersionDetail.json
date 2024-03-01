@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "machine",
+    "version_group"
+  ],
   "properties": {
     "machine": {
       "description": "The machine that teaches a move from an item.",

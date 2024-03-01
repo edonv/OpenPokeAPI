@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "max_change",
+    "nature"
+  ],
   "properties": {
     "max_change": {
       "description": "The maximum amount of change to the referenced Pokéathlon stat.",

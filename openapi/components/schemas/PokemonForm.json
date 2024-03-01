@@ -1,5 +1,21 @@
 {
   "type": "object",
+  "required": [
+    "id",
+    "name",
+    "order",
+    "form_order",
+    "is_default",
+    "is_battle_only",
+    "is_mega",
+    "form_name",
+    "pokemon",
+    "types",
+    "sprites",
+    "version_group",
+    "names",
+    "form_names"
+  ],
   "properties": {
     "id": {
       "$ref": "./ResourceId.json"

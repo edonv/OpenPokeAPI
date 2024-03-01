@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "potency",
+    "berry"
+  ],
   "properties": {
     "potency": {
       "$ref": "./BerryPotency.json"
