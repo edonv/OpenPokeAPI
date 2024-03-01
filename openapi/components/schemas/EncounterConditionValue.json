@@ -3,7 +3,7 @@
   "required": [
     "id",
     "name",
-    "values",
+    "condition",
     "names"
   ],
   "properties": {
@@ -13,7 +13,7 @@
     "name": {
       "$ref": "./ResourceName.json"
     },
-    "values": {
+    "condition": {
       "description": "The condition this encounter condition value pertains to.",
       "$ref": "./NamedAPIResource.json"
     },
