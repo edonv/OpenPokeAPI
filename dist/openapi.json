@@ -101,6 +101,17 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NamedAPIResourceList"
+                },
+                "example": {
+                  "count": 248,
+                  "next": "https://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+                  "previous": null,
+                  "results": [
+                    {
+                      "name": "stench",
+                      "url": "https://pokeapi.co/api/v2/ability/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -128,6 +139,37 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Berry"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "cheri",
+                  "growth_time": 3,
+                  "max_harvest": 5,
+                  "natural_gift_power": 60,
+                  "size": 20,
+                  "smoothness": 25,
+                  "soil_dryness": 15,
+                  "firmness": {
+                    "name": "soft",
+                    "url": "https://pokeapi.co/api/v2/berry-firmness/2/"
+                  },
+                  "flavors": [
+                    {
+                      "potency": 10,
+                      "flavor": {
+                        "name": "spicy",
+                        "url": "https://pokeapi.co/api/v2/berry-flavor/1/"
+                      }
+                    }
+                  ],
+                  "item": {
+                    "name": "cheri-berry",
+                    "url": "https://pokeapi.co/api/v2/item/126/"
+                  },
+                  "natural_gift_type": {
+                    "name": "fire",
+                    "url": "https://pokeapi.co/api/v2/type/10/"
+                  }
                 }
               }
             },
@@ -178,6 +220,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BerryFirmness"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "very-soft",
+                  "berries": [
+                    {
+                      "name": "pecha",
+                      "url": "https://pokeapi.co/api/v2/berry/3/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Very Soft",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             },
@@ -214,6 +275,32 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BerryFlavor"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "spicy",
+                  "berries": [
+                    {
+                      "potency": 10,
+                      "berry": {
+                        "name": "rowap",
+                        "url": "https://pokeapi.co/api/v2/berry/64/"
+                      }
+                    }
+                  ],
+                  "contest_type": {
+                    "name": "cool",
+                    "url": "https://pokeapi.co/api/v2/contest-type/1/"
+                  },
+                  "names": [
+                    {
+                      "name": "Spicy",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             },
@@ -257,6 +344,24 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ContestType"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "cool",
+                  "berry_flavor": {
+                    "name": "spicy",
+                    "url": "https://pokeapi.co/api/v2/berry-flavor/1/"
+                  },
+                  "names": [
+                    {
+                      "name": "Cool",
+                      "color": "Red",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -284,6 +389,29 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ContestEffect"
+                },
+                "example": {
+                  "id": 1,
+                  "appeal": 4,
+                  "jam": 0,
+                  "effect_entries": [
+                    {
+                      "effect": "Gives a high number of appeal points wth no other effects.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "flavor_text_entries": [
+                    {
+                      "flavor_text": "A highly appealing move.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -311,6 +439,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/SuperContestEffect"
+                },
+                "example": {
+                  "id": 1,
+                  "appeal": 2,
+                  "flavor_text_entries": [
+                    {
+                      "flavor_text": "Enables the user to perform first in the next turn.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "moves": [
+                    {
+                      "name": "agility",
+                      "url": "https://pokeapi.co/api/v2/move/97/"
+                    }
+                  ]
                 }
               }
             }
@@ -338,6 +485,20 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EncounterMethod"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "walk",
+                  "order": 1,
+                  "names": [
+                    {
+                      "name": "Walking in tall grass or a cave",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -365,6 +526,29 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EncounterCondition"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "swarm",
+                  "values": [
+                    {
+                      "name": "swarm-yes",
+                      "url": "https://pokeapi.co/api/v2/encounter-condition-value/1/"
+                    },
+                    {
+                      "name": "swarm-no",
+                      "url": "https://pokeapi.co/api/v2/encounter-condition-value/2/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Schwarm",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -392,6 +576,23 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EncounterConditionValue"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "swarm-yes",
+                  "condition": {
+                    "name": "swarm",
+                    "url": "https://pokeapi.co/api/v2/encounter-condition/1/"
+                  },
+                  "names": [
+                    {
+                      "name": "WÃ¤hrend eines Schwarms",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -419,6 +620,53 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EvolutionChain"
+                },
+                "example": {
+                  "id": 7,
+                  "baby_trigger_item": null,
+                  "chain": {
+                    "is_baby": false,
+                    "species": {
+                      "name": "rattata",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/19/"
+                    },
+                    "evolution_details": null,
+                    "evolves_to": [
+                      {
+                        "is_baby": false,
+                        "species": {
+                          "name": "raticate",
+                          "url": "https://pokeapi.co/api/v2/pokemon-species/20/"
+                        },
+                        "evolution_details": [
+                          {
+                            "item": null,
+                            "trigger": {
+                              "name": "level-up",
+                              "url": "https://pokeapi.co/api/v2/evolution-trigger/1/"
+                            },
+                            "gender": null,
+                            "held_item": null,
+                            "known_move": null,
+                            "known_move_type": null,
+                            "location": null,
+                            "min_level": 20,
+                            "min_happiness": null,
+                            "min_beauty": null,
+                            "min_affection": null,
+                            "needs_overworld_rain": false,
+                            "party_species": null,
+                            "party_type": null,
+                            "relative_physical_stats": null,
+                            "time_of_day": "",
+                            "trade_species": null,
+                            "turn_upside_down": false
+                          }
+                        ],
+                        "evolves_to": []
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -446,6 +694,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EvolutionTrigger"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "level-up",
+                  "names": [
+                    {
+                      "name": "Level up",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "ivysaur",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/2/"
+                    }
+                  ]
                 }
               }
             }
@@ -473,6 +740,48 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Generation"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "generation-i",
+                  "abilities": [],
+                  "main_region": {
+                    "name": "kanto",
+                    "url": "https://pokeapi.co/api/v2/region/1/"
+                  },
+                  "moves": [
+                    {
+                      "name": "pound",
+                      "url": "https://pokeapi.co/api/v2/move/1/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Generation I",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "bulbasaur",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+                    }
+                  ],
+                  "types": [
+                    {
+                      "name": "normal",
+                      "url": "https://pokeapi.co/api/v2/type/1/"
+                    }
+                  ],
+                  "version_groups": [
+                    {
+                      "name": "red-blue",
+                      "url": "https://pokeapi.co/api/v2/version-group/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -500,6 +809,48 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Pokedex"
+                },
+                "example": {
+                  "id": 2,
+                  "name": "kanto",
+                  "is_main_series": true,
+                  "descriptions": [
+                    {
+                      "description": "Rot/Blau/Gelb Kanto Dex",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Kanto",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "pokemon_entries": [
+                    {
+                      "entry_number": 1,
+                      "pokemon_species": {
+                        "name": "bulbasaur",
+                        "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+                      }
+                    }
+                  ],
+                  "region": {
+                    "name": "kanto",
+                    "url": "https://pokeapi.co/api/v2/region/1/"
+                  },
+                  "version_groups": [
+                    {
+                      "name": "red-blue",
+                      "url": "https://pokeapi.co/api/v2/version-group/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -527,6 +878,23 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Version"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "red",
+                  "names": [
+                    {
+                      "name": "Rot",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "version_group": {
+                    "name": "red-blue",
+                    "url": "https://pokeapi.co/api/v2/version-group/1/"
+                  }
                 }
               }
             }
@@ -554,6 +922,39 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/VersionGroup"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "red-blue",
+                  "order": 1,
+                  "generation": {
+                    "name": "generation-i",
+                    "url": "https://pokeapi.co/api/v2/generation/1/"
+                  },
+                  "move_learn_methods": [
+                    {
+                      "name": "level-up",
+                      "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+                    }
+                  ],
+                  "pokedexes": [
+                    {
+                      "name": "kanto",
+                      "url": "https://pokeapi.co/api/v2/pokedex/2/"
+                    }
+                  ],
+                  "regions": [
+                    {
+                      "name": "kanto",
+                      "url": "https://pokeapi.co/api/v2/region/1/"
+                    }
+                  ],
+                  "versions": [
+                    {
+                      "name": "red",
+                      "url": "https://pokeapi.co/api/v2/version/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -581,6 +982,90 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Item"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "master-ball",
+                  "cost": 0,
+                  "fling_power": 10,
+                  "fling_effect": {
+                    "name": "flinch",
+                    "url": "https://pokeapi.co/api/v2/item-fling-effect/7/"
+                  },
+                  "attributes": [
+                    {
+                      "name": "holdable",
+                      "url": "https://pokeapi.co/api/v2/item-attribute/5/"
+                    }
+                  ],
+                  "category": {
+                    "name": "standard-balls",
+                    "url": "https://pokeapi.co/api/v2/item-category/34/"
+                  },
+                  "effect_entries": [
+                    {
+                      "effect": "Used in battle\n:   [Catches]{mechanic:catch} a wild Pokémon without fail.\n\n    If used in a trainer battle, nothing happens and the ball is lost.",
+                      "short_effect": "Catches a wild Pokémon every time.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "flavor_text_entries": [
+                    {
+                      "text": "The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail.",
+                      "version_group": {
+                        "name": "x-y",
+                        "url": "https://pokeapi.co/api/v2/version-group/15/"
+                      },
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "game_indices": [
+                    {
+                      "game_index": 1,
+                      "generation": {
+                        "name": "generation-vi",
+                        "url": "https://pokeapi.co/api/v2/generation/6/"
+                      }
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Master Ball",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "sprites": {
+                    "default": "https://pokeapi.co/media/sprites/items/master-ball.png"
+                  },
+                  "held_by_pokemon": [
+                    {
+                      "pokemon": {
+                        "name": "chansey",
+                        "url": "https://pokeapi.co/api/v2/pokemon/113/"
+                      },
+                      "version_details": [
+                        {
+                          "rarity": 50,
+                          "version": {
+                            "name": "soulsilver",
+                            "url": "https://pokeapi.co/api/v2/version/16/"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "baby_trigger_for": {
+                    "url": "https://pokeapi.co/api/v2/evolution-chain/1/"
+                  }
                 }
               }
             }
@@ -608,6 +1093,34 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ItemAttribute"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "countable",
+                  "descriptions": [
+                    {
+                      "description": "Has a count in the bag",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "items": [
+                    {
+                      "name": "master-ball",
+                      "url": "https://pokeapi.co/api/v2/item/1/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Countable",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -635,6 +1148,29 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ItemCategory"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "stat-boosts",
+                  "items": [
+                    {
+                      "name": "guard-spec",
+                      "url": "https://pokeapi.co/api/v2/item/55/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Stat boosts",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "pocket": {
+                    "name": "battle",
+                    "url": "https://pokeapi.co/api/v2/item-pocket/7/"
+                  }
                 }
               }
             }
@@ -662,6 +1198,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ItemFlingEffect"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "badly-poison",
+                  "effect_entries": [
+                    {
+                      "effect": "Badly poisons the target.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "items": [
+                    {
+                      "name": "toxic-orb",
+                      "url": "https://pokeapi.co/api/v2/item/249/"
+                    }
+                  ]
                 }
               }
             }
@@ -689,6 +1244,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ItemPocket"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "misc",
+                  "categories": [
+                    {
+                      "name": "collectibles",
+                      "url": "https://pokeapi.co/api/v2/item-category/9/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Items",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -716,6 +1290,38 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Location"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "canalave-city",
+                  "region": {
+                    "name": "sinnoh",
+                    "url": "https://pokeapi.co/api/v2/region/4/"
+                  },
+                  "names": [
+                    {
+                      "name": "Canalave City",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "game_indices": [
+                    {
+                      "game_index": 7,
+                      "generation": {
+                        "name": "generation-iv",
+                        "url": "https://pokeapi.co/api/v2/generation/4/"
+                      }
+                    }
+                  ],
+                  "areas": [
+                    {
+                      "name": "canalave-city-area",
+                      "url": "https://pokeapi.co/api/v2/location-area/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -743,6 +1349,70 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LocationArea"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "canalave-city-area",
+                  "game_index": 1,
+                  "encounter_method_rates": [
+                    {
+                      "encounter_method": {
+                        "name": "old-rod",
+                        "url": "https://pokeapi.co/api/v2/encounter-method/2/"
+                      },
+                      "version_details": [
+                        {
+                          "rate": 25,
+                          "version": {
+                            "name": "platinum",
+                            "url": "https://pokeapi.co/api/v2/version/14/"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "location": {
+                    "name": "canalave-city",
+                    "url": "https://pokeapi.co/api/v2/location/1/"
+                  },
+                  "names": [
+                    {
+                      "name": "",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "pokemon_encounters": [
+                    {
+                      "pokemon": {
+                        "name": "tentacool",
+                        "url": "https://pokeapi.co/api/v2/pokemon/72/"
+                      },
+                      "version_details": [
+                        {
+                          "version": {
+                            "name": "diamond",
+                            "url": "https://pokeapi.co/api/v2/version/12/"
+                          },
+                          "max_chance": 60,
+                          "encounter_details": [
+                            {
+                              "min_level": 20,
+                              "max_level": 30,
+                              "condition_values": [],
+                              "chance": 60,
+                              "method": {
+                                "name": "surf",
+                                "url": "https://pokeapi.co/api/v2/encounter-method/5/"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -770,6 +1440,29 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PalParkArea"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "forest",
+                  "names": [
+                    {
+                      "name": "Forest",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "pokemon_encounters": [
+                    {
+                      "base_score": 30,
+                      "rate": 50,
+                      "pokemon_species": {
+                        "name": "caterpie",
+                        "url": "https://pokeapi.co/api/v2/pokemon-species/10/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -797,6 +1490,41 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Region"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "kanto",
+                  "locations": [
+                    {
+                      "name": "celadon-city",
+                      "url": "https://pokeapi.co/api/v2/location/67/"
+                    }
+                  ],
+                  "main_generation": {
+                    "name": "generation-i",
+                    "url": "https://pokeapi.co/api/v2/generation/1/"
+                  },
+                  "names": [
+                    {
+                      "name": "Kanto",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "pokedexes": [
+                    {
+                      "name": "kanto",
+                      "url": "https://pokeapi.co/api/v2/pokedex/2/"
+                    }
+                  ],
+                  "version_groups": [
+                    {
+                      "name": "red-blue",
+                      "url": "https://pokeapi.co/api/v2/version-group/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -824,6 +1552,21 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Machine"
+                },
+                "example": {
+                  "id": 1,
+                  "item": {
+                    "name": "tm01",
+                    "url": "https://pokeapi.co/api/v2/item/305/"
+                  },
+                  "move": {
+                    "name": "mega-punch",
+                    "url": "https://pokeapi.co/api/v2/move/5/"
+                  },
+                  "version_group": {
+                    "name": "red-blue",
+                    "url": "https://pokeapi.co/api/v2/version/1/"
+                  }
                 }
               }
             }
@@ -851,6 +1594,126 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Move"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "pound",
+                  "accuracy": 100,
+                  "effect_chance": null,
+                  "pp": 35,
+                  "priority": 0,
+                  "power": 40,
+                  "contest_combos": {
+                    "normal": {
+                      "use_before": [
+                        {
+                          "name": "double-slap",
+                          "url": "https://pokeapi.co/api/v2/move/3/"
+                        },
+                        {
+                          "name": "headbutt",
+                          "url": "https://pokeapi.co/api/v2/move/29/"
+                        },
+                        {
+                          "name": "feint-attack",
+                          "url": "https://pokeapi.co/api/v2/move/185/"
+                        }
+                      ],
+                      "use_after": null
+                    },
+                    "super": {
+                      "use_before": null,
+                      "use_after": null
+                    }
+                  },
+                  "contest_type": {
+                    "name": "tough",
+                    "url": "https://pokeapi.co/api/v2/contest-type/5/"
+                  },
+                  "contest_effect": {
+                    "url": "https://pokeapi.co/api/v2/contest-effect/1/"
+                  },
+                  "damage_class": {
+                    "name": "physical",
+                    "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
+                  },
+                  "effect_entries": [
+                    {
+                      "effect": "Inflicts [regular damage]{mechanic:regular-damage}.",
+                      "short_effect": "Inflicts regular damage with no additional effect.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "effect_changes": [],
+                  "generation": {
+                    "name": "generation-i",
+                    "url": "https://pokeapi.co/api/v2/generation/1/"
+                  },
+                  "machines": [],
+                  "meta": {
+                    "ailment": {
+                      "name": "none",
+                      "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+                    },
+                    "category": {
+                      "name": "damage",
+                      "url": "https://pokeapi.co/api/v2/move-category/0/"
+                    },
+                    "min_hits": null,
+                    "max_hits": null,
+                    "min_turns": null,
+                    "max_turns": null,
+                    "drain": 0,
+                    "healing": 0,
+                    "crit_rate": 0,
+                    "ailment_chance": 0,
+                    "flinch_chance": 0,
+                    "stat_chance": 0
+                  },
+                  "names": [
+                    {
+                      "name": "Pound",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "past_values": [],
+                  "stat_changes": [],
+                  "super_contest_effect": {
+                    "url": "https://pokeapi.co/api/v2/super-contest-effect/5/"
+                  },
+                  "target": {
+                    "name": "selected-pokemon",
+                    "url": "https://pokeapi.co/api/v2/move-target/10/"
+                  },
+                  "type": {
+                    "name": "normal",
+                    "url": "https://pokeapi.co/api/v2/type/1/"
+                  },
+                  "learned_by_pokemon": [
+                    {
+                      "name": "clefairy",
+                      "url": "https://pokeapi.co/api/v2/pokemon/35/"
+                    }
+                  ],
+                  "flavor_text_entries": [
+                    {
+                      "flavor_text": "Pounds with fore­\nlegs or tail.",
+                      "language": {
+                        "url": "https://pokeapi.co/api/v2/language/9/",
+                        "name": "en"
+                      },
+                      "version_group": {
+                        "url": "https://pokeapi.co/api/v2/version-group/3/",
+                        "name": "gold-silver"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -878,6 +1741,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MoveAilment"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "paralysis",
+                  "moves": [
+                    {
+                      "name": "thunder-punch",
+                      "url": "https://pokeapi.co/api/v2/move/9/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Paralysis",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -905,6 +1787,19 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MoveBattleStyle"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "attack",
+                  "names": [
+                    {
+                      "name": "Attack",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -932,6 +1827,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MoveCategory"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "ailment",
+                  "descriptions": [
+                    {
+                      "description": "No damage; inflicts status ailment",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "moves": [
+                    {
+                      "name": "sing",
+                      "url": "https://pokeapi.co/api/v2/move/47/"
+                    }
+                  ]
                 }
               }
             }
@@ -959,6 +1873,34 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MoveDamageClass"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "status",
+                  "descriptions": [
+                    {
+                      "description": "ãƒ€ãƒ¡ãƒ¼ã‚¸ãªã„",
+                      "language": {
+                        "name": "ja",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      }
+                    }
+                  ],
+                  "moves": [
+                    {
+                      "name": "swords-dance",
+                      "url": "https://pokeapi.co/api/v2/move/14/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "language": {
+                        "name": "ja-Hrkt",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      },
+                      "name": "へんか"
+                    }
+                  ]
                 }
               }
             }
@@ -986,6 +1928,34 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MoveLearnMethod"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "level-up",
+                  "names": [
+                    {
+                      "name": "Level up",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "descriptions": [
+                    {
+                      "description": "Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht.",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "version_groups": [
+                    {
+                      "name": "red-blue",
+                      "url": "https://pokeapi.co/api/v2/version-group/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -1013,6 +1983,34 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MoveTarget"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "specific-move",
+                  "descriptions": [
+                    {
+                      "description": "Eine spezifische Fähigkeit. Wie diese Fähigkeit genutzt wird, hängt von den genutzten Fähigkeiten ab.",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "moves": [
+                    {
+                      "name": "counter",
+                      "url": "https://pokeapi.co/api/v2/move/68/"
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Spezifische Fähigkeit",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1040,6 +2038,74 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Ability"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "stench",
+                  "is_main_series": true,
+                  "generation": {
+                    "name": "generation-iii",
+                    "url": "https://pokeapi.co/api/v2/generation/3/"
+                  },
+                  "names": [
+                    {
+                      "name": "Stench",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "effect_entries": [
+                    {
+                      "effect": "This Pokémon's damaging moves have a 10% chance to make the target [flinch]{mechanic:flinch} with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this Pokémon is first in the party.",
+                      "short_effect": "Has a 10% chance of making target Pokémon [flinch]{mechanic:flinch} with each hit.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "effect_changes": [
+                    {
+                      "version_group": {
+                        "name": "black-white",
+                        "url": "https://pokeapi.co/api/v2/version-group/11/"
+                      },
+                      "effect_entries": [
+                        {
+                          "effect": "Has no effect in battle.",
+                          "language": {
+                            "name": "en",
+                            "url": "https://pokeapi.co/api/v2/language/9/"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "flavor_text_entries": [
+                    {
+                      "flavor_text": "è‡­ãã¦ã€€ç›¸æ‰‹ãŒ\nã²ã‚‹ã‚€ã€€ã“ã¨ãŒã‚ã‚‹ã€‚",
+                      "language": {
+                        "name": "ja-kanji",
+                        "url": "https://pokeapi.co/api/v2/language/11/"
+                      },
+                      "version_group": {
+                        "name": "x-y",
+                        "url": "https://pokeapi.co/api/v2/version-group/15/"
+                      }
+                    }
+                  ],
+                  "pokemon": [
+                    {
+                      "is_hidden": true,
+                      "slot": 3,
+                      "pokemon": {
+                        "name": "gloom",
+                        "url": "https://pokeapi.co/api/v2/pokemon/44/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1067,6 +2133,32 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Characteristic"
+                },
+                "example": {
+                  "id": 1,
+                  "gene_modulo": 0,
+                  "possible_values": [
+                    0,
+                    5,
+                    10,
+                    15,
+                    20,
+                    25,
+                    30
+                  ],
+                  "highest_stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                  },
+                  "descriptions": [
+                    {
+                      "description": "Loves to eat",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1094,6 +2186,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EggGroup"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "monster",
+                  "names": [
+                    {
+                      "name": "かいじゅう",
+                      "language": {
+                        "name": "ja",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      }
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "bulbasaur",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+                    }
+                  ]
                 }
               }
             }
@@ -1121,6 +2232,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Gender"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "female",
+                  "pokemon_species_details": [
+                    {
+                      "rate": 1,
+                      "pokemon_species": {
+                        "name": "bulbasaur",
+                        "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+                      }
+                    }
+                  ],
+                  "required_for_evolution": [
+                    {
+                      "name": "wormadam",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/413/"
+                    }
+                  ]
                 }
               }
             }
@@ -1148,6 +2278,32 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GrowthRate"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "slow",
+                  "formula": "\\frac{5x^3}{4}",
+                  "descriptions": [
+                    {
+                      "description": "langsam",
+                      "language": {
+                        "name": "de",
+                        "url": "https://pokeapi.co/api/v2/language/6/"
+                      }
+                    }
+                  ],
+                  "levels": [
+                    {
+                      "level": 100,
+                      "experience": 1250000
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "growlithe",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/58/"
+                    }
+                  ]
                 }
               }
             }
@@ -1175,6 +2331,54 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Nature"
+                },
+                "example": {
+                  "id": 2,
+                  "name": "bold",
+                  "decreased_stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                  },
+                  "increased_stat": {
+                    "name": "defense",
+                    "url": "https://pokeapi.co/api/v2/stat/3/"
+                  },
+                  "likes_flavor": {
+                    "name": "sour",
+                    "url": "https://pokeapi.co/api/v2/berry-flavor/5/"
+                  },
+                  "hates_flavor": {
+                    "name": "spicy",
+                    "url": "https://pokeapi.co/api/v2/berry-flavor/1/"
+                  },
+                  "pokeathlon_stat_changes": [
+                    {
+                      "max_change": -2,
+                      "pokeathlon_stat": {
+                        "name": "speed",
+                        "url": "https://pokeapi.co/api/v2/pokeathlon-stat/1/"
+                      }
+                    }
+                  ],
+                  "move_battle_style_preferences": [
+                    {
+                      "low_hp_preference": 32,
+                      "high_hp_preference": 30,
+                      "move_battle_style": {
+                        "name": "attack",
+                        "url": "https://pokeapi.co/api/v2/move-battle-style/1/"
+                      }
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "がんばりや",
+                      "language": {
+                        "name": "ja",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1202,6 +2406,39 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PokeathlonStat"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "speed",
+                  "affecting_natures": {
+                    "increase": [
+                      {
+                        "max_change": 2,
+                        "nature": {
+                          "name": "timid",
+                          "url": "https://pokeapi.co/api/v2/nature/5/"
+                        }
+                      }
+                    ],
+                    "decrease": [
+                      {
+                        "max_change": -1,
+                        "nature": {
+                          "name": "hardy",
+                          "url": "https://pokeapi.co/api/v2/nature/1/"
+                        }
+                      }
+                    ]
+                  },
+                  "names": [
+                    {
+                      "name": "Speed",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1229,6 +2466,299 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Pokemon"
+                },
+                "example": {
+                  "id": 35,
+                  "name": "clefairy",
+                  "base_experience": 113,
+                  "height": 6,
+                  "is_default": true,
+                  "order": 56,
+                  "weight": 75,
+                  "abilities": [
+                    {
+                      "is_hidden": true,
+                      "slot": 3,
+                      "ability": {
+                        "name": "friend-guard",
+                        "url": "https://pokeapi.co/api/v2/ability/132/"
+                      }
+                    }
+                  ],
+                  "forms": [
+                    {
+                      "name": "clefairy",
+                      "url": "https://pokeapi.co/api/v2/pokemon-form/35/"
+                    }
+                  ],
+                  "game_indices": [
+                    {
+                      "game_index": 35,
+                      "version": {
+                        "name": "white-2",
+                        "url": "https://pokeapi.co/api/v2/version/22/"
+                      }
+                    }
+                  ],
+                  "held_items": [
+                    {
+                      "item": {
+                        "name": "moon-stone",
+                        "url": "https://pokeapi.co/api/v2/item/81/"
+                      },
+                      "version_details": [
+                        {
+                          "rarity": 5,
+                          "version": {
+                            "name": "ruby",
+                            "url": "https://pokeapi.co/api/v2/version/7/"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "location_area_encounters": "/api/v2/pokemon/35/encounters",
+                  "moves": [
+                    {
+                      "move": {
+                        "name": "pound",
+                        "url": "https://pokeapi.co/api/v2/move/1/"
+                      },
+                      "version_group_details": [
+                        {
+                          "level_learned_at": 1,
+                          "version_group": {
+                            "name": "red-blue",
+                            "url": "https://pokeapi.co/api/v2/version-group/1/"
+                          },
+                          "move_learn_method": {
+                            "name": "level-up",
+                            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "species": {
+                    "name": "clefairy",
+                    "url": "https://pokeapi.co/api/v2/pokemon-species/35/"
+                  },
+                  "sprites": {
+                    "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/35.png",
+                    "back_female": null,
+                    "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/35.png",
+                    "back_shiny_female": null,
+                    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+                    "front_female": null,
+                    "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png",
+                    "front_shiny_female": null,
+                    "other": {
+                      "dream_world": {
+                        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.svg",
+                        "front_female": null
+                      },
+                      "home": {
+                        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/35.png",
+                        "front_female": null,
+                        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/35.png",
+                        "front_shiny_female": null
+                      },
+                      "official-artwork": {
+                        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png",
+                        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/35.png"
+                      },
+                      "showdown": {
+                        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/35.gif",
+                        "back_female": null,
+                        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/35.gif",
+                        "back_shiny_female": null,
+                        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/35.gif",
+                        "front_female": null,
+                        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/35.gif",
+                        "front_shiny_female": null
+                      }
+                    },
+                    "versions": {
+                      "generation-i": {
+                        "red-blue": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/35.png",
+                          "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/back/gray/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/35.png",
+                          "front_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/gray/35.png"
+                        },
+                        "yellow": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/yellow/back/35.png",
+                          "back_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/yellow/back/gray/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/yellow/35.png",
+                          "front_gray": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/yellow/gray/35.png"
+                        }
+                      },
+                      "generation-ii": {
+                        "crystal": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/back/35.png",
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/back/shiny/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/35.png",
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/shiny/35.png"
+                        },
+                        "gold": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/gold/back/35.png",
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/gold/back/shiny/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/gold/35.png",
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/gold/shiny/35.png"
+                        },
+                        "silver": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/silver/back/35.png",
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/silver/back/shiny/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/silver/35.png",
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/silver/shiny/35.png"
+                        }
+                      },
+                      "generation-iii": {
+                        "emerald": {
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/35.png",
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/shiny/35.png"
+                        },
+                        "firered-leafgreen": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/35.png",
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/back/shiny/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/35.png",
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/shiny/35.png"
+                        },
+                        "ruby-sapphire": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/35.png",
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/back/shiny/35.png",
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/35.png",
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/shiny/35.png"
+                        }
+                      },
+                      "generation-iv": {
+                        "diamond-pearl": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/back/35.png",
+                          "back_female": null,
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/back/shiny/35.png",
+                          "back_shiny_female": null,
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/shiny/35.png",
+                          "front_shiny_female": null
+                        },
+                        "heartgold-soulsilver": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/back/35.png",
+                          "back_female": null,
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/back/shiny/35.png",
+                          "back_shiny_female": null,
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/35.png",
+                          "front_shiny_female": null
+                        },
+                        "platinum": {
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/back/35.png",
+                          "back_female": null,
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/back/shiny/35.png",
+                          "back_shiny_female": null,
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/shiny/35.png",
+                          "front_shiny_female": null
+                        }
+                      },
+                      "generation-v": {
+                        "black-white": {
+                          "animated": {
+                            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/35.gif",
+                            "back_female": null,
+                            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/35.gif",
+                            "back_shiny_female": null,
+                            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/35.gif",
+                            "front_female": null,
+                            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/35.gif",
+                            "front_shiny_female": null
+                          },
+                          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/back/35.png",
+                          "back_female": null,
+                          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/back/shiny/35.png",
+                          "back_shiny_female": null,
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/shiny/35.png",
+                          "front_shiny_female": null
+                        }
+                      },
+                      "generation-vi": {
+                        "omegaruby-alphasapphire": {
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/35.png",
+                          "front_shiny_female": null
+                        },
+                        "x-y": {
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/35.png",
+                          "front_shiny_female": null
+                        }
+                      },
+                      "generation-vii": {
+                        "icons": {
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/35.png",
+                          "front_female": null
+                        },
+                        "ultra-sun-ultra-moon": {
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/35.png",
+                          "front_female": null,
+                          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/35.png",
+                          "front_shiny_female": null
+                        }
+                      },
+                      "generation-viii": {
+                        "icons": {
+                          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/35.png",
+                          "front_female": null
+                        }
+                      }
+                    }
+                  },
+                  "cries": {
+                    "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/35.ogg",
+                    "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/35.ogg"
+                  },
+                  "stats": [
+                    {
+                      "base_stat": 35,
+                      "effort": 0,
+                      "stat": {
+                        "name": "speed",
+                        "url": "https://pokeapi.co/api/v2/stat/6/"
+                      }
+                    }
+                  ],
+                  "types": [
+                    {
+                      "slot": 1,
+                      "type": {
+                        "name": "fairy",
+                        "url": "https://pokeapi.co/api/v2/type/18/"
+                      }
+                    }
+                  ],
+                  "past_types": [
+                    {
+                      "generation": {
+                        "name": "generation-v",
+                        "url": "https://pokeapi.co/api/v2/generation/5/"
+                      },
+                      "types": [
+                        {
+                          "slot": 1,
+                          "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/1/"
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -1251,12 +2781,49 @@
         ],
         "responses": {
           "200": {
-            "description": "A PokemonLocationArea object.",
+            "description": "A LocationAreaEncounter object.",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PokemonLocationArea"
-                }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LocationAreaEncounter"
+                  }
+                },
+                "example": [
+                  {
+                    "location_area": {
+                      "name": "kanto-route-2-south-towards-viridian-city",
+                      "url": "https://pokeapi.co/api/v2/location-area/296/"
+                    },
+                    "version_details": [
+                      {
+                        "max_chance": 10,
+                        "encounter_details": [
+                          {
+                            "min_level": 7,
+                            "max_level": 7,
+                            "condition_values": [
+                              {
+                                "name": "time-morning",
+                                "url": "https://pokeapi.co/api/v2/encounter-condition-value/3/"
+                              }
+                            ],
+                            "chance": 5,
+                            "method": {
+                              "name": "walk",
+                              "url": "https://pokeapi.co/api/v2/encounter-method/1/"
+                            }
+                          }
+                        ],
+                        "version": {
+                          "name": "heartgold",
+                          "url": "https://pokeapi.co/api/v2/version/15/"
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             }
           }
@@ -1283,6 +2850,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PokemonColor"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "black",
+                  "names": [
+                    {
+                      "name": "é»’ã„",
+                      "language": {
+                        "name": "ja",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      }
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "snorlax",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/143/"
+                    }
+                  ]
                 }
               }
             }
@@ -1310,6 +2896,61 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PokemonForm"
+                },
+                "example": {
+                  "id": 10041,
+                  "name": "arceus-bug",
+                  "order": 631,
+                  "form_order": 7,
+                  "is_default": false,
+                  "is_battle_only": false,
+                  "is_mega": false,
+                  "form_name": "bug",
+                  "pokemon": {
+                    "name": "arceus",
+                    "url": "https://pokeapi.co/api/v2/pokemon/493/"
+                  },
+                  "sprites": {
+                    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493-bug.png",
+                    "front_female": null,
+                    "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493-bug.png",
+                    "front_shiny_female": null,
+                    "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/493-bug.png",
+                    "back_female": null,
+                    "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/493-bug.png",
+                    "back_shiny_female": null
+                  },
+                  "types": [
+                    {
+                      "slot": 1,
+                      "type": {
+                        "name": "bug",
+                        "url": "https://pokeapi.co/api/v2/type/7/"
+                      }
+                    }
+                  ],
+                  "version_group": {
+                    "name": "diamond-pearl",
+                    "url": "https://pokeapi.co/api/v2/version-group/8/"
+                  },
+                  "names": [
+                    {
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      },
+                      "name": "Bug Arceus"
+                    }
+                  ],
+                  "form_names": [
+                    {
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      },
+                      "name": "Bug Type"
+                    }
+                  ]
                 }
               }
             }
@@ -1337,6 +2978,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PokemonHabitat"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "cave",
+                  "names": [
+                    {
+                      "name": "grottes",
+                      "language": {
+                        "name": "fr",
+                        "url": "https://pokeapi.co/api/v2/language/5/"
+                      }
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "zubat",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/41/"
+                    }
+                  ]
                 }
               }
             }
@@ -1364,6 +3024,34 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PokemonShape"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "ball",
+                  "awesome_names": [
+                    {
+                      "awesome_name": "Pomaceous",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "names": [
+                    {
+                      "name": "Ball",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "pokemon_species": [
+                    {
+                      "name": "shellder",
+                      "url": "https://pokeapi.co/api/v2/pokemon-species/90/"
+                    }
+                  ]
                 }
               }
             }
@@ -1391,6 +3079,118 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PokemonSpecies"
+                },
+                "example": {
+                  "id": 413,
+                  "name": "wormadam",
+                  "order": 441,
+                  "gender_rate": 8,
+                  "capture_rate": 45,
+                  "base_happiness": 70,
+                  "is_baby": false,
+                  "is_legendary": false,
+                  "is_mythical": false,
+                  "hatch_counter": 15,
+                  "has_gender_differences": false,
+                  "forms_switchable": false,
+                  "growth_rate": {
+                    "name": "medium",
+                    "url": "https://pokeapi.co/api/v2/growth-rate/2/"
+                  },
+                  "pokedex_numbers": [
+                    {
+                      "entry_number": 45,
+                      "pokedex": {
+                        "name": "kalos-central",
+                        "url": "https://pokeapi.co/api/v2/pokedex/12/"
+                      }
+                    }
+                  ],
+                  "egg_groups": [
+                    {
+                      "name": "bug",
+                      "url": "https://pokeapi.co/api/v2/egg-group/3/"
+                    }
+                  ],
+                  "color": {
+                    "name": "gray",
+                    "url": "https://pokeapi.co/api/v2/pokemon-color/4/"
+                  },
+                  "shape": {
+                    "name": "squiggle",
+                    "url": "https://pokeapi.co/api/v2/pokemon-shape/2/"
+                  },
+                  "evolves_from_species": {
+                    "name": "burmy",
+                    "url": "https://pokeapi.co/api/v2/pokemon-species/412/"
+                  },
+                  "evolution_chain": {
+                    "url": "https://pokeapi.co/api/v2/evolution-chain/213/"
+                  },
+                  "habitat": null,
+                  "generation": {
+                    "name": "generation-iv",
+                    "url": "https://pokeapi.co/api/v2/generation/4/"
+                  },
+                  "names": [
+                    {
+                      "name": "Wormadam",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "pal_park_encounters": [
+                    {
+                      "area": {
+                        "name": "forest",
+                        "url": "https://pokeapi.co/api/v2/pal-park-area/1/"
+                      },
+                      "base_score": 70,
+                      "rate": 20
+                    }
+                  ],
+                  "flavor_text_entries": [
+                    {
+                      "flavor_text": "When the bulb on\nits back grows\nlarge, it appears\fto lose the\nability to stand\non its hind legs.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      },
+                      "version": {
+                        "name": "red",
+                        "url": "https://pokeapi.co/api/v2/version/1/"
+                      }
+                    }
+                  ],
+                  "form_descriptions": [
+                    {
+                      "description": "Forms have different stats and movepools.  During evolution, Burmy's current cloak becomes Wormadam's form, and can no longer be changed.",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "genera": [
+                    {
+                      "genus": "Bagworm",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ],
+                  "varieties": [
+                    {
+                      "is_default": true,
+                      "pokemon": {
+                        "name": "wormadam-plant",
+                        "url": "https://pokeapi.co/api/v2/pokemon/413/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1418,6 +3218,64 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Stat"
+                },
+                "example": {
+                  "id": 2,
+                  "name": "attack",
+                  "game_index": 2,
+                  "is_battle_only": false,
+                  "affecting_moves": {
+                    "increase": [
+                      {
+                        "change": 2,
+                        "move": {
+                          "name": "swords-dance",
+                          "url": "https://pokeapi.co/api/v2/move/14/"
+                        }
+                      }
+                    ],
+                    "decrease": [
+                      {
+                        "change": -1,
+                        "move": {
+                          "name": "growl",
+                          "url": "https://pokeapi.co/api/v2/move/45/"
+                        }
+                      }
+                    ]
+                  },
+                  "affecting_natures": {
+                    "increase": [
+                      {
+                        "name": "lonely",
+                        "url": "https://pokeapi.co/api/v2/nature/6/"
+                      }
+                    ],
+                    "decrease": [
+                      {
+                        "name": "bold",
+                        "url": "https://pokeapi.co/api/v2/nature/2/"
+                      }
+                    ]
+                  },
+                  "characteristics": [
+                    {
+                      "url": "https://pokeapi.co/api/v2/characteristic/2/"
+                    }
+                  ],
+                  "move_damage_class": {
+                    "name": "physical",
+                    "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
+                  },
+                  "names": [
+                    {
+                      "name": "ã“ã†ã’ã",
+                      "language": {
+                        "name": "ja",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1445,6 +3303,135 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Type"
+                },
+                "example": {
+                  "id": 5,
+                  "name": "ground",
+                  "damage_relations": {
+                    "no_damage_to": [
+                      {
+                        "name": "flying",
+                        "url": "https://pokeapi.co/api/v2/type/3/"
+                      }
+                    ],
+                    "half_damage_to": [
+                      {
+                        "name": "bug",
+                        "url": "https://pokeapi.co/api/v2/type/7/"
+                      }
+                    ],
+                    "double_damage_to": [
+                      {
+                        "name": "poison",
+                        "url": "https://pokeapi.co/api/v2/type/4/"
+                      }
+                    ],
+                    "no_damage_from": [
+                      {
+                        "name": "electric",
+                        "url": "https://pokeapi.co/api/v2/type/13/"
+                      }
+                    ],
+                    "half_damage_from": [
+                      {
+                        "name": "poison",
+                        "url": "https://pokeapi.co/api/v2/type/4/"
+                      }
+                    ],
+                    "double_damage_from": [
+                      {
+                        "name": "water",
+                        "url": "https://pokeapi.co/api/v2/type/11/"
+                      }
+                    ]
+                  },
+                  "past_damage_relations": [
+                    {
+                      "generation": {
+                        "name": "generation-v",
+                        "url": "https://pokeapi.co/api/v2/generation/5/"
+                      },
+                      "damage_relations": {
+                        "no_damage_to": [
+                          {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/1/"
+                          }
+                        ],
+                        "half_damage_to": [
+                          {
+                            "name": "steel",
+                            "url": "https://pokeapi.co/api/v2/type/9/"
+                          }
+                        ],
+                        "double_damage_to": [
+                          {
+                            "name": "ghost",
+                            "url": "https://pokeapi.co/api/v2/type/8/"
+                          }
+                        ],
+                        "no_damage_from": [
+                          {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/1/"
+                          }
+                        ],
+                        "half_damage_from": [
+                          {
+                            "name": "poison",
+                            "url": "https://pokeapi.co/api/v2/type/4/"
+                          }
+                        ],
+                        "double_damage_from": [
+                          {
+                            "name": "ghost",
+                            "url": "https://pokeapi.co/api/v2/type/8/"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "game_indices": [
+                    {
+                      "game_index": 4,
+                      "generation": {
+                        "name": "generation-i",
+                        "url": "https://pokeapi.co/api/v2/generation/1/"
+                      }
+                    }
+                  ],
+                  "generation": {
+                    "name": "generation-i",
+                    "url": "https://pokeapi.co/api/v2/generation/1/"
+                  },
+                  "move_damage_class": {
+                    "name": "physical",
+                    "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
+                  },
+                  "names": [
+                    {
+                      "name": "ã˜ã‚ã‚“",
+                      "language": {
+                        "name": "ja",
+                        "url": "https://pokeapi.co/api/v2/language/1/"
+                      }
+                    }
+                  ],
+                  "pokemon": [
+                    {
+                      "slot": 1,
+                      "pokemon": {
+                        "name": "sandshrew",
+                        "url": "https://pokeapi.co/api/v2/pokemon/27/"
+                      }
+                    }
+                  ],
+                  "moves": [
+                    {
+                      "name": "sand-attack",
+                      "url": "https://pokeapi.co/api/v2/move/28/"
+                    }
+                  ]
                 }
               }
             }
@@ -1472,6 +3459,22 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Language"
+                },
+                "example": {
+                  "id": 1,
+                  "name": "ja",
+                  "official": true,
+                  "iso639": "ja",
+                  "iso3166": "jp",
+                  "names": [
+                    {
+                      "name": "Japanese",
+                      "language": {
+                        "name": "en",
+                        "url": "https://pokeapi.co/api/v2/language/9/"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1873,8 +3876,7 @@
         "type": "object",
         "required": [
           "flavor_text",
-          "language",
-          "version"
+          "language"
         ],
         "properties": {
           "flavor_text": {
@@ -2013,7 +4015,7 @@
         "required": [
           "id",
           "name",
-          "values",
+          "condition",
           "names"
         ],
         "properties": {
@@ -2023,7 +4025,7 @@
           "name": {
             "$ref": "#/components/schemas/ResourceName"
           },
-          "values": {
+          "condition": {
             "description": "The condition this encounter condition value pertains to.",
             "$ref": "#/components/schemas/NamedAPIResource"
           },
@@ -2077,6 +4079,7 @@
               "null"
             ],
             "enum": [
+              null,
               1,
               2,
               3
@@ -2187,6 +4190,7 @@
               "null"
             ],
             "enum": [
+              null,
               -1,
               0,
               1
@@ -2237,7 +4241,10 @@
           },
           "evolution_details": {
             "description": "All details regarding the specific details of the referenced Pokémon species evolution.",
-            "type": "array",
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/EvolutionDetail"
             }
@@ -2539,12 +4546,12 @@
       "VersionGroupFlavorText": {
         "type": "object",
         "required": [
-          "flavor_text",
+          "text",
           "language",
           "version_group"
         ],
         "properties": {
-          "flavor_text": {
+          "text": {
             "description": "The localized flavor text for an API resource in a specific language. Note that this text is left unprocessed as it is found in game files. This means that it contains special characters that one might want to replace with their visible decodable version. Please check out this [issue](https://github.com/veekun/pokedex/issues/218#issuecomment-339841781) to find out more.",
             "type": "string"
           },
@@ -2657,8 +4664,7 @@
           "names",
           "sprites",
           "held_by_pokemon",
-          "baby_trigger_for",
-          "machines"
+          "baby_trigger_for"
         ],
         "properties": {
           "id": {
@@ -3163,13 +5169,19 @@
         ],
         "properties": {
           "use_before": {
-            "type": "array",
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/NamedAPIResource"
             }
           },
           "use_after": {
-            "type": "array",
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/NamedAPIResource"
             }
@@ -4248,6 +6260,679 @@
           }
         }
       },
+      "PokemonSpritesVersions": {
+        "type": "object",
+        "required": [
+          "generation-i",
+          "generation-ii",
+          "generation-iii",
+          "generation-iv",
+          "generation-v",
+          "generation-vi",
+          "generation-vii",
+          "generation-viii"
+        ],
+        "properties": {
+          "generation-i": {
+            "type": "object",
+            "required": [
+              "red-blue",
+              "yellow"
+            ],
+            "properties": {
+              "red-blue": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_gray",
+                  "front_default",
+                  "front_gray"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_gray": {
+                    "type": "string"
+                  },
+                  "back_transparent": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_gray": {
+                    "type": "string"
+                  },
+                  "front_transparent": {
+                    "type": "string"
+                  }
+                }
+              },
+              "yellow": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_gray",
+                  "front_default",
+                  "front_gray"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_gray": {
+                    "type": "string"
+                  },
+                  "back_transparent": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_gray": {
+                    "type": "string"
+                  },
+                  "front_transparent": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "generation-ii": {
+            "type": "object",
+            "required": [
+              "crystal",
+              "gold",
+              "silver"
+            ],
+            "properties": {
+              "crystal": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_shiny",
+                  "front_default",
+                  "front_shiny"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "back_shiny_transparent": {
+                    "type": "string"
+                  },
+                  "back_transparent": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_transparent": {
+                    "type": "string"
+                  },
+                  "front_transparent": {
+                    "type": "string"
+                  }
+                }
+              },
+              "gold": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_shiny",
+                  "front_default",
+                  "front_shiny"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_transparent": {
+                    "type": "string"
+                  }
+                }
+              },
+              "silver": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_shiny",
+                  "front_default",
+                  "front_shiny"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_transparent": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "generation-iii": {
+            "type": "object",
+            "required": [
+              "emerald",
+              "firered-leafgreen",
+              "ruby-sapphire"
+            ],
+            "properties": {
+              "emerald": {
+                "type": "object",
+                "required": [
+                  "front_default",
+                  "front_shiny"
+                ],
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  }
+                }
+              },
+              "firered-leafgreen": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_shiny",
+                  "front_default",
+                  "front_shiny"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  }
+                }
+              },
+              "ruby-sapphire": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_shiny",
+                  "front_default",
+                  "front_shiny"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "generation-iv": {
+            "type": "object",
+            "required": [
+              "diamond-pearl",
+              "heartgold-soulsilver",
+              "platinum"
+            ],
+            "properties": {
+              "diamond-pearl": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_female",
+                  "back_shiny",
+                  "back_shiny_female",
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "back_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "heartgold-soulsilver": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_female",
+                  "back_shiny",
+                  "back_shiny_female",
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "back_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "platinum": {
+                "type": "object",
+                "required": [
+                  "back_default",
+                  "back_female",
+                  "back_shiny",
+                  "back_shiny_female",
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "back_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "generation-v": {
+            "type": "object",
+            "required": [
+              "black-white"
+            ],
+            "properties": {
+              "black-white": {
+                "type": "object",
+                "required": [
+                  "animated",
+                  "back_default",
+                  "back_female",
+                  "back_shiny",
+                  "back_shiny_female",
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "animated": {
+                    "type": "object",
+                    "required": [
+                      "back_default",
+                      "back_female",
+                      "back_shiny",
+                      "back_shiny_female",
+                      "front_default",
+                      "front_female",
+                      "front_shiny",
+                      "front_shiny_female"
+                    ],
+                    "properties": {
+                      "back_default": {
+                        "type": "string"
+                      },
+                      "back_female": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "back_shiny": {
+                        "type": "string"
+                      },
+                      "back_shiny_female": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "front_default": {
+                        "type": "string"
+                      },
+                      "front_female": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "front_shiny": {
+                        "type": "string"
+                      },
+                      "front_shiny_female": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    }
+                  },
+                  "back_default": {
+                    "type": "string"
+                  },
+                  "back_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "back_shiny": {
+                    "type": "string"
+                  },
+                  "back_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "generation-vi": {
+            "type": "object",
+            "required": [
+              "omegaruby-alphasapphire",
+              "x-y"
+            ],
+            "properties": {
+              "omegaruby-alphasapphire": {
+                "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "x-y": {
+                "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "generation-vii": {
+            "type": "object",
+            "required": [
+              "icons",
+              "ultra-sun-ultra-moon"
+            ],
+            "properties": {
+              "icons": {
+                "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female"
+                ],
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "ultra-sun-ultra-moon": {
+                "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "front_shiny": {
+                    "type": "string"
+                  },
+                  "front_shiny_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "generation-viii": {
+            "type": "object",
+            "required": [
+              "icons"
+            ],
+            "properties": {
+              "icons": {
+                "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female"
+                ],
+                "properties": {
+                  "front_default": {
+                    "type": "string"
+                  },
+                  "front_female": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "PokemonSprites": {
         "type": "object",
         "required": [
@@ -4312,8 +6997,10 @@
               "null"
             ],
             "required": [
-              "front_default",
-              "front_female"
+              "dream_world",
+              "home",
+              "official-artwork",
+              "showdown"
             ],
             "properties": {
               "dream_world": {
@@ -4424,6 +7111,9 @@
                 }
               }
             }
+          },
+          "versions": {
+            "$ref": "#/components/schemas/PokemonSpritesVersions"
           }
         }
       },
@@ -4590,7 +7280,7 @@
           }
         }
       },
-      "PokemonLocationArea": {
+      "LocationAreaEncounter": {
         "type": "object",
         "required": [
           "location_area",
@@ -4655,26 +7345,58 @@
         "type": "object",
         "required": [
           "front_default",
+          "front_female",
           "front_shiny",
+          "front_shiny_female",
           "back_default",
-          "back_shiny"
+          "back_female",
+          "back_shiny",
+          "back_shiny_female"
         ],
         "properties": {
           "front_default": {
             "description": "The default depiction of this Pokémon from the front in battle.",
             "type": "string"
           },
+          "front_female": {
+            "description": "The female depiction of this Pokémon from the front in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "front_shiny": {
             "description": "The shiny depiction of this Pokémon from the front in battle.",
             "type": "string"
+          },
+          "front_shiny_female": {
+            "description": "The shiny female depiction of this Pokémon from the front in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "back_default": {
             "description": "The default depiction of this Pokémon from the back in battle.",
             "type": "string"
           },
+          "back_female": {
+            "description": "The female depiction of this Pokémon from the back in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "back_shiny": {
             "description": "The shiny depiction of this Pokémon from the back in battle.",
             "type": "string"
+          },
+          "back_shiny_female": {
+            "description": "The shiny female depiction of this Pokémon from the back in battle.",
+            "type": [
+              "string",
+              "null"
+            ]
           }
         }
       },
@@ -5012,7 +7734,14 @@
           },
           "habitat": {
             "description": "The habitat this Pokémon species can be encountered in.",
-            "$ref": "#/components/schemas/NamedAPIResource"
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/NamedAPIResource"
+              }
+            ]
           },
           "generation": {
             "description": "The generation this Pokémon species was introduced in.",
@@ -5342,8 +8071,18 @@
         "in": "path",
         "required": true,
         "description": "The name or unique ID to get.",
+        "examples": {
+          "id": {
+            "summary": "An ID value.",
+            "value": 1
+          },
+          "name": {
+            "summary": "A name value.",
+            "value": "cheri"
+          }
+        },
         "schema": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/components/schemas/ResourceId"
             },
@@ -5358,6 +8097,7 @@
         "in": "path",
         "required": true,
         "description": "The name or unique ID to get.",
+        "example": 1,
         "schema": {
           "$ref": "#/components/schemas/ResourceId"
         }
