@@ -16,6 +16,25 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/EggGroup.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "monster",
+              "names": [
+                {
+                  "name": "かいじゅう",
+                  "language": {
+                    "name": "ja",
+                    "url": "https://pokeapi.co/api/v2/language/1/"
+                  }
+                }
+              ],
+              "pokemon_species": [
+                {
+                  "name": "bulbasaur",
+                  "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+                }
+              ]
             }
           }
         }

@@ -17,7 +17,7 @@
     },
     "evolution_details": {
       "description": "All details regarding the specific details of the referenced Pokémon species evolution.",
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "./EvolutionDetail.json"
       }

@@ -18,6 +18,29 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/EncounterCondition.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "swarm",
+              "values": [
+                {
+                  "name": "swarm-yes",
+                  "url": "https://pokeapi.co/api/v2/encounter-condition-value/1/"
+                },
+                {
+                  "name": "swarm-no",
+                  "url": "https://pokeapi.co/api/v2/encounter-condition-value/2/"
+                }
+              ],
+              "names": [
+                {
+                  "name": "Schwarm",
+                  "language": {
+                    "name": "de",
+                    "url": "https://pokeapi.co/api/v2/language/6/"
+                  }
+                }
+              ]
             }
           }
         }
