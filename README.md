@@ -13,7 +13,7 @@ In the `openapi` folder, is the spec broken down into separate files for easier 
 ## To-Do's
 
 - [x] Add `required` to every `object` type in the spec 😭
-- [ ] Add response examples from docs
+- [x] Add response examples from docs
 - [ ] Refactor `PokemonSpritesVersions` to more modular types (keys are `Generation` names then either `Version` or `VersionGroup` names)
 - [ ] Finish fixing the GitHub Action that runs the Redocly CLI `bundle` command.
     - [ ] Maybe in same or different plugin, make code that automatically adds `required` field?
