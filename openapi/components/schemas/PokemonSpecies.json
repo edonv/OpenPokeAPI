@@ -109,7 +109,14 @@
     },
     "habitat": {
       "description": "The habitat this Pokémon species can be encountered in.",
-      "$ref": "./NamedAPIResource.json"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "./NamedAPIResource.json"
+        }
+      ]
     },
     "generation": {
       "description": "The generation this Pokémon species was introduced in.",
