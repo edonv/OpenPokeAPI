@@ -7,7 +7,7 @@
     },
     "nature": {
       "description": "The nature causing the change.",
-        "$ref": "./NamedAPIResource.json"
+      "$ref": "./NamedAPIResource.json"
     }
   }
 }
