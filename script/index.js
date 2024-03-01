@@ -14,7 +14,17 @@ const files = fs.readdirSync(componentsDir, {
 
 const filesWithOptionalProps = {
     'FlavorText.json': ['version'],
-    'Item.json': ['machines']
+    'Item.json': ['machines'],
+    'PokemonSprites.json': ['versions'],
+    'PokemonSpritesVersions.json': [
+        'generation-i',
+        'generation-ii',
+        'generation-iii',
+        'generation-iv',
+        'generation-v',
+        'generation-vi',
+        'generation-vii'
+    ]
 };
 
 for (const filePath of files) {
