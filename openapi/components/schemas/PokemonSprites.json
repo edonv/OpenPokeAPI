@@ -62,8 +62,10 @@
         "null"
       ],
       "required": [
-        "front_default",
-        "front_female"
+        "dream_world",
+        "home",
+        "official-artwork",
+        "showdown"
       ],
       "properties": {
         "dream_world": {
