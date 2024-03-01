@@ -16,6 +16,54 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/Nature.json"
+            },
+            "example": {
+              "id": 2,
+              "name": "bold",
+              "decreased_stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              },
+              "increased_stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              },
+              "likes_flavor": {
+                "name": "sour",
+                "url": "https://pokeapi.co/api/v2/berry-flavor/5/"
+              },
+              "hates_flavor": {
+                "name": "spicy",
+                "url": "https://pokeapi.co/api/v2/berry-flavor/1/"
+              },
+              "pokeathlon_stat_changes": [
+                {
+                  "max_change": -2,
+                  "pokeathlon_stat": {
+                    "name": "speed",
+                    "url": "https://pokeapi.co/api/v2/pokeathlon-stat/1/"
+                  }
+                }
+              ],
+              "move_battle_style_preferences": [
+                {
+                  "low_hp_preference": 32,
+                  "high_hp_preference": 30,
+                  "move_battle_style": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/move-battle-style/1/"
+                  }
+                }
+              ],
+              "names": [
+                {
+                  "name": "がんばりや",
+                  "language": {
+                    "name": "ja",
+                    "url": "https://pokeapi.co/api/v2/language/1/"
+                  }
+                }
+              ]
             }
           }
         }

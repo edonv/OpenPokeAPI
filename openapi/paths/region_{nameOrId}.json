@@ -16,6 +16,41 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/Region.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "kanto",
+              "locations": [
+                {
+                  "name": "celadon-city",
+                  "url": "https://pokeapi.co/api/v2/location/67/"
+                }
+              ],
+              "main_generation": {
+                "name": "generation-i",
+                "url": "https://pokeapi.co/api/v2/generation/1/"
+              },
+              "names": [
+                {
+                  "name": "Kanto",
+                  "language": {
+                    "name": "de",
+                    "url": "https://pokeapi.co/api/v2/language/6/"
+                  }
+                }
+              ],
+              "pokedexes": [
+                {
+                  "name": "kanto",
+                  "url": "https://pokeapi.co/api/v2/pokedex/2/"
+                }
+              ],
+              "version_groups": [
+                {
+                  "name": "red-blue",
+                  "url": "https://pokeapi.co/api/v2/version-group/1/"
+                }
+              ]
             }
           }
         }

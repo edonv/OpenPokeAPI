@@ -16,6 +16,34 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/MoveDamageClass.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "status",
+              "descriptions": [
+                {
+                  "description": "ãƒ€ãƒ¡ãƒ¼ã‚¸ãªã„",
+                  "language": {
+                    "name": "ja",
+                    "url": "https://pokeapi.co/api/v2/language/1/"
+                  }
+                }
+              ],
+              "moves": [
+                {
+                  "name": "swords-dance",
+                  "url": "https://pokeapi.co/api/v2/move/14/"
+                }
+              ],
+              "names": [
+                {
+                  "language": {
+                    "name": "ja-Hrkt",
+                    "url": "https://pokeapi.co/api/v2/language/1/"
+                  },
+                  "name": "へんか"
+                }
+              ]
             }
           }
         }

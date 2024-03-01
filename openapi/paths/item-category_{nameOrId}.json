@@ -16,6 +16,29 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/ItemCategory.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "stat-boosts",
+              "items": [
+                {
+                  "name": "guard-spec",
+                  "url": "https://pokeapi.co/api/v2/item/55/"
+                }
+              ],
+              "names": [
+                {
+                  "name": "Stat boosts",
+                  "language": {
+                    "name": "en",
+                    "url": "https://pokeapi.co/api/v2/language/9/"
+                  }
+                }
+              ],
+              "pocket": {
+                "name": "battle",
+                "url": "https://pokeapi.co/api/v2/item-pocket/7/"
+              }
             }
           }
         }

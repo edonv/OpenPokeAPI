@@ -16,6 +16,21 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/Machine.json"
+            },
+            "example": {
+              "id": 1,
+              "item": {
+                "name": "tm01",
+                "url": "https://pokeapi.co/api/v2/item/305/"
+              },
+              "move": {
+                "name": "mega-punch",
+                "url": "https://pokeapi.co/api/v2/move/5/"
+              },
+              "version_group": {
+                "name": "red-blue",
+                "url": "https://pokeapi.co/api/v2/version/1/"
+              }
             }
           }
         }

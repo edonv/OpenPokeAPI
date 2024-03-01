@@ -16,6 +16,25 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/PokemonColor.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "black",
+              "names": [
+                {
+                  "name": "é»’ã„",
+                  "language": {
+                    "name": "ja",
+                    "url": "https://pokeapi.co/api/v2/language/1/"
+                  }
+                }
+              ],
+              "pokemon_species": [
+                {
+                  "name": "snorlax",
+                  "url": "https://pokeapi.co/api/v2/pokemon-species/143/"
+                }
+              ]
             }
           }
         }

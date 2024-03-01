@@ -16,6 +16,25 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/Gender.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "female",
+              "pokemon_species_details": [
+                {
+                  "rate": 1,
+                  "pokemon_species": {
+                    "name": "bulbasaur",
+                    "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+                  }
+                }
+              ],
+              "required_for_evolution": [
+                {
+                  "name": "wormadam",
+                  "url": "https://pokeapi.co/api/v2/pokemon-species/413/"
+                }
+              ]
             }
           }
         }

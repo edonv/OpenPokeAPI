@@ -16,6 +16,24 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/Characteristic.json"
+            },
+            "example": {
+              "id": 1,
+              "gene_modulo": 0,
+              "possible_values": [0, 5, 10, 15, 20, 25, 30],
+              "highest_stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              },
+              "descriptions": [
+                {
+                  "description": "Loves to eat",
+                  "language": {
+                    "name": "en",
+                    "url": "https://pokeapi.co/api/v2/language/9/"
+                  }
+                }
+              ]
             }
           }
         }

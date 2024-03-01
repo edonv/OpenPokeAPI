@@ -16,6 +16,25 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/PokemonHabitat.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "cave",
+              "names": [
+                {
+                  "name": "grottes",
+                  "language": {
+                    "name": "fr",
+                    "url": "https://pokeapi.co/api/v2/language/5/"
+                  }
+                }
+              ],
+              "pokemon_species": [
+                {
+                  "name": "zubat",
+                  "url": "https://pokeapi.co/api/v2/pokemon-species/41/"
+                }
+              ]
             }
           }
         }

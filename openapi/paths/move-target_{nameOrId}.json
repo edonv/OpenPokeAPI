@@ -16,6 +16,34 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/MoveTarget.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "specific-move",
+              "descriptions": [
+                {
+                  "description": "Eine spezifische Fähigkeit. Wie diese Fähigkeit genutzt wird, hängt von den genutzten Fähigkeiten ab.",
+                  "language": {
+                    "name": "de",
+                    "url": "https://pokeapi.co/api/v2/language/6/"
+                  }
+                }
+              ],
+              "moves": [
+                {
+                  "name": "counter",
+                  "url": "https://pokeapi.co/api/v2/move/68/"
+                }
+              ],
+              "names": [
+                {
+                  "name": "Spezifische Fähigkeit",
+                  "language": {
+                    "name": "de",
+                    "url": "https://pokeapi.co/api/v2/language/6/"
+                  }
+                }
+              ]
             }
           }
         }

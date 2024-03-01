@@ -16,6 +16,23 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/Version.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "red",
+              "names": [
+                {
+                  "name": "Rot",
+                  "language": {
+                    "name": "de",
+                    "url": "https://pokeapi.co/api/v2/language/6/"
+                  }
+                }
+              ],
+              "version_group": {
+                "name": "red-blue",
+                "url": "https://pokeapi.co/api/v2/version-group/1/"
+              }
             }
           }
         }

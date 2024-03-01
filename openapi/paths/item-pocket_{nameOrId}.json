@@ -16,6 +16,25 @@
           "application/json": {
             "schema": {
               "$ref": "../components/schemas/ItemPocket.json"
+            },
+            "example": {
+              "id": 1,
+              "name": "misc",
+              "categories": [
+                {
+                  "name": "collectibles",
+                  "url": "https://pokeapi.co/api/v2/item-category/9/"
+                }
+              ],
+              "names": [
+                {
+                  "name": "Items",
+                  "language": {
+                    "name": "en",
+                    "url": "https://pokeapi.co/api/v2/language/9/"
+                  }
+                }
+              ]
             }
           }
         }
