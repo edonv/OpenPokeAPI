@@ -23,6 +23,12 @@ for (filePath of files) {
             const properties = json['properties'];
             const propertyKeys = Object.keys(properties);
             // console.log(propertyKeys);
+
+            // Keep `version` non-required
+            if (filePath.includes('/FlavorText.json')) {
+                const index = propertyKeys.indexOf('version');
+                propertyKeys.splice(index, 1);
+            }
             
             const remainingData = json;
             delete remainingData.type;

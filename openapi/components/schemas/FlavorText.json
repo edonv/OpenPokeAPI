@@ -2,8 +2,7 @@
   "type": "object",
   "required": [
     "flavor_text",
-    "language",
-    "version"
+    "language"
   ],
   "properties": {
     "flavor_text": {
