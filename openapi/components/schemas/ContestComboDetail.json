@@ -6,13 +6,13 @@
   ],
   "properties": {
     "use_before": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "./NamedAPIResource.json"
       }
     },
     "use_after": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "./NamedAPIResource.json"
       }
