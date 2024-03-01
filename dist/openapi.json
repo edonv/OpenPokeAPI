@@ -91,7 +91,9 @@
       ],
       "get": {
         "operationId": "getEndpointList",
-        "tags": ["Resource Lists/Pagination"],
+        "tags": [
+          "Resource Lists/Pagination"
+        ],
         "responses": {
           "200": {
             "description": "A list of resource items.",
@@ -116,7 +118,9 @@
       ],
       "get": {
         "operationId": "getBerry",
-        "tags": ["Berries"],
+        "tags": [
+          "Berries"
+        ],
         "responses": {
           "200": {
             "description": "A Berry object.",
@@ -164,7 +168,9 @@
       ],
       "get": {
         "operationId": "getBerryFirmness",
-        "tags": ["Berries"],
+        "tags": [
+          "Berries"
+        ],
         "responses": {
           "200": {
             "description": "A BerryFirmness object.",
@@ -198,7 +204,9 @@
       ],
       "get": {
         "operationId": "getBerryFlavor",
-        "tags": ["Berries"],
+        "tags": [
+          "Berries"
+        ],
         "responses": {
           "200": {
             "description": "A BerryFlavor object.",
@@ -239,7 +247,9 @@
       ],
       "get": {
         "operationId": "getContest",
-        "tags": ["Contests"],
+        "tags": [
+          "Contests"
+        ],
         "responses": {
           "200": {
             "description": "A ContestType object.",
@@ -264,7 +274,9 @@
       ],
       "get": {
         "operationId": "getContestEffect",
-        "tags": ["Contests"],
+        "tags": [
+          "Contests"
+        ],
         "responses": {
           "200": {
             "description": "A ContestEffect object.",
@@ -289,7 +301,9 @@
       ],
       "get": {
         "operationId": "getSuperContestEffect",
-        "tags": ["Contests"],
+        "tags": [
+          "Contests"
+        ],
         "responses": {
           "200": {
             "description": "A SuperContestEffect object.",
@@ -314,7 +328,9 @@
       ],
       "get": {
         "operationId": "getEncounterMethod",
-        "tags": ["Encounters"],
+        "tags": [
+          "Encounters"
+        ],
         "responses": {
           "200": {
             "description": "An EncounterMethod object.",
@@ -339,7 +355,9 @@
       ],
       "get": {
         "operationId": "getEncounterCondition",
-        "tags": ["Encounters"],
+        "tags": [
+          "Encounters"
+        ],
         "responses": {
           "200": {
             "description": "An EncounterCondition object.",
@@ -364,7 +382,9 @@
       ],
       "get": {
         "operationId": "getEncounterConditionValue",
-        "tags": ["Encounters"],
+        "tags": [
+          "Encounters"
+        ],
         "responses": {
           "200": {
             "description": "An EncounterConditionValue object.",
@@ -389,7 +409,9 @@
       ],
       "get": {
         "operationId": "getEvolutionChain",
-        "tags": ["Evolution"],
+        "tags": [
+          "Evolution"
+        ],
         "responses": {
           "200": {
             "description": "An EvolutionChain object.",
@@ -414,7 +436,9 @@
       ],
       "get": {
         "operationId": "getEvolutionTrigger",
-        "tags": ["Evolution"],
+        "tags": [
+          "Evolution"
+        ],
         "responses": {
           "200": {
             "description": "An EvolutionTrigger object.",
@@ -439,7 +463,9 @@
       ],
       "get": {
         "operationId": "getGeneration",
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "responses": {
           "200": {
             "description": "A Generation object.",
@@ -464,7 +490,9 @@
       ],
       "get": {
         "operationId": "getPokedex",
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "responses": {
           "200": {
             "description": "A Pokedex object.",
@@ -489,7 +517,9 @@
       ],
       "get": {
         "operationId": "getVersion",
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "responses": {
           "200": {
             "description": "A Version object.",
@@ -514,7 +544,9 @@
       ],
       "get": {
         "operationId": "getVersionGroup",
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "responses": {
           "200": {
             "description": "A VersionGroup object.",
@@ -539,7 +571,9 @@
       ],
       "get": {
         "operationId": "getItem",
-        "tags": ["Items"],
+        "tags": [
+          "Items"
+        ],
         "responses": {
           "200": {
             "description": "An Item object.",
@@ -564,7 +598,9 @@
       ],
       "get": {
         "operationId": "getItemAttribute",
-        "tags": ["Items"],
+        "tags": [
+          "Items"
+        ],
         "responses": {
           "200": {
             "description": "An ItemAttribute object.",
@@ -589,7 +625,9 @@
       ],
       "get": {
         "operationId": "getItemCategory",
-        "tags": ["Items"],
+        "tags": [
+          "Items"
+        ],
         "responses": {
           "200": {
             "description": "An ItemCategory object.",
@@ -614,7 +652,9 @@
       ],
       "get": {
         "operationId": "getItemFlingEffect",
-        "tags": ["Items"],
+        "tags": [
+          "Items"
+        ],
         "responses": {
           "200": {
             "description": "An ItemFlingEffect object.",
@@ -639,7 +679,9 @@
       ],
       "get": {
         "operationId": "getItemPocket",
-        "tags": ["Items"],
+        "tags": [
+          "Items"
+        ],
         "responses": {
           "200": {
             "description": "An ItemPocket object.",
@@ -664,7 +706,9 @@
       ],
       "get": {
         "operationId": "getLocation",
-        "tags": ["Locations"],
+        "tags": [
+          "Locations"
+        ],
         "responses": {
           "200": {
             "description": "A Location object.",
@@ -689,7 +733,9 @@
       ],
       "get": {
         "operationId": "getLocationArea",
-        "tags": ["Locations"],
+        "tags": [
+          "Locations"
+        ],
         "responses": {
           "200": {
             "description": "A LocationArea object.",
@@ -714,7 +760,9 @@
       ],
       "get": {
         "operationId": "getPalParkArea",
-        "tags": ["Locations"],
+        "tags": [
+          "Locations"
+        ],
         "responses": {
           "200": {
             "description": "A PalParkArea object.",
@@ -739,7 +787,9 @@
       ],
       "get": {
         "operationId": "getRegion",
-        "tags": ["Locations"],
+        "tags": [
+          "Locations"
+        ],
         "responses": {
           "200": {
             "description": "A Region object.",
@@ -764,7 +814,9 @@
       ],
       "get": {
         "operationId": "getMachine",
-        "tags": ["Machines"],
+        "tags": [
+          "Machines"
+        ],
         "responses": {
           "200": {
             "description": "A Machine object.",
@@ -789,7 +841,9 @@
       ],
       "get": {
         "operationId": "getMove",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A Move object.",
@@ -814,7 +868,9 @@
       ],
       "get": {
         "operationId": "getMoveAilment",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A MoveAilment object.",
@@ -839,7 +895,9 @@
       ],
       "get": {
         "operationId": "getMoveBattleStyle",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A MoveBattleStyle object.",
@@ -864,7 +922,9 @@
       ],
       "get": {
         "operationId": "getMoveCategory",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A MoveCategory object.",
@@ -889,7 +949,9 @@
       ],
       "get": {
         "operationId": "getMoveDamageClass",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A MoveDamageClass object.",
@@ -914,7 +976,9 @@
       ],
       "get": {
         "operationId": "getMoveLearnMethod",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A MoveLearnMethod object.",
@@ -939,7 +1003,9 @@
       ],
       "get": {
         "operationId": "getMoveTarget",
-        "tags": ["Moves"],
+        "tags": [
+          "Moves"
+        ],
         "responses": {
           "200": {
             "description": "A MoveTarget object.",
@@ -964,7 +1030,9 @@
       ],
       "get": {
         "operationId": "getAbility",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "An Ability object.",
@@ -989,7 +1057,9 @@
       ],
       "get": {
         "operationId": "getCharacteristic",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A Characteristic object.",
@@ -1014,7 +1084,9 @@
       ],
       "get": {
         "operationId": "getEggGroup",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "An EggGroup object.",
@@ -1039,7 +1111,9 @@
       ],
       "get": {
         "operationId": "getGender",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A Gender object.",
@@ -1064,7 +1138,9 @@
       ],
       "get": {
         "operationId": "getGrowthRate",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A GrowthRate object.",
@@ -1089,7 +1165,9 @@
       ],
       "get": {
         "operationId": "getNature",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A Nature object.",
@@ -1114,7 +1192,9 @@
       ],
       "get": {
         "operationId": "getPokeathlonStat",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokeathlonStat object.",
@@ -1139,7 +1219,9 @@
       ],
       "get": {
         "operationId": "getPokemon",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A Pokemon object.",
@@ -1164,7 +1246,9 @@
       ],
       "get": {
         "operationId": "getPokemonLocationArea",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokemonLocationArea object.",
@@ -1189,7 +1273,9 @@
       ],
       "get": {
         "operationId": "getPokemonColor",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokemonColor object.",
@@ -1214,7 +1300,9 @@
       ],
       "get": {
         "operationId": "getPokemonForm",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokemonForm object.",
@@ -1239,7 +1327,9 @@
       ],
       "get": {
         "operationId": "getPokemonHabitat",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokemonHabitat object.",
@@ -1264,7 +1354,9 @@
       ],
       "get": {
         "operationId": "getPokemonShape",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokemonShape object.",
@@ -1289,7 +1381,9 @@
       ],
       "get": {
         "operationId": "getPokemonSpecies",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A PokemonSpecies object.",
@@ -1314,7 +1408,9 @@
       ],
       "get": {
         "operationId": "getStat",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A Stat object.",
@@ -1339,7 +1435,9 @@
       ],
       "get": {
         "operationId": "getType",
-        "tags": ["Pokémon"],
+        "tags": [
+          "Pokémon"
+        ],
         "responses": {
           "200": {
             "description": "A Type object.",
@@ -1364,7 +1462,9 @@
       ],
       "get": {
         "operationId": "getLanguage",
-        "tags": ["Utility"],
+        "tags": [
+          "Utility"
+        ],
         "responses": {
           "200": {
             "description": "A Language object.",
@@ -1437,6 +1537,9 @@
       },
       "APIResource": {
         "type": "object",
+        "required": [
+          "url"
+        ],
         "properties": {
           "url": {
             "description": "The URL of the referenced resource.",
@@ -1448,6 +1551,9 @@
         "allOf": [
           {
             "type": "object",
+            "required": [
+              "name"
+            ],
             "properties": {
               "name": {
                 "description": "The name of the referenced resource.",
@@ -1468,6 +1574,12 @@
       },
       "NamedAPIResourceList": {
         "type": "object",
+        "required": [
+          "count",
+          "next",
+          "previous",
+          "results"
+        ],
         "properties": {
           "count": {
             "description": "The total number of resources available from this API.",
@@ -1475,11 +1587,17 @@
           },
           "next": {
             "description": "The URL for the next page in the list.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "previous": {
             "description": "The URL for the previous page in the list.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "results": {
             "description": "A list of named API resources.",
@@ -1503,6 +1621,10 @@
       },
       "BerryFlavorMap": {
         "type": "object",
+        "required": [
+          "potency",
+          "flavor"
+        ],
         "properties": {
           "potency": {
             "$ref": "#/components/schemas/BerryPotency"
@@ -1515,6 +1637,20 @@
       },
       "Berry": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "growth_time",
+          "max_harvest",
+          "natural_gift_power",
+          "size",
+          "smoothness",
+          "soil_dryness",
+          "firmness",
+          "flavors",
+          "item",
+          "natural_gift_type"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1569,6 +1705,10 @@
       },
       "Name": {
         "type": "object",
+        "required": [
+          "name",
+          "language"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -1589,6 +1729,12 @@
       },
       "BerryFirmness": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "berries",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1610,6 +1756,10 @@
       },
       "FlavorBerryMap": {
         "type": "object",
+        "required": [
+          "potency",
+          "berry"
+        ],
         "properties": {
           "potency": {
             "$ref": "#/components/schemas/BerryPotency"
@@ -1622,6 +1772,13 @@
       },
       "BerryFlavor": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "berries",
+          "contest_type",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1647,6 +1804,11 @@
       },
       "ContestName": {
         "type": "object",
+        "required": [
+          "name",
+          "color",
+          "language"
+        ],
         "properties": {
           "name": {
             "description": "The name for this contest.",
@@ -1664,6 +1826,12 @@
       },
       "ContestType": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "berry_flavor",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1686,6 +1854,10 @@
       },
       "Effect": {
         "type": "object",
+        "required": [
+          "effect",
+          "language"
+        ],
         "properties": {
           "effect": {
             "description": "The localized effect text for an API resource in a specific language.",
@@ -1699,6 +1871,11 @@
       },
       "FlavorText": {
         "type": "object",
+        "required": [
+          "flavor_text",
+          "language",
+          "version"
+        ],
         "properties": {
           "flavor_text": {
             "description": "The localized flavor text for an API resource in a specific language. Note that this text is left unprocessed as it is found in game files. This means that it contains special characters that one might want to replace with their visible decodable version. Please check out this [issue](https://github.com/veekun/pokedex/issues/218#issuecomment-339841781) to find out more.",
@@ -1716,6 +1893,13 @@
       },
       "ContestEffect": {
         "type": "object",
+        "required": [
+          "id",
+          "appeal",
+          "jam",
+          "effect_entries",
+          "flavor_text_entries"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1746,6 +1930,12 @@
       },
       "SuperContestEffect": {
         "type": "object",
+        "required": [
+          "id",
+          "appeal",
+          "flavor_text_entries",
+          "moves"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1772,6 +1962,12 @@
       },
       "EncounterMethod": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "order",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1790,6 +1986,12 @@
       },
       "EncounterCondition": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "values"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1808,6 +2010,12 @@
       },
       "EncounterConditionValue": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "values",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -1826,6 +2034,26 @@
       },
       "EvolutionDetail": {
         "type": "object",
+        "required": [
+          "item",
+          "trigger",
+          "gender",
+          "held_item",
+          "known_move",
+          "known_move_type",
+          "location",
+          "min_level",
+          "min_happiness",
+          "min_beauty",
+          "min_affection",
+          "needs_overworld_rain",
+          "party_species",
+          "party_type",
+          "relative_physical_stats",
+          "time_of_day",
+          "trade_species",
+          "turn_upside_down"
+        ],
         "properties": {
           "item": {
             "description": "The item required to cause evolution this into Pokémon species.",
@@ -1844,8 +2072,15 @@
           },
           "gender": {
             "description": "The id of the gender of the evolving Pokémon species must be in order to evolve into this Pokémon species.",
-            "type": ["integer", "null"],
-            "enum": [1, 2, 3]
+            "type": [
+              "integer",
+              "null"
+            ],
+            "enum": [
+              1,
+              2,
+              3
+            ]
           },
           "held_item": {
             "description": "The item the evolving Pokémon species must be holding during the evolution trigger event to evolve into this Pokémon species.",
@@ -1893,19 +2128,31 @@
           },
           "min_level": {
             "description": "The minimum required level of the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "min_happiness": {
             "description": "The minimum required level of happiness the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "min_beauty": {
             "description": "The minimum required level of beauty the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "min_affection": {
             "description": "The minimum required level of affection the evolving Pokémon species to evolve into this Pokémon species.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "needs_overworld_rain": {
             "description": "Whether or not it must be raining in the overworld to cause evolution this Pokémon species.",
@@ -1935,13 +2182,24 @@
           },
           "relative_physical_stats": {
             "description": "The required relation between the Pokémon's Attack and Defense stats. `1` means Attack > Defense. `0` means Attack = Defense. `-1` means Attack < Defense.",
-            "type": ["integer", "null"],
-            "enum": [-1, 0, 1]
+            "type": [
+              "integer",
+              "null"
+            ],
+            "enum": [
+              -1,
+              0,
+              1
+            ]
           },
           "time_of_day": {
             "description": "The required time of day. Day or night.",
             "type": "string",
-            "enum": ["day", "night", ""]
+            "enum": [
+              "day",
+              "night",
+              ""
+            ]
           },
           "trade_species": {
             "description": "Pokémon species for which this one must be traded.",
@@ -1962,6 +2220,12 @@
       },
       "ChainLink": {
         "type": "object",
+        "required": [
+          "is_baby",
+          "species",
+          "evolution_details",
+          "evolves_to"
+        ],
         "properties": {
           "is_baby": {
             "description": "Whether or not this link is for a baby Pokémon. This would only ever be true on the base link.",
@@ -1989,6 +2253,11 @@
       },
       "EvolutionChain": {
         "type": "object",
+        "required": [
+          "id",
+          "baby_trigger_item",
+          "chain"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2012,6 +2281,12 @@
       },
       "EvolutionTrigger": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "pokemon_species"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2030,6 +2305,17 @@
       },
       "Generation": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "abilities",
+          "names",
+          "main_region",
+          "moves",
+          "pokemon_species",
+          "types",
+          "version_groups"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2068,6 +2354,10 @@
       },
       "Description": {
         "type": "object",
+        "required": [
+          "description",
+          "language"
+        ],
         "properties": {
           "description": {
             "description": "The localized description for an API resource in a specific language.",
@@ -2088,6 +2378,10 @@
       },
       "PokemonEntry": {
         "type": "object",
+        "required": [
+          "entry_number",
+          "pokemon_species"
+        ],
         "properties": {
           "entry_number": {
             "description": "The index of this Pokémon species entry within the Pokédex.",
@@ -2101,6 +2395,16 @@
       },
       "Pokedex": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "is_main_series",
+          "descriptions",
+          "names",
+          "pokemon_entries",
+          "region",
+          "version_groups"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2137,6 +2441,12 @@
       },
       "Version": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "version_group"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2155,6 +2465,16 @@
       },
       "VersionGroup": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "order",
+          "generation",
+          "move_learn_methods",
+          "pokedexes",
+          "regions",
+          "versions"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2190,6 +2510,11 @@
       },
       "VerboseEffect": {
         "type": "object",
+        "required": [
+          "effect",
+          "short_effect",
+          "language"
+        ],
         "properties": {
           "effect": {
             "description": "The localized effect text for an API resource in a specific language.",
@@ -2213,6 +2538,11 @@
       },
       "VersionGroupFlavorText": {
         "type": "object",
+        "required": [
+          "flavor_text",
+          "language",
+          "version_group"
+        ],
         "properties": {
           "flavor_text": {
             "description": "The localized flavor text for an API resource in a specific language. Note that this text is left unprocessed as it is found in game files. This means that it contains special characters that one might want to replace with their visible decodable version. Please check out this [issue](https://github.com/veekun/pokedex/issues/218#issuecomment-339841781) to find out more.",
@@ -2230,6 +2560,10 @@
       },
       "GenerationGameIndex": {
         "type": "object",
+        "required": [
+          "game_index",
+          "generation"
+        ],
         "properties": {
           "game_index": {
             "description": "The internal id of an API resource within game data.",
@@ -2243,6 +2577,9 @@
       },
       "ItemSprites": {
         "type": "object",
+        "required": [
+          "default"
+        ],
         "properties": {
           "default": {
             "description": "The default depiction of this item.",
@@ -2252,6 +2589,10 @@
       },
       "ItemHolderPokemonVersionDetail": {
         "type": "object",
+        "required": [
+          "rarity",
+          "version"
+        ],
         "properties": {
           "rarity": {
             "description": "How often this Pokémon holds this item in this version.",
@@ -2265,6 +2606,10 @@
       },
       "ItemHolderPokemon": {
         "type": "object",
+        "required": [
+          "pokemon",
+          "version_details"
+        ],
         "properties": {
           "pokemon": {
             "description": "The Pokémon that holds this item.",
@@ -2281,6 +2626,10 @@
       },
       "MachineVersionDetail": {
         "type": "object",
+        "required": [
+          "machine",
+          "version_group"
+        ],
         "properties": {
           "machine": {
             "description": "The machine that teaches a move from an item.",
@@ -2294,6 +2643,23 @@
       },
       "Item": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "cost",
+          "fling_power",
+          "fling_effect",
+          "attributes",
+          "category",
+          "effect_entries",
+          "flavor_text_entries",
+          "game_indices",
+          "names",
+          "sprites",
+          "held_by_pokemon",
+          "baby_trigger_for",
+          "machines"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2369,6 +2735,13 @@
       },
       "ItemAttribute": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "items",
+          "names",
+          "descriptions"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2392,6 +2765,13 @@
       },
       "ItemCategory": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "items",
+          "names",
+          "pocket"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2415,6 +2795,12 @@
       },
       "ItemFlingEffect": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "effect_entries",
+          "items"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2437,6 +2823,12 @@
       },
       "ItemPocket": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "categories",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2455,6 +2847,14 @@
       },
       "Location": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "region",
+          "names",
+          "game_indices",
+          "areas"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2484,6 +2884,10 @@
       },
       "EncounterVersionDetails": {
         "type": "object",
+        "required": [
+          "rate",
+          "version"
+        ],
         "properties": {
           "rate": {
             "description": "The chance of an encounter to occur.",
@@ -2497,6 +2901,10 @@
       },
       "EncounterMethodRate": {
         "type": "object",
+        "required": [
+          "encounter_method",
+          "version_details"
+        ],
         "properties": {
           "encounter_method": {
             "description": "The method in which Pokémon may be encountered in an area.",
@@ -2513,6 +2921,13 @@
       },
       "Encounter": {
         "type": "object",
+        "required": [
+          "min_level",
+          "max_level",
+          "condition_values",
+          "chance",
+          "method"
+        ],
         "properties": {
           "min_level": {
             "description": "The lowest level the Pokémon could be encountered at.",
@@ -2538,6 +2953,11 @@
       },
       "VersionEncounterDetail": {
         "type": "object",
+        "required": [
+          "version",
+          "max_chance",
+          "encounter_details"
+        ],
         "properties": {
           "version": {
             "description": "The game version this encounter happens in.",
@@ -2558,6 +2978,10 @@
       },
       "PokemonEncounter": {
         "type": "object",
+        "required": [
+          "pokemon",
+          "version_details"
+        ],
         "properties": {
           "pokemon": {
             "description": "The Pokémon being encountered.",
@@ -2574,6 +2998,15 @@
       },
       "LocationArea": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "game_index",
+          "encounter_method_rates",
+          "location",
+          "names",
+          "pokemon_encounters"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2610,6 +3043,11 @@
       },
       "PalParkEncounterSpecies": {
         "type": "object",
+        "required": [
+          "base_score",
+          "rate",
+          "pokemon_species"
+        ],
         "properties": {
           "base_score": {
             "description": "The base score given to the player when this Pokémon is caught during a pal park run.",
@@ -2627,6 +3065,12 @@
       },
       "PalParkArea": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "pokemon_encounters"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2648,6 +3092,15 @@
       },
       "Region": {
         "type": "object",
+        "required": [
+          "id",
+          "locations",
+          "name",
+          "names",
+          "main_generation",
+          "pokedexes",
+          "version_groups"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2678,6 +3131,12 @@
       },
       "Machine": {
         "type": "object",
+        "required": [
+          "id",
+          "item",
+          "move",
+          "version_group"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2698,6 +3157,10 @@
       },
       "ContestComboDetail": {
         "type": "object",
+        "required": [
+          "use_before",
+          "use_after"
+        ],
         "properties": {
           "use_before": {
             "type": "array",
@@ -2714,7 +3177,14 @@
         }
       },
       "ContestComboSets": {
-        "type": ["object", "null"],
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "normal",
+          "super"
+        ],
         "properties": {
           "normal": {
             "$ref": "#/components/schemas/ContestComboDetail"
@@ -2726,6 +3196,10 @@
       },
       "AbilityEffectChange": {
         "type": "object",
+        "required": [
+          "effect_entries",
+          "version_group"
+        ],
         "properties": {
           "effect_entries": {
             "description": "The previous effect of this ability listed in different languages.",
@@ -2742,6 +3216,11 @@
       },
       "MoveFlavorText": {
         "type": "object",
+        "required": [
+          "flavor_text",
+          "language",
+          "version_group"
+        ],
         "properties": {
           "flavor_text": {
             "description": "The localized flavor text for an api resource in a specific language.",
@@ -2759,6 +3238,20 @@
       },
       "MoveMetaData": {
         "type": "object",
+        "required": [
+          "ailment",
+          "category",
+          "min_hits",
+          "max_hits",
+          "min_turns",
+          "max_turns",
+          "drain",
+          "healing",
+          "crit_rate",
+          "ailment_chance",
+          "flinch_chance",
+          "stat_chance"
+        ],
         "properties": {
           "ailment": {
             "description": "The status ailment this move inflicts on its target.",
@@ -2770,19 +3263,31 @@
           },
           "min_hits": {
             "description": "The minimum number of times this move hits. Null if it always only hits once.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "max_hits": {
             "description": "The maximum number of times this move hits. Null if it always only hits once.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "min_turns": {
             "description": "The minimum number of turns this move continues to take effect. Null if it always only lasts one turn.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "max_turns": {
             "description": "The maximum number of turns this move continues to take effect. Null if it always only lasts one turn.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "drain": {
             "description": "HP drain (if positive) or Recoil damage (if negative), in percent of damage done.",
@@ -2812,6 +3317,15 @@
       },
       "PastMoveStatValues": {
         "type": "object",
+        "required": [
+          "accuracy",
+          "effect_chance",
+          "power",
+          "pp",
+          "effect_entries",
+          "type",
+          "version_group"
+        ],
         "properties": {
           "accuracy": {
             "description": "The percent value of how likely this move is to be successful.",
@@ -2845,6 +3359,10 @@
       },
       "MoveStatChange": {
         "type": "object",
+        "required": [
+          "change",
+          "stat"
+        ],
         "properties": {
           "change": {
             "description": "The amount of change.",
@@ -2858,6 +3376,32 @@
       },
       "Move": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "accuracy",
+          "effect_chance",
+          "pp",
+          "priority",
+          "power",
+          "contest_combos",
+          "contest_type",
+          "contest_effect",
+          "damage_class",
+          "effect_entries",
+          "effect_changes",
+          "learned_by_pokemon",
+          "flavor_text_entries",
+          "generation",
+          "machines",
+          "meta",
+          "names",
+          "past_values",
+          "stat_changes",
+          "super_contest_effect",
+          "target",
+          "type"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2867,11 +3411,17 @@
           },
           "accuracy": {
             "description": "The percent value of how likely this move is to be successful.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "effect_chance": {
             "description": "The percent value of how likely it is this moves effect will happen.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "pp": {
             "description": "Power points. The number of times this move can be used.",
@@ -2885,7 +3435,10 @@
           },
           "power": {
             "description": "The base power of this move with a value of 0 if it does not have a base power.",
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "contest_combos": {
             "description": "A detail of normal and super contest combos that require this move.",
@@ -2973,6 +3526,12 @@
       },
       "MoveAilment": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "moves",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -2991,6 +3550,11 @@
       },
       "MoveBattleStyle": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3005,6 +3569,12 @@
       },
       "MoveCategory": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "moves",
+          "descriptions"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3023,6 +3593,13 @@
       },
       "MoveDamageClass": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "descriptions",
+          "moves",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3044,6 +3621,13 @@
       },
       "MoveLearnMethod": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "descriptions",
+          "names",
+          "version_groups"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3065,6 +3649,13 @@
       },
       "MoveTarget": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "descriptions",
+          "moves",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3086,6 +3677,11 @@
       },
       "AbilityFlavorText": {
         "type": "object",
+        "required": [
+          "flavor_text",
+          "language",
+          "version_group"
+        ],
         "properties": {
           "flavor_text": {
             "description": "The localized name for an API resource in a specific language.",
@@ -3103,6 +3699,11 @@
       },
       "AbilityPokemon": {
         "type": "object",
+        "required": [
+          "is_hidden",
+          "slot",
+          "pokemon"
+        ],
         "properties": {
           "is_hidden": {
             "description": "Whether or not this a hidden ability for the referenced Pokémon.",
@@ -3120,6 +3721,17 @@
       },
       "Ability": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "is_main_series",
+          "generation",
+          "names",
+          "effect_entries",
+          "effect_changes",
+          "flavor_text_entries",
+          "pokemon"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3167,6 +3779,13 @@
       },
       "Characteristic": {
         "type": "object",
+        "required": [
+          "id",
+          "gene_modulo",
+          "possible_values",
+          "highest_stat",
+          "descriptions"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3194,6 +3813,12 @@
       },
       "EggGroup": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "pokemon_species"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3212,6 +3837,10 @@
       },
       "PokemonSpeciesGender": {
         "type": "object",
+        "required": [
+          "rate",
+          "pokemon_species"
+        ],
         "properties": {
           "rate": {
             "description": "The chance of this Pokémon being female, in eighths; or -1 for genderless.",
@@ -3225,6 +3854,12 @@
       },
       "Gender": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "pokemon_species_details",
+          "required_for_evolution"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3247,6 +3882,10 @@
       },
       "GrowthRateExperienceLevel": {
         "type": "object",
+        "required": [
+          "level",
+          "experience"
+        ],
         "properties": {
           "level": {
             "description": "The level gained.",
@@ -3260,6 +3899,14 @@
       },
       "GrowthRate": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "formula",
+          "descriptions",
+          "levels",
+          "pokemon_species"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3290,6 +3937,10 @@
       },
       "NatureStatChange": {
         "type": "object",
+        "required": [
+          "max_change",
+          "pokeathlon_stat"
+        ],
         "properties": {
           "max_change": {
             "description": "The amount of change.",
@@ -3303,6 +3954,11 @@
       },
       "MoveBattleStylePreference": {
         "type": "object",
+        "required": [
+          "low_hp_preference",
+          "high_hp_preference",
+          "move_battle_style"
+        ],
         "properties": {
           "low_hp_preference": {
             "description": "Chance of using the move, in percent, if HP is under one half.",
@@ -3320,6 +3976,17 @@
       },
       "Nature": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "decreased_stat",
+          "increased_stat",
+          "hates_flavor",
+          "likes_flavor",
+          "pokeathlon_stat_changes",
+          "move_battle_style_preferences",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3364,6 +4031,10 @@
       },
       "NaturePokeathlonStatAffect": {
         "type": "object",
+        "required": [
+          "max_change",
+          "nature"
+        ],
         "properties": {
           "max_change": {
             "description": "The maximum amount of change to the referenced Pokéathlon stat.",
@@ -3377,6 +4048,10 @@
       },
       "NaturePokeathlonStatAffectSets": {
         "type": "object",
+        "required": [
+          "increase",
+          "decrease"
+        ],
         "properties": {
           "increase": {
             "description": "A list of natures and how they change the referenced Pokéathlon stat.",
@@ -3396,6 +4071,12 @@
       },
       "PokeathlonStat": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "affecting_natures"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3414,6 +4095,11 @@
       },
       "PokemonAbility": {
         "type": "object",
+        "required": [
+          "is_hidden",
+          "slot",
+          "ability"
+        ],
         "properties": {
           "is_hidden": {
             "description": "Whether or not this is a hidden ability.",
@@ -3431,6 +4117,10 @@
       },
       "VersionGameIndex": {
         "type": "object",
+        "required": [
+          "game_index",
+          "version"
+        ],
         "properties": {
           "game_index": {
             "description": "The internal id of an API resource within game data.",
@@ -3444,6 +4134,10 @@
       },
       "PokemonHeldItemVersion": {
         "type": "object",
+        "required": [
+          "version",
+          "rarity"
+        ],
         "properties": {
           "version": {
             "description": "The version in which the item is held.",
@@ -3457,6 +4151,10 @@
       },
       "PokemonHeldItem": {
         "type": "object",
+        "required": [
+          "item",
+          "version_details"
+        ],
         "properties": {
           "item": {
             "description": "The item the referenced Pokémon holds.",
@@ -3473,6 +4171,11 @@
       },
       "PokemonMoveVersion": {
         "type": "object",
+        "required": [
+          "move_learn_method",
+          "version_group",
+          "level_learned_at"
+        ],
         "properties": {
           "move_learn_method": {
             "description": "The method by which the move is learned.",
@@ -3490,6 +4193,10 @@
       },
       "PokemonMove": {
         "type": "object",
+        "required": [
+          "move",
+          "version_group_details"
+        ],
         "properties": {
           "move": {
             "description": "The move the Pokémon can learn.",
@@ -3506,6 +4213,10 @@
       },
       "PokemonType": {
         "type": "object",
+        "required": [
+          "slot",
+          "type"
+        ],
         "properties": {
           "slot": {
             "description": "The order the Pokémon's types are listed in.",
@@ -3519,6 +4230,10 @@
       },
       "PokemonTypePast": {
         "type": "object",
+        "required": [
+          "generation",
+          "types"
+        ],
         "properties": {
           "generation": {
             "description": "The last generation in which the referenced pokémon had the listed types.",
@@ -3535,6 +4250,17 @@
       },
       "PokemonSprites": {
         "type": "object",
+        "required": [
+          "front_default",
+          "front_shiny",
+          "front_female",
+          "front_shiny_female",
+          "back_default",
+          "back_shiny",
+          "back_female",
+          "back_shiny_female",
+          "other"
+        ],
         "properties": {
           "front_default": {
             "description": "The default depiction of this Pokémon from the front in battle.",
@@ -3546,11 +4272,17 @@
           },
           "front_female": {
             "description": "The female depiction of this Pokémon from the front in battle.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "front_shiny_female": {
             "description": "The shiny female depiction of this Pokémon from the front in battle.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "back_default": {
             "description": "The default depiction of this Pokémon from the back in battle.",
@@ -3562,45 +4294,81 @@
           },
           "back_female": {
             "description": "The female depiction of this Pokémon from the back in battle.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "back_shiny_female": {
             "description": "The shiny female depiction of this Pokémon from the back in battle.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "other": {
-            "type": ["object", "null"],
+            "type": [
+              "object",
+              "null"
+            ],
+            "required": [
+              "front_default",
+              "front_female"
+            ],
             "properties": {
               "dream_world": {
                 "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female"
+                ],
                 "properties": {
                   "front_default": {
                     "type": "string"
                   },
                   "front_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 }
               },
               "home": {
                 "type": "object",
+                "required": [
+                  "front_default",
+                  "front_female",
+                  "front_shiny",
+                  "front_shiny_female"
+                ],
                 "properties": {
                   "front_default": {
                     "type": "string"
                   },
                   "front_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "front_shiny": {
                     "type": "string"
                   },
                   "front_shiny_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 }
               },
               "official-artwork": {
                 "type": "object",
+                "required": [
+                  "front_default",
+                  "front_shiny"
+                ],
                 "properties": {
                   "front_default": {
                     "type": "string"
@@ -3612,30 +4380,46 @@
               },
               "showdown": {
                 "type": "object",
+                "required": [
+                  "back_default",
+                  "back_female"
+                ],
                 "properties": {
                   "back_default": {
                     "type": "string"
                   },
                   "back_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "back_shiny": {
                     "type": "string"
                   },
                   "back_shiny_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "front_default": {
                     "type": "string"
                   },
                   "front_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "front_shiny": {
                     "type": "string"
                   },
                   "front_shiny_female": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 }
               }
@@ -3645,6 +4429,10 @@
       },
       "PokemonCries": {
         "type": "object",
+        "required": [
+          "latest",
+          "legacy"
+        ],
         "properties": {
           "latest": {
             "description": "The latest depiction of this Pokémon's cry.",
@@ -3658,6 +4446,11 @@
       },
       "PokemonStat": {
         "type": "object",
+        "required": [
+          "stat",
+          "effort",
+          "base_stat"
+        ],
         "properties": {
           "stat": {
             "description": "The stat the Pokémon has.",
@@ -3675,21 +4468,28 @@
       },
       "Pokemon": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "base_experience",
+          "height",
+          "is_default",
+          "order",
+          "weight",
+          "abilities",
+          "forms",
+          "game_indices",
+          "held_items",
+          "location_area_encounters",
+          "moves",
+          "past_types",
+          "sprites",
+          "cries",
+          "species",
+          "stats",
+          "types"
+        ],
         "properties": {
-          "increase": {
-            "description": "A list of natures and how they change the referenced Pokéathlon stat.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NaturePokeathlonStatAffect"
-            }
-          },
-          "decrease": {
-            "description": "A list of natures and how they change the referenced Pokéathlon stat.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NaturePokeathlonStatAffect"
-            }
-          },
           "id": {
             "$ref": "#/components/schemas/ResourceId"
           },
@@ -3792,6 +4592,10 @@
       },
       "PokemonLocationArea": {
         "type": "object",
+        "required": [
+          "location_area",
+          "version_details"
+        ],
         "properties": {
           "location_area": {
             "description": "The location area the referenced Pokémon can be encountered in.",
@@ -3808,6 +4612,12 @@
       },
       "PokemonColor": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "pokemon_species"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3826,6 +4636,10 @@
       },
       "PokemonFormType": {
         "type": "object",
+        "required": [
+          "slot",
+          "type"
+        ],
         "properties": {
           "slot": {
             "description": "The order the Pokémon's types are listed in.",
@@ -3839,6 +4653,12 @@
       },
       "PokemonFormSprites": {
         "type": "object",
+        "required": [
+          "front_default",
+          "front_shiny",
+          "back_default",
+          "back_shiny"
+        ],
         "properties": {
           "front_default": {
             "description": "The default depiction of this Pokémon from the front in battle.",
@@ -3860,6 +4680,22 @@
       },
       "PokemonForm": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "order",
+          "form_order",
+          "is_default",
+          "is_battle_only",
+          "is_mega",
+          "form_name",
+          "pokemon",
+          "types",
+          "sprites",
+          "version_group",
+          "names",
+          "form_names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3921,6 +4757,12 @@
       },
       "PokemonHabitat": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "pokemon_species"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3939,6 +4781,10 @@
       },
       "AwesomeName": {
         "type": "object",
+        "required": [
+          "awesome_name",
+          "language"
+        ],
         "properties": {
           "awesome_name": {
             "description": "The localized \"scientific\" name for an API resource in a specific language.",
@@ -3952,6 +4798,13 @@
       },
       "PokemonShape": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "awesome_names",
+          "names",
+          "pokemon_species"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -3977,6 +4830,10 @@
       },
       "PokemonSpeciesDexEntry": {
         "type": "object",
+        "required": [
+          "entry_number",
+          "pokedex"
+        ],
         "properties": {
           "entry_number": {
             "description": "The index number within the Pokédex.",
@@ -3990,6 +4847,11 @@
       },
       "PalParkEncounterArea": {
         "type": "object",
+        "required": [
+          "base_score",
+          "rate",
+          "area"
+        ],
         "properties": {
           "base_score": {
             "description": "The base score given to the player when this Pokémon is caught during a pal park run.",
@@ -4007,6 +4869,10 @@
       },
       "Genus": {
         "type": "object",
+        "required": [
+          "genus",
+          "language"
+        ],
         "properties": {
           "genus": {
             "description": "The localized genus for the referenced Pokémon species.",
@@ -4020,6 +4886,10 @@
       },
       "PokemonSpeciesVariety": {
         "type": "object",
+        "required": [
+          "is_default",
+          "pokemon"
+        ],
         "properties": {
           "is_default": {
             "description": "Whether this variety is the default variety.",
@@ -4033,6 +4903,35 @@
       },
       "PokemonSpecies": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "order",
+          "gender_rate",
+          "capture_rate",
+          "base_happiness",
+          "is_baby",
+          "is_legendary",
+          "is_mythical",
+          "hatch_counter",
+          "has_gender_differences",
+          "forms_switchable",
+          "growth_rate",
+          "pokedex_numbers",
+          "egg_groups",
+          "color",
+          "shape",
+          "evolves_from_species",
+          "evolution_chain",
+          "habitat",
+          "generation",
+          "names",
+          "pal_park_encounters",
+          "flavor_text_entries",
+          "form_descriptions",
+          "genera",
+          "varieties"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -4158,6 +5057,10 @@
       },
       "MoveStatAffect": {
         "type": "object",
+        "required": [
+          "change",
+          "move"
+        ],
         "properties": {
           "change": {
             "description": "The maximum amount of change to the referenced stat.",
@@ -4171,6 +5074,10 @@
       },
       "MoveStatAffectSets": {
         "type": "object",
+        "required": [
+          "increase",
+          "decrease"
+        ],
         "properties": {
           "increase": {
             "description": "A list of moves and how they change the referenced stat.",
@@ -4190,6 +5097,10 @@
       },
       "NatureStatAffectSets": {
         "type": "object",
+        "required": [
+          "increase",
+          "decrease"
+        ],
         "properties": {
           "increase": {
             "description": "A list of natures and how they change the referenced stat.",
@@ -4203,6 +5114,17 @@
       },
       "Stat": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "game_index",
+          "is_battle_only",
+          "affecting_moves",
+          "affecting_natures",
+          "characteristics",
+          "move_damage_class",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -4244,6 +5166,14 @@
       },
       "TypeRelations": {
         "type": "object",
+        "required": [
+          "no_damage_to",
+          "half_damage_to",
+          "double_damage_to",
+          "no_damage_from",
+          "half_damage_from",
+          "double_damage_from"
+        ],
         "properties": {
           "no_damage_to": {
             "description": "A list of types this type has no effect on.",
@@ -4273,6 +5203,10 @@
       },
       "TypeRelationsPast": {
         "type": "object",
+        "required": [
+          "generation",
+          "damage_relations"
+        ],
         "properties": {
           "generation": {
             "description": "The last generation in which the referenced type had the listed damage relations.",
@@ -4286,6 +5220,10 @@
       },
       "TypePokemon": {
         "type": "object",
+        "required": [
+          "slot",
+          "pokemon"
+        ],
         "properties": {
           "slot": {
             "description": "The order the Pokémon's types are listed in.",
@@ -4299,6 +5237,18 @@
       },
       "Type": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "damage_relations",
+          "past_damage_relations",
+          "game_indices",
+          "generation",
+          "move_damage_class",
+          "names",
+          "pokemon",
+          "moves"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -4353,6 +5303,14 @@
       },
       "Language": {
         "type": "object",
+        "required": [
+          "id",
+          "name",
+          "official",
+          "iso639",
+          "iso3166",
+          "names"
+        ],
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
