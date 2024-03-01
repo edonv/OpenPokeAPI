@@ -12,7 +12,12 @@ const files = fs.readdirSync(componentsDir, {
 
 // console.log(files);
 
-for (filePath of files) {
+const filesWithOptionalProps = {
+    'FlavorText.json': ['version']
+};
+
+for (const filePath of files) {
+    const fileName = filePath.split('/').at(-1);
     const file = fs.readFileSync(filePath, {
         encoding: 'utf8'
     });
@@ -24,10 +29,12 @@ for (filePath of files) {
             const propertyKeys = Object.keys(properties);
             // console.log(propertyKeys);
 
-            // Keep `version` non-required
-            if (filePath.includes('/FlavorText.json')) {
-                const index = propertyKeys.indexOf('version');
-                propertyKeys.splice(index, 1);
+            // Exclude optional properties
+            if (Object.keys(filesWithOptionalProps).includes(fileName)) {
+                for (const key of filesWithOptionalProps[fileName]) {
+                    const index = propertyKeys.indexOf(key);
+                    propertyKeys.splice(index, 1);
+                }
             }
             
             const remainingData = json;
