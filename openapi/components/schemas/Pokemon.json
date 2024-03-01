@@ -1,21 +1,6 @@
 {
   "type": "object",
   "properties": {
-    "increase": {
-      "description": "A list of natures and how they change the referenced Pokéathlon stat.",
-      "type": "array",
-      "items": {
-        "$ref": "./NaturePokeathlonStatAffect.json"
-      }
-    },
-    "decrease": {
-      "description": "A list of natures and how they change the referenced Pokéathlon stat.",
-      "type": "array",
-      "items": {
-        "$ref": "./NaturePokeathlonStatAffect.json"
-      }
-    },
-
     "id": {
       "$ref": "./ResourceId.json"
     },
