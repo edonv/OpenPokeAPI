@@ -4,7 +4,7 @@
   "required": true,
   "description": "The name or unique ID to get.",
   "schema": {
-    "anyOf": [
+    "oneOf": [
       {
         "$ref": "../schemas/ResourceId.json"
       },
