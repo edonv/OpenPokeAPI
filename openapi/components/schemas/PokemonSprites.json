@@ -176,6 +176,9 @@
           }
         }
       }
+    },
+    "versions": {
+      "$ref": "./PokemonSpritesVersions.json"
     }
   }
 }
