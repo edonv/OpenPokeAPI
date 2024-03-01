@@ -12,7 +12,7 @@ In the `openapi` folder, is the spec broken down into separate files for easier 
 
 ## To-Do's
 
-- [ ] Add `required` to every `object` type in the spec 😭
+- [x] Add `required` to every `object` type in the spec 😭
 - [ ] Finish fixing the GitHub Action that runs the Redocly CLI `bundle` command.
     - [ ] Maybe in same or different plugin, make code that automatically adds `required` field?
     - [ ] Once plugin below is finished, make sure this action uses it.
