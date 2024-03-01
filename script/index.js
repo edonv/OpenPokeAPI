@@ -1,3 +1,5 @@
+// Use the following RegEx to search the project for nested objects missing `required firled`
+// "type": ([\["\]\w\-,\s]+)?"object"([\["\]\w\-,\s]+)?,\n\s+"(?!required":)
 const fs = require('fs');
 
 const componentsDir = '../openapi/components';
