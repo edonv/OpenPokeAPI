@@ -14,6 +14,7 @@ In the `openapi` folder, is the spec broken down into separate files for easier 
 
 - [ ] Add `required` to every `object` type in the spec 😭
 - [ ] Finish fixing the GitHub Action that runs the Redocly CLI `bundle` command.
+    - [ ] Maybe in same or different plugin, make code that automatically adds `required` field?
     - [ ] Once plugin below is finished, make sure this action uses it.
     - [ ] Add plain `split` command to Action as well, and have `bundle` command place bundled file in `/bundled` folder, and the `split` command place files in `/split` folder. That way people can use both single-file and multi-file versions with the custom `x-` properties already expanded.
 - [ ] Figure out how to standardize custom OpenAPI fields for specifying the endpoint each `NamedAPIResource`/`NamedAPIResourceList` would point to.
