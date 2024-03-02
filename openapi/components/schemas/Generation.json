@@ -16,7 +16,7 @@
       "$ref": "./ResourceId.json"
     },
     "name": {
-      "$ref": "./ResourceName.json"
+      "$ref": "./GenerationName.json"
     },
     "abilities": {
       "description": "A list of abilities that were introduced in this generation.",
