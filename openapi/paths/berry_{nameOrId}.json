@@ -56,21 +56,21 @@
           "GetBerryFirmnessByName": {
             "operationId": "getBerryFirmness",
             "parameters": {
-              "itemNameOrId": "$response.body#/firmness.name"
+              "nameOrId": "$response.body#/firmness.name"
             },
             "description": "The `name` field of the `firmness` value returned in the response can be used as the `nameOrId` parameter in `GET /berry-firmness/{nameOrId}`."
           },
           "GetBerryItemByName": {
             "operationId": "getItem",
             "parameters": {
-              "itemNameOrId": "$response.body#/item.name"
+              "nameOrId": "$response.body#/item.name"
             },
             "description": "The `name` field of the `item` value returned in the response can be used as the `nameOrId` parameter in `GET /item/{nameOrId}`."
           },
           "GetTypeByName": {
             "operationId": "getType",
             "parameters": {
-              "typeNameOrId": "$response.body#/natural_gift_type.name"
+              "nameOrId": "$response.body#/natural_gift_type.name"
             },
             "description": "The `name` field of the `natural_gift_type` value returned in the response can be used as the `nameOrId` parameter in `GET /type/{nameOrId}`."
           }
