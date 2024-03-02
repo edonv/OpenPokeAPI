@@ -42,7 +42,7 @@
             },
             "example": {
               "count": 248,
-              "next": "https://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+              "next": "https://pokeapi.co/api/v2/ability?limit=20&offset=20",
               "previous": null,
               "results": [
                 {
