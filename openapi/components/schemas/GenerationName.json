@@ -1,14 +1,21 @@
 {
-  "$ref": "./ResourceName.json",
-  "enum": [
-    "generation-i",
-    "generation-ii",
-    "generation-iii",
-    "generation-iv",
-    "generation-v",
-    "generation-vi",
-    "generation-vii",
-    "generation-viii",
-    "generation-ix"
+  "allOf": [
+    {
+      "$ref": "./ResourceName.json"
+    },
+    {
+      "type": "string",
+      "enum": [
+        "generation-i",
+        "generation-ii",
+        "generation-iii",
+        "generation-iv",
+        "generation-v",
+        "generation-vi",
+        "generation-vii",
+        "generation-viii",
+        "generation-ix"
+      ]
+    }
   ]
 }
