@@ -86,7 +86,7 @@
             "type": "integer"
           },
           "required": false,
-          "description": "The number of resources to skip before listing resources. The default is `20`."
+          "description": "The number of resources to skip before listing resources. The default is `0`."
         }
       ],
       "get": {
@@ -104,7 +104,7 @@
                 },
                 "example": {
                   "count": 248,
-                  "next": "https://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+                  "next": "https://pokeapi.co/api/v2/ability?limit=20&offset=20",
                   "previous": null,
                   "results": [
                     {
