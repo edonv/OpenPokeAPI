@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "front_transparent": {
+      "type": "string"
+    },
+    "back_transparent": {
+      "type": "string"
+    }
+  }
+}

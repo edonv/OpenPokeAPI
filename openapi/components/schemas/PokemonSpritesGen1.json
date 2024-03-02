@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["front_default", "front_gray", "back_default", "back_gray"],
+  "properties": {
+    "front_default": {
+      "type": "string"
+    },
+    "front_gray": {
+      "type": "string"
+    },
+    "front_transparent": {
+      "type": "string"
+    },
+    "back_default": {
+      "type": "string"
+    },
+    "back_gray": {
+      "type": "string"
+    },
+    "back_transparent": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": ["icons"],
+  "properties": {
+    "icons": {
+      "type": "object",
+      "required": ["front_default", "front_female"],
+      "properties": {
+        "front_default": {
+          "type": "string"
+        },
+        "front_female": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

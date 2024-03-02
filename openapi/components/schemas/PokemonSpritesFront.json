@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["front_default", "front_shiny"],
+  "properties": {
+    "front_default": {
+      "type": "string"
+    },
+    "front_shiny": {
+      "type": "string"
+    }
+  }
+}

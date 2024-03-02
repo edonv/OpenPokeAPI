@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["back_default", "back_shiny"],
+  "properties": {
+    "back_default": {
+      "type": "string"
+    },
+    "back_shiny": {
+      "type": "string"
+    }
+  }
+}
