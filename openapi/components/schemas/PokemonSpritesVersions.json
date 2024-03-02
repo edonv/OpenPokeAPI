@@ -18,21 +18,12 @@
         "red-blue": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_gray",
             "front_default",
-            "front_gray"
+            "front_gray",
+            "back_default",
+            "back_gray"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_gray": {
-              "type": "string"
-            },
-            "back_transparent": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
@@ -40,6 +31,15 @@
               "type": "string"
             },
             "front_transparent": {
+              "type": "string"
+            },
+            "back_default": {
+              "type": "string"
+            },
+            "back_gray": {
+              "type": "string"
+            },
+            "back_transparent": {
               "type": "string"
             }
           }
@@ -47,21 +47,12 @@
         "yellow": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_gray",
             "front_default",
-            "front_gray"
+            "front_gray",
+            "back_default",
+            "back_gray"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_gray": {
-              "type": "string"
-            },
-            "back_transparent": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
@@ -69,6 +60,15 @@
               "type": "string"
             },
             "front_transparent": {
+              "type": "string"
+            },
+            "back_default": {
+              "type": "string"
+            },
+            "back_gray": {
+              "type": "string"
+            },
+            "back_transparent": {
               "type": "string"
             }
           }
@@ -82,34 +82,34 @@
         "crystal": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_shiny",
             "front_default",
-            "front_shiny"
+            "front_shiny",
+            "back_default",
+            "back_shiny"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_shiny": {
-              "type": "string"
-            },
-            "back_shiny_transparent": {
-              "type": "string"
-            },
-            "back_transparent": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
             "front_shiny": {
               "type": "string"
             },
+            "front_transparent": {
+              "type": "string"
+            },
             "front_shiny_transparent": {
               "type": "string"
             },
-            "front_transparent": {
+            "back_default": {
+              "type": "string"
+            },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_transparent": {
+              "type": "string"
+            },
+            "back_shiny_transparent": {
               "type": "string"
             }
           }
@@ -117,18 +117,12 @@
         "gold": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_shiny",
             "front_default",
-            "front_shiny"
+            "front_shiny",
+            "back_default",
+            "back_shiny"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_shiny": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
@@ -136,6 +130,15 @@
               "type": "string"
             },
             "front_transparent": {
+              "type": "string"
+            },
+            "back_default": {
+              "type": "string"
+            },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_transparent": {
               "type": "string"
             }
           }
@@ -143,18 +146,12 @@
         "silver": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_shiny",
             "front_default",
-            "front_shiny"
+            "front_shiny",
+            "back_default",
+            "back_shiny"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_shiny": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
@@ -162,6 +159,15 @@
               "type": "string"
             },
             "front_transparent": {
+              "type": "string"
+            },
+            "back_default": {
+              "type": "string"
+            },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_transparent": {
               "type": "string"
             }
           }
@@ -187,22 +193,22 @@
         "firered-leafgreen": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_shiny",
             "front_default",
-            "front_shiny"
+            "front_shiny",
+            "back_default",
+            "back_shiny"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_shiny": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
             "front_shiny": {
+              "type": "string"
+            },
+            "back_default": {
+              "type": "string"
+            },
+            "back_shiny": {
               "type": "string"
             }
           }
@@ -210,22 +216,22 @@
         "ruby-sapphire": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_shiny",
             "front_default",
-            "front_shiny"
+            "front_shiny",
+            "back_default",
+            "back_shiny"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_shiny": {
-              "type": "string"
-            },
             "front_default": {
               "type": "string"
             },
             "front_shiny": {
+              "type": "string"
+            },
+            "back_default": {
+              "type": "string"
+            },
+            "back_shiny": {
               "type": "string"
             }
           }
@@ -239,24 +245,16 @@
         "diamond-pearl": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_female",
-            "back_shiny",
-            "back_shiny_female",
             "front_default",
             "front_female",
             "front_shiny",
-            "front_shiny_female"
+            "front_shiny_female",
+            "back_default",
+            "back_female",
+            "back_shiny",
+            "back_shiny_female"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_female": { "type": ["string", "null"] },
-            "back_shiny": {
-              "type": "string"
-            },
-            "back_shiny_female": { "type": ["string", "null"] },
             "front_default": {
               "type": "string"
             },
@@ -264,30 +262,30 @@
             "front_shiny": {
               "type": "string"
             },
-            "front_shiny_female": { "type": ["string", "null"] }
+            "front_shiny_female": { "type": ["string", "null"] },
+            "back_default": {
+              "type": "string"
+            },
+            "back_female": { "type": ["string", "null"] },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_shiny_female": { "type": ["string", "null"] }
           }
         },
         "heartgold-soulsilver": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_female",
-            "back_shiny",
-            "back_shiny_female",
             "front_default",
             "front_female",
             "front_shiny",
-            "front_shiny_female"
+            "front_shiny_female",
+            "back_default",
+            "back_female",
+            "back_shiny",
+            "back_shiny_female"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_female": { "type": ["string", "null"] },
-            "back_shiny": {
-              "type": "string"
-            },
-            "back_shiny_female": { "type": ["string", "null"] },
             "front_default": {
               "type": "string"
             },
@@ -295,30 +293,30 @@
             "front_shiny": {
               "type": "string"
             },
-            "front_shiny_female": { "type": ["string", "null"] }
+            "front_shiny_female": { "type": ["string", "null"] },
+            "back_default": {
+              "type": "string"
+            },
+            "back_female": { "type": ["string", "null"] },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_shiny_female": { "type": ["string", "null"] }
           }
         },
         "platinum": {
           "type": "object",
           "required": [
-            "back_default",
-            "back_female",
-            "back_shiny",
-            "back_shiny_female",
             "front_default",
             "front_female",
             "front_shiny",
-            "front_shiny_female"
+            "front_shiny_female",
+            "back_default",
+            "back_female",
+            "back_shiny",
+            "back_shiny_female"
           ],
           "properties": {
-            "back_default": {
-              "type": "string"
-            },
-            "back_female": { "type": ["string", "null"] },
-            "back_shiny": {
-              "type": "string"
-            },
-            "back_shiny_female": { "type": ["string", "null"] },
             "front_default": {
               "type": "string"
             },
@@ -326,7 +324,15 @@
             "front_shiny": {
               "type": "string"
             },
-            "front_shiny_female": { "type": ["string", "null"] }
+            "front_shiny_female": { "type": ["string", "null"] },
+            "back_default": {
+              "type": "string"
+            },
+            "back_female": { "type": ["string", "null"] },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_shiny_female": { "type": ["string", "null"] }
           }
         }
       }
@@ -339,37 +345,29 @@
           "type": "object",
           "required": [
             "animated",
-            "back_default",
-            "back_female",
-            "back_shiny",
-            "back_shiny_female",
             "front_default",
             "front_female",
             "front_shiny",
-            "front_shiny_female"
+            "front_shiny_female",
+            "back_default",
+            "back_female",
+            "back_shiny",
+            "back_shiny_female"
           ],
           "properties": {
             "animated": {
               "type": "object",
               "required": [
-                "back_default",
-                "back_female",
-                "back_shiny",
-                "back_shiny_female",
                 "front_default",
                 "front_female",
                 "front_shiny",
-                "front_shiny_female"
+                "front_shiny_female",
+                "back_default",
+                "back_female",
+                "back_shiny",
+                "back_shiny_female"
               ],
               "properties": {
-                "back_default": {
-                  "type": "string"
-                },
-                "back_female": { "type": ["string", "null"] },
-                "back_shiny": {
-                  "type": "string"
-                },
-                "back_shiny_female": { "type": ["string", "null"] },
                 "front_default": {
                   "type": "string"
                 },
@@ -377,17 +375,17 @@
                 "front_shiny": {
                   "type": "string"
                 },
-                "front_shiny_female": { "type": ["string", "null"] }
+                "front_shiny_female": { "type": ["string", "null"] },
+                "back_default": {
+                  "type": "string"
+                },
+                "back_female": { "type": ["string", "null"] },
+                "back_shiny": {
+                  "type": "string"
+                },
+                "back_shiny_female": { "type": ["string", "null"] }
               }
             },
-            "back_default": {
-              "type": "string"
-            },
-            "back_female": { "type": ["string", "null"] },
-            "back_shiny": {
-              "type": "string"
-            },
-            "back_shiny_female": { "type": ["string", "null"] },
             "front_default": {
               "type": "string"
             },
@@ -395,7 +393,15 @@
             "front_shiny": {
               "type": "string"
             },
-            "front_shiny_female": { "type": ["string", "null"] }
+            "front_shiny_female": { "type": ["string", "null"] },
+            "back_default": {
+              "type": "string"
+            },
+            "back_female": { "type": ["string", "null"] },
+            "back_shiny": {
+              "type": "string"
+            },
+            "back_shiny_female": { "type": ["string", "null"] }
           }
         }
       }
