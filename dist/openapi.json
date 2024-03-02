@@ -4310,6 +4310,27 @@
           }
         }
       },
+      "GenerationName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ResourceName"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "generation-i",
+              "generation-ii",
+              "generation-iii",
+              "generation-iv",
+              "generation-v",
+              "generation-vi",
+              "generation-vii",
+              "generation-viii",
+              "generation-ix"
+            ]
+          }
+        ]
+      },
       "Generation": {
         "type": "object",
         "required": [
@@ -4328,7 +4349,7 @@
             "$ref": "#/components/schemas/ResourceId"
           },
           "name": {
-            "$ref": "#/components/schemas/ResourceName"
+            "$ref": "#/components/schemas/GenerationName"
           },
           "abilities": {
             "description": "A list of abilities that were introduced in this generation.",
@@ -6260,6 +6281,233 @@
           }
         }
       },
+      "PokemonSpritesGen1": {
+        "type": "object",
+        "required": [
+          "front_default",
+          "front_gray",
+          "back_default",
+          "back_gray"
+        ],
+        "properties": {
+          "front_default": {
+            "type": "string"
+          },
+          "front_gray": {
+            "type": "string"
+          },
+          "front_transparent": {
+            "type": "string"
+          },
+          "back_default": {
+            "type": "string"
+          },
+          "back_gray": {
+            "type": "string"
+          },
+          "back_transparent": {
+            "type": "string"
+          }
+        }
+      },
+      "PokemonSpritesFront": {
+        "type": "object",
+        "required": [
+          "front_default",
+          "front_shiny"
+        ],
+        "properties": {
+          "front_default": {
+            "type": "string"
+          },
+          "front_shiny": {
+            "type": "string"
+          }
+        }
+      },
+      "PokemonSpritesBack": {
+        "type": "object",
+        "required": [
+          "back_default",
+          "back_shiny"
+        ],
+        "properties": {
+          "back_default": {
+            "type": "string"
+          },
+          "back_shiny": {
+            "type": "string"
+          }
+        }
+      },
+      "PokemonSpritesFrontBackTransparent": {
+        "type": "object",
+        "properties": {
+          "front_transparent": {
+            "type": "string"
+          },
+          "back_transparent": {
+            "type": "string"
+          }
+        }
+      },
+      "PokemonSpritesGen4": {
+        "type": "object",
+        "required": [
+          "front_default",
+          "front_female",
+          "front_shiny",
+          "front_shiny_female",
+          "back_default",
+          "back_female",
+          "back_shiny",
+          "back_shiny_female"
+        ],
+        "properties": {
+          "front_default": {
+            "type": "string"
+          },
+          "front_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "front_shiny": {
+            "type": "string"
+          },
+          "front_shiny_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "back_default": {
+            "type": "string"
+          },
+          "back_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "back_shiny": {
+            "type": "string"
+          },
+          "back_shiny_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "PokemonSpritesGen5": {
+        "type": "object",
+        "required": [
+          "front_default",
+          "front_female",
+          "front_shiny",
+          "front_shiny_female",
+          "back_default",
+          "back_female",
+          "back_shiny",
+          "back_shiny_female"
+        ],
+        "properties": {
+          "front_default": {
+            "type": "string"
+          },
+          "front_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "front_shiny": {
+            "type": "string"
+          },
+          "front_shiny_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "back_default": {
+            "type": "string"
+          },
+          "back_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "back_shiny": {
+            "type": "string"
+          },
+          "back_shiny_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "PokemonSpritesGen6_7": {
+        "type": "object",
+        "required": [
+          "front_default",
+          "front_female",
+          "front_shiny",
+          "front_shiny_female"
+        ],
+        "properties": {
+          "front_default": {
+            "type": "string"
+          },
+          "front_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "front_shiny": {
+            "type": "string"
+          },
+          "front_shiny_female": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "PokemonSpritesGen7_8Icons": {
+        "type": "object",
+        "required": [
+          "icons"
+        ],
+        "properties": {
+          "icons": {
+            "type": "object",
+            "required": [
+              "front_default",
+              "front_female"
+            ],
+            "properties": {
+              "front_default": {
+                "type": "string"
+              },
+              "front_female": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      },
       "PokemonSpritesVersions": {
         "type": "object",
         "required": [
@@ -6281,62 +6529,10 @@
             ],
             "properties": {
               "red-blue": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_gray",
-                  "front_default",
-                  "front_gray"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
-                  },
-                  "back_gray": {
-                    "type": "string"
-                  },
-                  "back_transparent": {
-                    "type": "string"
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_gray": {
-                    "type": "string"
-                  },
-                  "front_transparent": {
-                    "type": "string"
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen1"
               },
               "yellow": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_gray",
-                  "front_default",
-                  "front_gray"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
-                  },
-                  "back_gray": {
-                    "type": "string"
-                  },
-                  "back_transparent": {
-                    "type": "string"
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_gray": {
-                    "type": "string"
-                  },
-                  "front_transparent": {
-                    "type": "string"
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen1"
               }
             }
           },
@@ -6349,91 +6545,54 @@
             ],
             "properties": {
               "crystal": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_shiny",
-                  "front_default",
-                  "front_shiny"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFront"
                   },
-                  "back_shiny": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesBack"
                   },
-                  "back_shiny_transparent": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFrontBackTransparent"
                   },
-                  "back_transparent": {
-                    "type": "string"
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_transparent": {
-                    "type": "string"
-                  },
-                  "front_transparent": {
-                    "type": "string"
+                  {
+                    "type": "object",
+                    "properties": {
+                      "front_shiny_transparent": {
+                        "type": "string"
+                      },
+                      "back_shiny_transparent": {
+                        "type": "string"
+                      }
+                    }
                   }
-                }
+                ]
               },
               "gold": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_shiny",
-                  "front_default",
-                  "front_shiny"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFront"
                   },
-                  "back_shiny": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesBack"
                   },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_transparent": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFrontBackTransparent"
                   }
-                }
+                ]
               },
               "silver": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_shiny",
-                  "front_default",
-                  "front_shiny"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFront"
                   },
-                  "back_shiny": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesBack"
                   },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_transparent": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFrontBackTransparent"
                   }
-                }
+                ]
               }
             }
           },
@@ -6446,65 +6605,27 @@
             ],
             "properties": {
               "emerald": {
-                "type": "object",
-                "required": [
-                  "front_default",
-                  "front_shiny"
-                ],
-                "properties": {
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesFront"
               },
               "firered-leafgreen": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_shiny",
-                  "front_default",
-                  "front_shiny"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFront"
                   },
-                  "back_shiny": {
-                    "type": "string"
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_shiny": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesBack"
                   }
-                }
+                ]
               },
               "ruby-sapphire": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_shiny",
-                  "front_default",
-                  "front_shiny"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesFront"
                   },
-                  "back_shiny": {
-                    "type": "string"
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_shiny": {
-                    "type": "string"
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesBack"
                   }
-                }
+                ]
               }
             }
           },
@@ -6517,157 +6638,13 @@
             ],
             "properties": {
               "diamond-pearl": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_female",
-                  "back_shiny",
-                  "back_shiny_female",
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
-                  },
-                  "back_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "back_shiny": {
-                    "type": "string"
-                  },
-                  "back_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen4"
               },
               "heartgold-soulsilver": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_female",
-                  "back_shiny",
-                  "back_shiny_female",
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
-                  },
-                  "back_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "back_shiny": {
-                    "type": "string"
-                  },
-                  "back_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen4"
               },
               "platinum": {
-                "type": "object",
-                "required": [
-                  "back_default",
-                  "back_female",
-                  "back_shiny",
-                  "back_shiny_female",
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "back_default": {
-                    "type": "string"
-                  },
-                  "back_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "back_shiny": {
-                    "type": "string"
-                  },
-                  "back_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen4"
               }
             }
           },
@@ -6678,107 +6655,22 @@
             ],
             "properties": {
               "black-white": {
-                "type": "object",
-                "required": [
-                  "animated",
-                  "back_default",
-                  "back_female",
-                  "back_shiny",
-                  "back_shiny_female",
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "animated": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PokemonSpritesGen5"
+                  },
+                  {
                     "type": "object",
                     "required": [
-                      "back_default",
-                      "back_female",
-                      "back_shiny",
-                      "back_shiny_female",
-                      "front_default",
-                      "front_female",
-                      "front_shiny",
-                      "front_shiny_female"
+                      "animated"
                     ],
                     "properties": {
-                      "back_default": {
-                        "type": "string"
-                      },
-                      "back_female": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
-                      },
-                      "back_shiny": {
-                        "type": "string"
-                      },
-                      "back_shiny_female": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
-                      },
-                      "front_default": {
-                        "type": "string"
-                      },
-                      "front_female": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
-                      },
-                      "front_shiny": {
-                        "type": "string"
-                      },
-                      "front_shiny_female": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
+                      "animated": {
+                        "$ref": "#/components/schemas/PokemonSpritesGen5"
                       }
                     }
-                  },
-                  "back_default": {
-                    "type": "string"
-                  },
-                  "back_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "back_shiny": {
-                    "type": "string"
-                  },
-                  "back_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
                   }
-                }
+                ]
               }
             }
           },
@@ -6790,62 +6682,10 @@
             ],
             "properties": {
               "omegaruby-alphasapphire": {
-                "type": "object",
-                "required": [
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen6_7"
               },
               "x-y": {
-                "type": "object",
-                "required": [
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen6_7"
               }
             }
           },
@@ -6875,61 +6715,12 @@
                 }
               },
               "ultra-sun-ultra-moon": {
-                "type": "object",
-                "required": [
-                  "front_default",
-                  "front_female",
-                  "front_shiny",
-                  "front_shiny_female"
-                ],
-                "properties": {
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "front_shiny": {
-                    "type": "string"
-                  },
-                  "front_shiny_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/PokemonSpritesGen6_7"
               }
             }
           },
           "generation-viii": {
-            "type": "object",
-            "required": [
-              "icons"
-            ],
-            "properties": {
-              "icons": {
-                "type": "object",
-                "required": [
-                  "front_default",
-                  "front_female"
-                ],
-                "properties": {
-                  "front_default": {
-                    "type": "string"
-                  },
-                  "front_female": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/schemas/PokemonSpritesGen7_8Icons"
           }
         }
       },
